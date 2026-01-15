@@ -88,6 +88,22 @@
   </div>
   <div class="card">
   <h2 id="menuTitle">Recomendados</h2>
+    <div class="card">
+  <h2 id="galleryTitle">Nuestro restaurante</h2>
+
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  ">
+    <img src="interior-1.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
+    <img src="interior-2.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
+    <img src="interior-3.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
+    <img src="exterior.jpg" alt="Exterior MISS MISI" style="width:100%; border-radius:14px;">
+  </div>
+</div>
+
 
   <img
     src="sushi-combo.jpg"
@@ -136,7 +152,9 @@
 <script>
   let lang = "es";
 
-  function toggleLang() {document.getElementById("menuTitle").innerText =
+  function toggleLang(document.getElementById("galleryTitle").innerText =
+  lang === "es" ? "Nuestro restaurante" : "Our restaurant";
+) {document.getElementById("menuTitle").innerText =
   lang === "es" ? "Recomendados" : "Chef’s Picks";
 
     lang = lang === "es" ? "en" : "es";
