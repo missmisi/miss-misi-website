@@ -152,30 +152,54 @@
 <script>
   let lang = "es";
 
-  function toggleLang(document.getElementById("galleryTitle").innerText =
-  lang === "es" ? "Nuestro restaurante" : "Our restaurant";
-) {document.getElementById("menuTitle").innerText =
-  lang === "es" ? "Recomendados" : "Chef’s Picks";
+  function setText(id, es, en) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.innerText = lang === "es" ? es : en;
+    }
+  }
 
+  function toggleLang() {
     lang = lang === "es" ? "en" : "es";
 
-    document.getElementById("tagline").innerText =
-      lang === "es"
-        ? "Cocina japonesa moderna en Barcelona"
-        : "Modern Japanese cuisine in Barcelona";
+    setText(
+      "tagline",
+      "Cocina japonesa moderna en Barcelona",
+      "Modern Japanese cuisine in Barcelona"
+    );
 
-    document.getElementById("welcomeTitle").innerText =
-      lang === "es" ? "Bienvenidos" : "Welcome";
+    setText(
+      "welcomeTitle",
+      "Bienvenidos",
+      "Welcome"
+    );
 
-    document.getElementById("welcomeText").innerText =
-      lang === "es"
-        ? "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle."
-        : "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail.";
+    setText(
+      "welcomeText",
+      "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle.",
+      "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail."
+    );
 
-    document.getElementById("findUs").innerText =
-      lang === "es" ? "Encuéntranos" : "Find us";
+    setText(
+      "findUs",
+      "Encuéntranos",
+      "Find us"
+    );
+
+    setText(
+      "menuTitle",
+      "Recomendados",
+      "Chef’s Picks"
+    );
+
+    setText(
+      "galleryTitle",
+      "Nuestro restaurante",
+      "Our restaurant"
+    );
   }
 </script>
+
 
 </body>
 </html>
