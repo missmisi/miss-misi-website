@@ -17,17 +17,25 @@
       padding: 60px 20px;
       text-align: center;
       background: white;
+      position: relative;
+    }
+
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      border: 1px solid #ddd;
+      background: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
     }
 
     header h1 {
       font-size: 48px;
       letter-spacing: 2px;
       margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #555;
     }
 
     section {
@@ -44,62 +52,69 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
     footer {
       text-align: center;
       padding: 30px;
       font-size: 14px;
       color: #777;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 36px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>MISS MISI</h1>
-    <p>Cocina japonesa moderna en Barcelona</p>
-  </header>
+<header>
+  <button class="lang-btn" onclick="toggleLang()">EN / ES</button>
+  <h1>MISS MISI</h1>
+  <p id="tagline">Cocina japonesa moderna en Barcelona</p>
+</header>
 
-  <section>
-    <div class="card">
-      <h2>Bienvenidos</h2>
-      <p>
-        MISS MISI es un restaurante de cocina japonesa moderna,
-        donde el sushi se prepara al momento con ingredientes frescos
-        y una atención cuidada al detalle.
-      </p>
-    </div>
+<section>
+  <div class="card">
+    <h2 id="welcomeTitle">Bienvenidos</h2>
+    <p id="welcomeText">
+      MISS MISI es un restaurante de cocina japonesa moderna,
+      donde el sushi se prepara al momento con ingredientes frescos
+      y una atención cuidada al detalle.
+    </p>
+  </div>
 
-    <div class="card contact">
-      <h2>Encuéntranos</h2>
-      <p>
-        📍 Carrer Bailèn 221, 08037 Barcelona<br />
-        📞 Móvil: 631 669 393<br />
-        ☎️ Fijo: 931 798 664
-      </p>
-    </div>
-  </section>
+  <div class="card">
+    <h2 id="findUs">Encuéntranos</h2>
+    <p>
+      📍 Carrer Bailèn 221, 08037 Barcelona<br />
+      📞 631 669 393 · 931 798 664
+    </p>
+  </div>
+</section>
 
-  <footer>
-    © MISS MISI · Barcelona
-  </footer>
+<footer>
+  © MISS MISI · Barcelona
+</footer>
+
+<script>
+  let lang = "es";
+
+  function toggleLang() {
+    lang = lang === "es" ? "en" : "es";
+
+    document.getElementById("tagline").innerText =
+      lang === "es"
+        ? "Cocina japonesa moderna en Barcelona"
+        : "Modern Japanese cuisine in Barcelona";
+
+    document.getElementById("welcomeTitle").innerText =
+      lang === "es" ? "Bienvenidos" : "Welcome";
+
+    document.getElementById("welcomeText").innerText =
+      lang === "es"
+        ? "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle."
+        : "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail.";
+
+    document.getElementById("findUs").innerText =
+      lang === "es" ? "Encuéntranos" : "Find us";
+  }
+</script>
 
 </body>
 </html>
