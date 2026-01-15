@@ -2,31 +2,104 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>MISS MISI</title>
+  <title>MISS MISI · Japanese Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: #fafafa;
-      text-align: center;
+      color: #111;
     }
-    h1 {
-      font-size: 42px;
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: white;
+    }
+
+    header h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
       margin-bottom: 10px;
     }
-    p {
+
+    header p {
       font-size: 18px;
       color: #555;
     }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
-<body>
-  <h1>MISS MISI</h1>
-  <p>Cocina japonesa moderna</p>
 
-  <p>
-    📍 Carrer Bailèn 221, Barcelona<br />
-    📞 631 669 393 · 931 798 664
-  </p>
+<body>
+
+  <header>
+    <h1>MISS MISI</h1>
+    <p>Cocina japonesa moderna en Barcelona</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>Bienvenidos</h2>
+      <p>
+        MISS MISI es un restaurante de cocina japonesa moderna,
+        donde el sushi se prepara al momento con ingredientes frescos
+        y una atención cuidada al detalle.
+      </p>
+    </div>
+
+    <div class="card contact">
+      <h2>Encuéntranos</h2>
+      <p>
+        📍 Carrer Bailèn 221, 08037 Barcelona<br />
+        📞 Móvil: 631 669 393<br />
+        ☎️ Fijo: 931 798 664
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © MISS MISI · Barcelona
+  </footer>
+
 </body>
 </html>
