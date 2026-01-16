@@ -192,6 +192,11 @@
     setText("menuTitle","Recomendados","Chef’s Picks");
     setText("galleryTitle","Nuestro restaurante","Our restaurant");
     setText("contactTitle","Contacto","Contact");
+    const reserveBtn = document.getElementById("reserveBtn");
+if (reserveBtn) {
+  reserveBtn.innerText = lang === "es" ? "📅 Reservar mesa" : "📅 Book a table";
+}
+
   }
 </script>
 
