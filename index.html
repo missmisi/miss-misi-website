@@ -2,7 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>MISS MISI · Japanese Restaurant</title>
+
+  <title>MISS MISI · Modern Japanese Cuisine in Barcelona</title>
+
+  <meta name="description" content="MISS MISI is a modern Japanese restaurant in Barcelona offering an intimate dining experience. Reservations available via WhatsApp.">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -65,158 +69,66 @@
 
 <header>
   <button class="lang-btn" onclick="toggleLang()">EN / ES</button>
+
   <h1>MISS MISI</h1>
   <p id="tagline">Cocina japonesa moderna en Barcelona</p>
-  
-  <div style="margin-top:30px;">
-  <a 
-    href="https://wa.me/34631669393?text=Hello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0AGuests%3A%0A%0AThank%20you.%0A%0A---%0A%0AHola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%0AFecha%3A%0AHora%3A%0APersonas%3A%0A%0AGracias."
-    target="_blank"
-    style="
-      display:inline-block;
-      padding:14px 32px;
-      background:#25D366;
-      color:white;
-      font-size:17px;
-      text-decoration:none;
-      border-radius:8px;
-      font-weight:600;
-    "
-  >
-    📲 Reserve via WhatsApp · Reservar por WhatsApp
-  </a>
-</div>
 
+  <div style="margin-top:30px;">
+    <a
+      href="https://wa.me/34631669393?text=Hello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0AGuests%3A%0A%0AThank%20you.%0A%0A---%0A%0AHola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%0AFecha%3A%0AHora%3A%0APersonas%3A%0A%0AGracias."
+      target="_blank"
+      style="display:inline-block;padding:14px 32px;background:#25D366;color:white;font-size:17px;text-decoration:none;border-radius:8px;font-weight:600;"
+    >
+      📲 Reserve via WhatsApp · Reservar por WhatsApp
+    </a>
+  </div>
 </header>
 
 <section>
+
   <div class="card">
     <h2 id="welcomeTitle">Bienvenidos</h2>
     <p id="welcomeText">
-      MISS MISI es un restaurante de cocina japonesa moderna,
-      donde el sushi se prepara al momento con ingredientes frescos
-      y una atención cuidada al detalle.
+      MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle.
     </p>
   </div>
 
   <div class="card">
-    <h2 id="findUs">Encuéntranos</h2>
+    <h2 id="menuTitle">Recomendados</h2>
+
+    <img src="sushi-combo.jpg" alt="Sushi combo MISS MISI"
+      style="width:100%;max-width:600px;display:block;margin:20px auto;border-radius:16px;">
+
+    <ul style="font-size:17px;line-height:1.8;">
+      <li>🍣 Sushi Combo</li>
+      <li>🍤 Uramaki Tempura Langostino</li>
+      <li>🌶 Uramaki Spicy Atún</li>
+      <li>🥑 California Roll</li>
+    </ul>
+
     <p>
-      📍 Carrer Bailèn 221, 08037 Barcelona<br />
-      📞 631 669 393 · 931 798 664
+      <a href="https://queresto.com/MISSMISI" target="_blank"
+        style="display:inline-block;padding:12px 24px;background:#111;color:white;border-radius:30px;text-decoration:none;">
+        Ver menú completo
+      </a>
     </p>
   </div>
-  <div class="card">
-  <h2 id="contactTitle">Contacto</h2>
-
-  <div style="
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  ">
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Carrer+Bailen+221+Barcelona"
-      target="_blank"
-      style="
-        padding: 14px 22px;
-        background: #111;
-        color: white;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      🗺 Cómo llegar
-    </a>
-
-    <a
-      href="tel:631669393"
-      style="
-        padding: 14px 22px;
-        background: #e5e5e5;
-        color: #111;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      📞 Llamar
-    </a>
-
-    <a
-      href="https://wa.me/34631669393"
-      target="_blank"
-      style="
-        padding: 14px 22px;
-        background: #25D366;
-        color: white;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      💬 WhatsApp
-    </a>
-  </div>
-</div>
 
   <div class="card">
-  <h2 id="menuTitle">Recomendados</h2>
-    <div class="card">
-  <h2 id="galleryTitle">Nuestro restaurante</h2>
+    <h2 id="galleryTitle">Nuestro restaurante</h2>
 
-  <div style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
-  ">
-    <img src="interior-1.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
-    <img src="interior-2.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
-    <img src="interior-3.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
-    <img src="exterior.jpg" alt="Exterior MISS MISI" style="width:100%; border-radius:14px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px;">
+      <img src="interior-1.jpg" alt="Interior MISS MISI" style="width:100%;border-radius:14px;">
+      <img src="interior-2.jpg" alt="Interior MISS MISI" style="width:100%;border-radius:14px;">
+      <img src="interior-3.jpg" alt="Interior MISS MISI" style="width:100%;border-radius:14px;">
+      <img src="exterior.jpg" alt="Exterior MISS MISI" style="width:100%;border-radius:14px;">
+    </div>
   </div>
-</div>
 
-
-  <img
-    src="sushi-combo.jpg"
-    alt="Sushi combo MISS MISI"
-    style="
-      width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 16px;
-    "
-  />
-
-  <ul style="font-size: 17px; line-height: 1.8;">
-    <li>🍣 Sushi Combo</li>
-    <li>🍤 Uramaki Tempura Langostino</li>
-    <li>🌶 Uramaki Spicy Atún</li>
-    <li>🥑 California Roll</li>
-  </ul>
-
-  <p style="margin-top: 20px;">
-    <a
-      href="https://queresto.com/MISSMISI"
-      target="_blank"
-      style="
-        display: inline-block;
-        padding: 12px 24px;
-        background: #111;
-        color: white;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      Ver menú completo
-    </a>
-  </p>
-</div>
+  <div class="card">
+    <h2 id="contactTitle">Contacto</h2>
+    <p>📍 Carrer Bailèn 221, 08037 Barcelona<br>📞 631 669 393 · 931 798 664</p>
+  </div>
 
 </section>
 
@@ -229,75 +141,30 @@
 
   function setText(id, es, en) {
     const el = document.getElementById(id);
-    if (el) {
-      el.innerText = lang === "es" ? es : en;
-    }
+    if (el) el.innerText = lang === "es" ? es : en;
   }
 
   function toggleLang() {
     lang = lang === "es" ? "en" : "es";
+    document.documentElement.lang = lang;
 
-    setText(
-      "tagline",
-      "Cocina japonesa moderna en Barcelona",
-      "Modern Japanese cuisine in Barcelona"
-    );
-
-    setText(
-      "welcomeTitle",
-      "Bienvenidos",
-      "Welcome"
-    );
-
-    setText(
-      "welcomeText",
+    setText("tagline","Cocina japonesa moderna en Barcelona","Modern Japanese cuisine in Barcelona");
+    setText("welcomeTitle","Bienvenidos","Welcome");
+    setText("welcomeText",
       "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle.",
       "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail."
     );
-
-    setText(
-      "findUs",
-      "Encuéntranos",
-      "Find us"
-    );
-
-    setText(
-      "menuTitle",
-      "Recomendados",
-      "Chef’s Picks"
-    );
-
-    setText(
-      "galleryTitle",
-      "Nuestro restaurante",
-      "Our restaurant"
-    );
-    
-    setText(
-  "contactTitle",
-  "Contacto",
-  "Contact"
-);
-
+    setText("menuTitle","Recomendados","Chef’s Picks");
+    setText("galleryTitle","Nuestro restaurante","Our restaurant");
+    setText("contactTitle","Contacto","Contact");
   }
 </script>
 
 <!-- Floating WhatsApp Button -->
 <a
-  href="https://wa.me/34631669393?text=Hello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0AGuests%3A%0A%0AThank%20you.%0A%0A---%0A%0AHola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%0AFecha%3A%0AHora%3A%0APersonas%3A%0A%0AGracias."
+  href="https://wa.me/34631669393"
   target="_blank"
-  style="
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:14px 16px;
-    border-radius:50%;
-    font-size:24px;
-    text-decoration:none;
-    z-index:9999;
-  "
+  style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 16px;border-radius:50%;font-size:24px;text-decoration:none;z-index:9999;"
   aria-label="WhatsApp Reservation"
 >
   💬
