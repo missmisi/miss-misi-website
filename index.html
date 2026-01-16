@@ -14,7 +14,7 @@
     }
 
     header {
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
       background: white;
       position: relative;
@@ -26,7 +26,7 @@
       right: 20px;
       border: 1px solid #ddd;
       background: white;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
       cursor: pointer;
       font-size: 14px;
@@ -35,7 +35,7 @@
     header h1 {
       font-size: 48px;
       letter-spacing: 2px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     section {
@@ -46,43 +46,10 @@
 
     .card {
       background: white;
-      border-radius: 16px;
-      padding: 30px;
+      border-radius: 18px;
+      padding: 34px;
       margin-bottom: 30px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .btn {
-      padding: 14px 26px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-dark {
-      background: #111;
-      color: white;
-    }
-
-    .btn-light {
-      background: #e5e5e5;
-      color: #111;
-    }
-
-    .btn-green {
-      background: #25D366;
-      color: white;
     }
 
     footer {
@@ -98,12 +65,33 @@
 
 <header>
   <button class="lang-btn" onclick="toggleLang()">EN / ES</button>
+
   <h1>MISS MISI</h1>
   <p id="tagline">Cocina japonesa moderna en Barcelona</p>
+
+  <!-- 唯一预约按钮 -->
+  <div style="margin-top:36px;">
+    <a
+      id="reserveBtn"
+      href="https://wa.me/34631669393?text=Hello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0AGuests%3A"
+      target="_blank"
+      style="
+        display:inline-block;
+        padding:16px 38px;
+        background:#111;
+        color:white;
+        font-size:17px;
+        border-radius:40px;
+        text-decoration:none;
+        font-weight:600;
+      "
+    >
+      Reservar mesa
+    </a>
+  </div>
 </header>
 
 <section>
-
   <div class="card">
     <h2 id="welcomeTitle">Bienvenidos</h2>
     <p id="welcomeText">
@@ -124,33 +112,97 @@
   <div class="card">
     <h2 id="contactTitle">Contacto</h2>
 
-    <div class="btn-group">
+    <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:20px;">
       <a
         href="https://www.google.com/maps/search/?api=1&query=Carrer+Bailen+221+Barcelona"
         target="_blank"
-        class="btn btn-dark"
+        style="
+          padding:14px 24px;
+          background:#111;
+          color:white;
+          border-radius:30px;
+          text-decoration:none;
+          font-size:15px;
+        "
       >
         🗺 Cómo llegar
       </a>
 
       <a
         href="tel:631669393"
-        class="btn btn-light"
+        style="
+          padding:14px 24px;
+          background:#e5e5e5;
+          color:#111;
+          border-radius:30px;
+          text-decoration:none;
+          font-size:15px;
+        "
       >
         📞 Llamar
       </a>
 
       <a
-        id="reserveBtn"
-        href="https://wa.me/34631669393?text=Hola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%0AFecha%3A%0AHora%3A%0APersonas%3A"
+        href="https://wa.me/34631669393"
         target="_blank"
-        class="btn btn-green"
+        style="
+          padding:14px 24px;
+          background:#25D366;
+          color:white;
+          border-radius:30px;
+          text-decoration:none;
+          font-size:15px;
+        "
       >
-        💬 Reservar mesa
+        💬 WhatsApp
       </a>
     </div>
   </div>
 
+  <div class="card">
+    <h2 id="galleryTitle">Nuestro restaurante</h2>
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:20px;
+    ">
+      <img src="interior-1.jpg" style="width:100%; border-radius:14px;">
+      <img src="interior-2.jpg" style="width:100%; border-radius:14px;">
+      <img src="interior-3.jpg" style="width:100%; border-radius:14px;">
+      <img src="exterior.jpg" style="width:100%; border-radius:14px;">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="menuTitle">Recomendados</h2>
+
+    <ul style="font-size:17px; line-height:1.8;">
+      <li>🍣 Sushi Combo</li>
+      <li>🍤 Uramaki Tempura Langostino</li>
+      <li>🌶 Uramaki Spicy Atún</li>
+      <li>🥑 California Roll</li>
+    </ul>
+
+    <p style="margin-top:20px;">
+      <a
+        href="https://queresto.com/MISSMISI"
+        target="_blank"
+        style="
+          display:inline-block;
+          padding:12px 26px;
+          background:#111;
+          color:white;
+          border-radius:30px;
+          text-decoration:none;
+          font-size:15px;
+        "
+      >
+        Ver menú completo
+      </a>
+    </p>
+  </div>
 </section>
 
 <footer>
@@ -160,38 +212,29 @@
 <script>
   let lang = "es";
 
+  function setText(id, es, en) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = lang === "es" ? es : en;
+  }
+
   function toggleLang() {
     lang = lang === "es" ? "en" : "es";
 
-    document.getElementById("tagline").innerText =
-      lang === "es"
-        ? "Cocina japonesa moderna en Barcelona"
-        : "Modern Japanese cuisine in Barcelona";
-
-    document.getElementById("welcomeTitle").innerText =
-      lang === "es" ? "Bienvenidos" : "Welcome";
-
-    document.getElementById("welcomeText").innerText =
-      lang === "es"
-        ? "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle."
-        : "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail.";
-
-    document.getElementById("findUs").innerText =
-      lang === "es" ? "Encuéntranos" : "Find us";
-
-    document.getElementById("contactTitle").innerText =
-      lang === "es" ? "Contacto" : "Contact";
+    setText("tagline", "Cocina japonesa moderna en Barcelona", "Modern Japanese cuisine in Barcelona");
+    setText("welcomeTitle", "Bienvenidos", "Welcome");
+    setText(
+      "welcomeText",
+      "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle.",
+      "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail."
+    );
+    setText("findUs", "Encuéntranos", "Find us");
+    setText("contactTitle", "Contacto", "Contact");
+    setText("galleryTitle", "Nuestro restaurante", "Our restaurant");
+    setText("menuTitle", "Recomendados", "Chef’s Picks");
 
     const reserveBtn = document.getElementById("reserveBtn");
-
-    if (lang === "en") {
-      reserveBtn.innerText = "💬 Book a table";
-      reserveBtn.href =
-        "https://wa.me/34631669393?text=Hello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0AGuests%3A";
-    } else {
-      reserveBtn.innerText = "💬 Reservar mesa";
-      reserveBtn.href =
-        "https://wa.me/34631669393?text=Hola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%0AFecha%3A%0AHora%3A%0APersonas%3A";
+    if (reserveBtn) {
+      reserveBtn.innerText = lang === "es" ? "Reservar mesa" : "Book a table";
     }
   }
 </script>
