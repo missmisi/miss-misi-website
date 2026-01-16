@@ -1,74 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>MISS MISI · Japanese Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+background: #fafafa;
+color: #111;
+}
+
+header {
+padding: 60px 20px;
+text-align: center;
+background: white;
+position: relative;
+}
+
+.lang-btn {
+position: absolute;
+top: 20px;
+right: 20px;
+border: 1px solid #ddd;
+background: white;
+padding: 6px 12px;
+border-radius: 20px;
+cursor: pointer;
+font-size: 14px;
+}
+
+header h1 {
+font-size: 48px;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+
+section {
+max-width: 900px;
+margin: 0 auto;
+padding: 50px 20px;
+}
+
+.card {
+background: white;
+border-radius: 16px;
+padding: 30px;
+margin-bottom: 30px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+footer {
+text-align: center;
+padding: 30px;
+font-size: 14px;
+color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<button class="lang-btn" onclick="toggleLang()">EN / ES</button>
+<h1>MISS MISI</h1>
+<p id="tagline">Cocina japonesa moderna en Barcelona</p>
+</header>
+
+<section>
+<div class="card">
+<h2 id="welcomeTitle">Bienvenidos</h2>
+<p id="welcomeText">
+MISS MISI es un restaurante de cocina japonesa moderna,
+donde el sushi se prepara al momento con ingredientes frescos
+y una atención cuidada al detalle.
+</p>
+</div>
+
+<div class="card">
+<h2 id="findUs">Encuéntranos</h2>
+<p>
+📍 Carrer Bailèn 221, 08037 Barcelona<br />
 📞 631 669 393 · 931 798 664
 </p>
 </div>
-  <div class="card">
-  <h2 id="contactTitle">Contacto</h2>
-
-  <div style="
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  ">
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Carrer+Bailen+221+Barcelona"
-      target="_blank"
-      style="
-        padding: 14px 22px;
-        background: #111;
-        color: white;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      🗺 Cómo llegar
-    </a>
-
-    <a
-      href="tel:631669393"
-      style="
-        padding: 14px 22px;
-        background: #e5e5e5;
-        color: #111;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      📞 Llamar
-    </a>
-
-    <a
-      href="https://wa.me/34631669393"
-      target="_blank"
-      style="
-        padding: 14px 22px;
-        background: #25D366;
-        color: white;
-        border-radius: 30px;
-        text-decoration: none;
-        font-size: 15px;
-      "
-    >
-      💬 WhatsApp
-    </a>
-  </div>
-</div>
-
 <div class="card">
 <h2 id="menuTitle">Recomendados</h2>
 <div class="card">
-@@ -197,6 +252,13 @@ <h2 id="galleryTitle">Nuestro restaurante</h2>
-"Nuestro restaurante",
-"Our restaurant"
-);
-    
-    setText(
-  "contactTitle",
-  "Contacto",
-  "Contact"
-);
+<h2 id="galleryTitle">Nuestro restaurante</h2>
 
+<div style="
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 16px;
+   margin-top: 20px;
+ ">
+<img src="interior-1.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
+<img src="interior-2.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
+<img src="interior-3.jpg" alt="Interior MISS MISI" style="width:100%; border-radius:14px;">
+<img src="exterior.jpg" alt="Exterior MISS MISI" style="width:100%; border-radius:14px;">
+</div>
+</div>
+
+
+<img
+src="sushi-combo.jpg"
+alt="Sushi combo MISS MISI"
+style="
+     width: 100%;
+     max-width: 600px;
+     display: block;
+     margin: 20px auto;
+     border-radius: 16px;
+   "
+/>
+
+<ul style="font-size: 17px; line-height: 1.8;">
+<li>🍣 Sushi Combo</li>
+<li>🍤 Uramaki Tempura Langostino</li>
+<li>🌶 Uramaki Spicy Atún</li>
+<li>🥑 California Roll</li>
+</ul>
+
+<p style="margin-top: 20px;">
+<a
+href="https://queresto.com/MISSMISI"
+target="_blank"
+style="
+       display: inline-block;
+       padding: 12px 24px;
+       background: #111;
+       color: white;
+       border-radius: 30px;
+       text-decoration: none;
+       font-size: 15px;
+     "
+>
+Ver menú completo
+</a>
+</p>
+</div>
+
+</section>
+
+<footer>
+© MISS MISI · Barcelona
+</footer>
+
+<script>
+let lang = "es";
+
+  function toggleLang(document.getElementById("galleryTitle").innerText =
+  lang === "es" ? "Nuestro restaurante" : "Our restaurant";
+) {document.getElementById("menuTitle").innerText =
+  lang === "es" ? "Recomendados" : "Chef’s Picks";
+  function setText(id, es, en) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.innerText = lang === "es" ? es : en;
+    }
+  }
+
+  function toggleLang() {
+lang = lang === "es" ? "en" : "es";
+
+    document.getElementById("tagline").innerText =
+      lang === "es"
+        ? "Cocina japonesa moderna en Barcelona"
+        : "Modern Japanese cuisine in Barcelona";
+
+    document.getElementById("welcomeTitle").innerText =
+      lang === "es" ? "Bienvenidos" : "Welcome";
+
+    document.getElementById("welcomeText").innerText =
+      lang === "es"
+        ? "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle."
+        : "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail.";
+
+    document.getElementById("findUs").innerText =
+      lang === "es" ? "Encuéntranos" : "Find us";
+    setText(
+      "tagline",
+      "Cocina japonesa moderna en Barcelona",
+      "Modern Japanese cuisine in Barcelona"
+    );
+
+    setText(
+      "welcomeTitle",
+      "Bienvenidos",
+      "Welcome"
+    );
+
+    setText(
+      "welcomeText",
+      "MISS MISI es un restaurante de cocina japonesa moderna, donde el sushi se prepara al momento con ingredientes frescos y una atención cuidada al detalle.",
+      "MISS MISI is a modern Japanese restaurant where sushi is freshly prepared with premium ingredients and careful attention to detail."
+    );
+
+    setText(
+      "findUs",
+      "Encuéntranos",
+      "Find us"
+    );
+
+    setText(
+      "menuTitle",
+      "Recomendados",
+      "Chef’s Picks"
+    );
+
+    setText(
+      "galleryTitle",
+      "Nuestro restaurante",
+      "Our restaurant"
+    );
 }
 </script>
+
+
+</body>
+</html>
