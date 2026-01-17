@@ -1,115 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>MISS MISI · Menu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>MISS MISI · Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #fafafa;
-      color: #111;
-    }
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:#fafafa;
+  color:#111;
+}
+header{
+  padding:50px 20px;
+  text-align:center;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.lang-btn{
+  position:absolute;
+  top:20px;
+  right:20px;
+  border:1px solid #ddd;
+  background:#fff;
+  padding:6px 14px;
+  border-radius:20px;
+  cursor:pointer;
+}
+section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px 120px;
+}
+.category{
+  margin-bottom:60px;
+}
+.category h2{
+  font-size:26px;
+  border-bottom:2px solid #111;
+  display:inline-block;
+  padding-bottom:6px;
+  margin-bottom:25px;
+}
+.item{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:18px;
+}
+.item-name{font-weight:600;}
+.item-desc{font-size:14px;color:#666;margin-top:4px;}
+.price{white-space:nowrap;font-weight:600;}
 
-    header {
-      padding: 50px 20px;
-      text-align: center;
-      background: #fff;
-      position: relative;
-      border-bottom: 1px solid #eee;
-    }
+.reserve{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:999;
+}
+.reserve a{
+  background:#25D366;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
 
-    .lang-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      border: 1px solid #ddd;
-      background: white;
-      padding: 6px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-      letter-spacing: 2px;
-    }
-
-    header p {
-      margin-top: 10px;
-      color: #666;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px 80px;
-    }
-
-    .category {
-      margin-bottom: 50px;
-    }
-
-    .category h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #111;
-      display: inline-block;
-      padding-bottom: 6px;
-    }
-
-    .item {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 18px;
-    }
-
-    .item-name {
-      font-weight: 600;
-    }
-
-    .item-desc {
-      font-size: 14px;
-      color: #666;
-      margin-top: 4px;
-    }
-
-    .price {
-      white-space: nowrap;
-      font-weight: 600;
-    }
-
-    .reserve-box {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .reserve-btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 14px 22px;
-      border-radius: 30px;
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#777;
+}
+</style>
 </head>
 
 <body>
@@ -122,119 +88,133 @@
 
 <section>
 
-  <!-- ENTRANTES -->
-  <div class="category">
-    <h2 id="c1">Entrantes</h2>
+<div class="category">
+<h2>Entrantes</h2>
 
-    <div class="item">
-      <div>
-        <div class="item-name">Edamame</div>
-        <div class="item-desc">Judías verdes al vapor con sal marina</div>
-      </div>
-      <div class="price">€4.50</div>
-    </div>
+<div class="item">
+<div>
+<div class="item-name">Edamame</div>
+<div class="item-desc">Judías verdes al vapor</div>
+</div>
+<div class="price">€3.60</div>
+</div>
 
-    <div class="item">
-      <div>
-        <div class="item-name">Gyozas de pollo</div>
-        <div class="item-desc">Empanadillas japonesas a la plancha</div>
-      </div>
-      <div class="price">€6.90</div>
-    </div>
-  </div>
+<div class="item">
+<div>
+<div class="item-name">Gyoza de pollo</div>
+<div class="item-desc">Empanadillas japonesas (5u)</div>
+</div>
+<div class="price">€6.50</div>
+</div>
 
-  <!-- SUSHI & SASHIMI -->
-  <div class="category">
-    <h2 id="c2">Sushi & Sashimi</h2>
+<div class="item">
+<div>
+<div class="item-name">EBI no FURAI</div>
+<div class="item-desc">Langostinos fritos</div>
+</div>
+<div class="price">€8.20</div>
+</div>
+</div>
 
-    <div class="item">
-      <div>
-        <div class="item-name">Sashimi de atún</div>
-        <div class="item-desc">Atún fresco cortado a mano</div>
-      </div>
-      <div class="price">€14.50</div>
-    </div>
+<div class="category">
+<h2>Sashimi</h2>
 
-    <div class="item">
-      <div>
-        <div class="item-name">Nigiri salmón (2 pcs)</div>
-        <div class="item-desc">Arroz avinagrado con salmón fresco</div>
-      </div>
-      <div class="price">€5.80</div>
-    </div>
-  </div>
+<div class="item">
+<div>
+<div class="item-name">Sashimi salmón (3u)</div>
+</div>
+<div class="price">€5.50</div>
+</div>
 
-  <!-- URAMAKI -->
-  <div class="category">
-    <h2 id="c3">Uramaki</h2>
+<div class="item">
+<div>
+<div class="item-name">Sashimi atún (3u)</div>
+</div>
+<div class="price">€6.00</div>
+</div>
 
-    <div class="item">
-      <div>
-        <div class="item-name">California Roll</div>
-        <div class="item-desc">Cangrejo, aguacate y pepino</div>
-      </div>
-      <div class="price">€8.50</div>
-    </div>
+<div class="item">
+<div>
+<div class="item-name">Sashimi mixto</div>
+</div>
+<div class="price">€17.00</div>
+</div>
+</div>
 
-    <div class="item">
-      <div>
-        <div class="item-name">Uramaki Spicy Atún</div>
-        <div class="item-desc">Atún picante, aguacate y salsa especial</div>
-      </div>
-      <div class="price">€9.80</div>
-    </div>
-  </div>
+<div class="category">
+<h2>Nigiri</h2>
 
-  <!-- RAMEN -->
-  <div class="category">
-    <h2 id="c4">Ramen</h2>
+<div class="item">
+<div><div class="item-name">Nigiri salmón (2u)</div></div>
+<div class="price">€4.20</div>
+</div>
 
-    <div class="item">
-      <div>
-        <div class="item-name">Miso Ramen</div>
-        <div class="item-desc">Caldo miso, cerdo, huevo y verduras</div>
-      </div>
-      <div class="price">€10.95</div>
-    </div>
-  </div>
+<div class="item">
+<div><div class="item-name">Nigiri atún (2u)</div></div>
+<div class="price">€5.60</div>
+</div>
+
+<div class="item">
+<div><div class="item-name">Nigiri anguila (2u)</div></div>
+<div class="price">€6.20</div>
+</div>
+</div>
+
+<div class="category">
+<h2>Uramaki</h2>
+
+<div class="item">
+<div>
+<div class="item-name">California roll</div>
+<div class="item-desc">Cangrejo, aguacate y pepino</div>
+</div>
+<div class="price">€6.80</div>
+</div>
+
+<div class="item">
+<div>
+<div class="item-name">Uramaki salmón</div>
+</div>
+<div class="price">€7.50</div>
+</div>
+
+<div class="item">
+<div>
+<div class="item-name">Uramaki spicy atún</div>
+</div>
+<div class="price">€9.80</div>
+</div>
+</div>
+
+<div class="category">
+<h2>Ramen</h2>
+
+<div class="item">
+<div>
+<div class="item-name">Miso ramen</div>
+<div class="item-desc">Cerdo, huevo y verduras</div>
+</div>
+<div class="price">€10.95</div>
+</div>
+</div>
 
 </section>
 
-<!-- SINGLE RESERVATION BUTTON -->
-<div class="reserve-box">
-  <a
-    class="reserve-btn"
-    href="https://wa.me/34631669393?text=Hello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0AGuests%3A%0A%0AThank%20you.%0A%0A---%0A%0AHola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%0AFecha%3A%0AHora%3A%0APersonas%3A%0A%0AGracias."
-    target="_blank"
-  >
-    📲 Reservar por WhatsApp
-  </a>
+<div class="reserve">
+<a href="https://wa.me/34631669393" target="_blank">📲 Reservar por WhatsApp</a>
 </div>
 
 <footer>
-  © MISS MISI · Barcelona
+© MISS MISI · Barcelona
 </footer>
 
 <script>
-  let lang = "es";
-
-  function toggleLang() {
-    lang = lang === "es" ? "en" : "es";
-
-    document.getElementById("subtitle").innerText =
-      lang === "es"
-        ? "Menu · Cocina japonesa moderna"
-        : "Menu · Modern Japanese Cuisine";
-
-    document.getElementById("c1").innerText =
-      lang === "es" ? "Entrantes" : "Starters";
-    document.getElementById("c2").innerText =
-      lang === "es" ? "Sushi & Sashimi" : "Sushi & Sashimi";
-    document.getElementById("c3").innerText =
-      lang === "es" ? "Uramaki" : "Uramaki Rolls";
-    document.getElementById("c4").innerText =
-      lang === "es" ? "Ramen" : "Ramen";
-  }
+let lang="es";
+function toggleLang(){
+lang=lang==="es"?"en":"es";
+document.getElementById("subtitle").innerText=
+lang==="es"?"Menu · Cocina japonesa moderna":"Menu · Modern Japanese Cuisine";
+}
 </script>
 
 </body>
