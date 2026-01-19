@@ -3,7 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MISS MISI · Menu</title>
+
+<!-- SEO TITLE -->
+<title>MISS MISI | Japanese Restaurant in Barcelona · Sushi · Ramen</title>
+
+<!-- SEO DESCRIPTION -->
+<meta name="description" content="MISS MISI is a modern Japanese restaurant in Barcelona. Sushi, ramen, wok dishes and desserts. Located at Carrer Bailèn 221.">
+
+<!-- SEO KEYWORDS -->
+<meta name="keywords" content="Japanese restaurant Barcelona, sushi Barcelona, ramen Barcelona, MISS MISI, Japanese food Barcelona">
+
+<!-- LANGUAGE -->
+<link rel="alternate" hreflang="es" href="#">
+<link rel="alternate" hreflang="en" href="#">
+
+<!-- LOCAL BUSINESS SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "MISS MISI",
+  "image": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer Bailèn 221",
+    "addressLocality": "Barcelona",
+    "postalCode": "08037",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34 631 669 393",
+  "servesCuisine": ["Japanese", "Sushi"],
+  "priceRange": "€€",
+  "url": ""
+}
+</script>
 
 <style>
 body{
@@ -13,7 +46,7 @@ body{
   color:#111;
 }
 
-/* Top nav */
+/* NAV */
 .nav{
   position:sticky;
   top:0;
@@ -31,9 +64,6 @@ body{
   font-size:14px;
   white-space:nowrap;
 }
-.nav a:hover{
-  text-decoration:underline;
-}
 
 header{
   text-align:center;
@@ -42,11 +72,10 @@ header{
 h1{
   font-size:42px;
   letter-spacing:2px;
-  margin:0;
 }
 .subtitle{
-  margin-top:10px;
   color:#666;
+  margin-top:8px;
 }
 
 .lang-btn{
@@ -57,7 +86,6 @@ h1{
   padding:6px 14px;
   border-radius:20px;
   cursor:pointer;
-  font-size:14px;
   background:#fff;
   z-index:1000;
 }
@@ -83,23 +111,18 @@ section{
   margin-top:20px;
   gap:20px;
 }
-.item-info{ max-width:80%; }
 .name{ font-weight:600; }
 .desc{
   font-size:14px;
   color:#666;
   margin-top:4px;
 }
-.price{
-  white-space:nowrap;
-  font-weight:600;
-}
+.price{ font-weight:600; }
 </style>
 </head>
 
 <body>
 
-<!-- CATEGORY NAV -->
 <div class="nav">
   <a href="#entrantes" data-es="Entrantes" data-en="Starters"></a>
   <a href="#uramaki">Uramaki</a>
@@ -113,41 +136,31 @@ section{
 
 <header>
   <h1>MISS MISI</h1>
-  <div class="subtitle" data-es="Menú · Cocina Japonesa Moderna"
-       data-en="Menu · Modern Japanese Cuisine"></div>
+  <div class="subtitle"
+    data-es="Menú · Cocina japonesa moderna en Barcelona"
+    data-en="Menu · Modern Japanese cuisine in Barcelona"></div>
 </header>
 
 <section>
 
-<!-- ENTRANTES -->
 <div class="category" id="entrantes">
 <h2 data-es="Entrantes" data-en="Starters"></h2>
 
 <div class="item">
-  <div class="item-info">
+  <div>
     <div class="name">Edamame</div>
-    <div class="desc" data-es="Soja verde al vapor con sal"
-         data-en="Steamed green soybeans with sea salt"></div>
+    <div class="desc"
+      data-es="Soja verde al vapor con sal"
+      data-en="Steamed green soybeans with sea salt"></div>
   </div>
   <div class="price">€4.50</div>
 </div>
-
-<div class="item">
-  <div class="item-info">
-    <div class="name">Gyozas de pollo</div>
-    <div class="desc" data-es="Empanadillas japonesas a la plancha"
-         data-en="Japanese pan-fried chicken dumplings"></div>
-  </div>
-  <div class="price">€6.90</div>
-</div>
 </div>
 
-<!-- URAMAKI -->
 <div class="category" id="uramaki">
 <h2>Uramaki</h2>
-
 <div class="item">
-  <div class="item-info">
+  <div>
     <div class="name">California Roll</div>
     <div class="desc"
       data-es="Cangrejo, aguacate y pepino"
@@ -157,57 +170,49 @@ section{
 </div>
 </div>
 
-<!-- RAMEN -->
 <div class="category" id="ramen">
 <h2>Ramen</h2>
-
 <div class="item">
-  <div class="item-info">
+  <div>
     <div class="name">Shoyu Ramen</div>
     <div class="desc"
-      data-es="Caldo de pollo y cerdo, soja, huevo y pollo crujiente"
-      data-en="Chicken & pork broth, soy sauce, egg and crispy chicken"></div>
+      data-es="Caldo de pollo y cerdo, soja y huevo"
+      data-en="Chicken & pork broth with soy and egg"></div>
   </div>
   <div class="price">€10.95</div>
 </div>
 </div>
 
-<!-- WOK -->
 <div class="category" id="wok">
 <h2>Wok</h2>
-
 <div class="item">
-  <div class="item-info">
-    <div class="name">Fideos de arroz</div>
+  <div>
+    <div class="name">Fideos salteados</div>
     <div class="desc"
-      data-es="Salteados al wok con verduras"
-      data-en="Stir-fried rice noodles with vegetables"></div>
+      data-es="Fideos al wok con verduras"
+      data-en="Stir-fried noodles with vegetables"></div>
   </div>
   <div class="price">€8.50</div>
 </div>
 </div>
 
-<!-- POSTRES -->
 <div class="category" id="postres">
 <h2 data-es="Postres" data-en="Desserts"></h2>
-
 <div class="item">
-  <div class="item-info">
-    <div class="name">Mochi té verde</div>
+  <div>
+    <div class="name">Mochi</div>
     <div class="desc"
-      data-es="Mochi relleno de mousse de té verde"
-      data-en="Green tea mousse filled mochi"></div>
+      data-es="Mochi japonés"
+      data-en="Japanese mochi"></div>
   </div>
   <div class="price">€4.50</div>
 </div>
 </div>
 
-<!-- BEBIDAS -->
 <div class="category" id="bebidas">
 <h2 data-es="Bebidas" data-en="Drinks"></h2>
-
 <div class="item">
-  <div class="item-info">
+  <div>
     <div class="name">Agua</div>
     <div class="desc"
       data-es="Agua mineral"
