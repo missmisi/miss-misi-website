@@ -11,20 +11,9 @@
         html { scroll-behavior: smooth; }
         body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
 
-        nav { 
-            position: fixed; top: 0; width: 100%; padding: 20px 40px; 
-            display: flex; justify-content: space-between; align-items: center; 
-            background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; 
-        }
-
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; }
         .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
-
-        .lang-btn { 
-            background: none; border: 1px solid var(--gold); color: var(--gold);
-            padding: 6px 18px; border-radius: 20px; cursor: pointer; 
-            font-weight: bold; transition: 0.3s; z-index: 10000;
-        }
-
+        .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
         .lang-btn:hover { background: var(--gold); color: var(--black); }
 
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
@@ -32,26 +21,20 @@
 
         .menu-preview { padding: 100px 10%; background: var(--black); text-align: center; }
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
-        
-        .category-card { 
-            background: var(--grey); padding: 50px 30px; border: 1px solid #333; transition: 0.4s; 
-            text-decoration: none; color: white; display: block; cursor: pointer;
-        }
+        .category-card { background: var(--grey); padding: 50px 30px; border: 1px solid #333; transition: 0.4s; text-decoration: none; color: white; display: block; cursor: pointer; }
         .category-card:hover { border-color: var(--gold); transform: translateY(-10px); background: #222; }
         .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 24px; margin-bottom: 15px; }
-        .category-card p { font-size: 14px; opacity: 0.8; }
 
         .detail-section { padding: 80px 10%; background: #0f0f0f; border-top: 1px solid #222; }
         .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 32px; border-bottom: 1px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
-        
-        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .dish-item { display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding-bottom: 15px; }
-        .dish-info h4 { font-size: 18px; margin-bottom: 5px; }
-        .dish-info p { font-size: 13px; color: #aaa; }
-        .dish-price { color: var(--gold); font-weight: bold; font-size: 18px; }
+        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .dish-item { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #222; padding: 15px 0; }
+        .dish-info h4 { font-size: 18px; color: var(--white); margin-bottom: 4px; }
+        .dish-info p { font-size: 13px; color: #888; }
+        .dish-price { color: var(--gold); font-weight: 500; font-size: 18px; margin-left: 15px; }
 
-        footer { padding: 60px 20px; text-align: center; color: #666; }
-        .cta-btn { display: inline-block; padding: 15px 40px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 2px; margin-top: 50px; }
+        footer { padding: 60px 20px; text-align: center; color: #666; font-size: 14px; }
+        .cta-btn { display: inline-block; padding: 15px 40px; background: #25D366; color: white; text-decoration: none; font-weight: bold; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -63,152 +46,116 @@
 
     <section class="hero">
         <h1>MISS MISI</h1>
-        <p id="heroTag" style="color:var(--gold); letter-spacing: 5px;">JAPANESE MODERN KITCHEN</p>
+        <p id="heroSub" style="color:var(--gold); letter-spacing: 5px;">JAPANESE MODERN KITCHEN</p>
     </section>
 
-    <section class="menu-preview" id="menu">
-        <h2 id="selectionTitle" style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">SELECTION</h2>
+    <section class="menu-preview">
+        <h2 id="selTitle" style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">SELECTION</h2>
         <div class="menu-grid">
-            <a href="#starters-detail" class="category-card">
-                <h3 id="cat1Title">STARTERS</h3>
-                <p id="cat1Desc">Descubre nuestra selección de entrantes artesanales.</p>
-                <div style="margin-top:20px; color:var(--gold);" id="cat1Btn">Explore Category →</div>
+            <a href="#starters-list" class="category-card">
+                <h3 id="cat1T">STARTERS</h3>
+                <p id="cat1D">Entrantes calientes y fríos para empezar.</p>
             </a>
-            <a href="#uramaki-detail" class="category-card">
-                <h3 id="cat2Title">URAMAKI</h3>
-                <p id="cat2Desc">Rollos creativos con los ingredientes más frescos.</p>
-                <div style="margin-top:20px; color:var(--gold);" id="cat2Btn">Explore Category →</div>
+            <a href="#" class="category-card">
+                <h3 id="cat2T">URAMAKI</h3>
+                <p id="cat2D">Nuestros rollos más especiales y creativos.</p>
             </a>
-            <a href="#wok-detail" class="category-card">
-                <h3 id="cat3Title">WOK & RAMEN</h3>
-                <p id="cat3Desc">El sabor del fuego y el alma de la cocina japonesa.</p>
-                <div style="margin-top:20px; color:var(--gold);" id="cat3Btn">Explore Category →</div>
+            <a href="#" class="category-card">
+                <h3 id="cat3T">WOK & RAMEN</h3>
+                <p id="cat3D">Platos calientes llenos de tradición.</p>
             </a>
         </div>
     </section>
 
-    <section id="starters-detail" class="detail-section">
-        <h2 id="startersTitle">ENTRANTES / STARTERS</h2>
+    <section id="starters-list" class="detail-section">
+        <h2 id="list1T">ENTRANTES / STARTERS</h2>
         <div class="dish-list">
-            <div class="dish-item">
-                <div class="dish-info"><h4>Edamame</h4><p id="d1Desc">Soja verde al vapor con sal volcánica.</p></div>
-                <div class="dish-price">4.50€</div>
-            </div>
-            <div class="dish-item">
-                <div class="dish-info"><h4 id="d2Name">Gyoza de Pollo</h4><p id="d2Desc">Empanadillas japonesas de pollo (5 uds).</p></div>
-                <div class="dish-price">7.50€</div>
-            </div>
-            <div class="dish-item">
-                <div class="dish-info"><h4 id="d3Name">Ebi Tempura</h4><p id="d3Desc">Langostinos en tempura crujiente.</p></div>
-                <div class="dish-price">9.50€</div>
-            </div>
-            <div class="dish-item">
-                <div class="dish-info"><h4 id="d4Name">Wakame Salad</h4><p id="d4Desc">Algas marinas con sésamo.</p></div>
-                <div class="dish-price">5.50€</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="uramaki-detail" class="detail-section">
-        <h2 id="uramakiTitle">URAMAKI SELECTION</h2>
-        <div class="dish-list">
-            <div class="dish-item">
-                <div class="dish-info"><h4>California Roll</h4><p id="d5Desc">Cangrejo, aguacate y pepino.</p></div>
-                <div class="dish-price">8.90€</div>
-            </div>
-            <div class="dish-item">
-                <div class="dish-info"><h4>Spicy Tuna</h4><p id="d6Desc">Atún y mayonesa picante.</p></div>
-                <div class="dish-price">12.50€</div>
-            </div>
-            <div class="dish-item">
-                <div class="dish-info"><h4>Dragon Roll</h4><p id="d7Desc">Anguila, aguacate y salsa unagi.</p></div>
-                <div class="dish-price">14.50€</div>
-            </div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n1">Salmón Teriyaki</h4><p id="d1">Salmón a la plancha con salsa teriyaki.</p></div><div class="dish-price">11,90€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n2">Ebi Tempura (5 uds)</h4><p id="d2">Langostinos fritos en tempura japonesa.</p></div><div class="dish-price">10,90€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n3">Tempura de Verdura</h4><p id="d3">Variedad de verduras fritas en tempura.</p></div><div class="dish-price">10,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n4">Ebi No Furai (5 uds)</h4><p id="d4">Langostinos rebozados en panko crujiente.</p></div><div class="dish-price">8,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n5">Gyoza Mixta (6 uds)</h4><p id="d5">Variedad de nuestras mejores empanadillas.</p></div><div class="dish-price">7,90€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n6">Gyoza de Langostino (5 uds)</h4><p id="d6">Empanadillas rellenas de langostino.</p></div><div class="dish-price">7,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n7">Gyoza de Cerdo (5 uds)</h4><p id="d7">Clásicas empanadillas de carne de cerdo.</p></div><div class="dish-price">5,90€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n8">Pollo Katsu</h4><p id="d8">Pechuga de pollo crujiente al estilo japonés.</p></div><div class="dish-price">4,55€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n9">Tori No Karaage (5 uds)</h4><p id="d9">Pollo marinado y frito al estilo japonés.</p></div><div class="dish-price">4,55€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n10">Takoyaki (4 uds)</h4><p id="d10">Bolitas de masa rellenas de pulpo.</p></div><div class="dish-price">6,55€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n11">Rollitos de Vegetales</h4><p id="d11">Rollitos crujientes rellenos de verdura.</p></div><div class="dish-price">5,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n12">Gyoza de Pollo (5 uds)</h4><p id="d12">Empanadillas rellenas de pollo y verduras.</p></div><div class="dish-price">5,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n13">Edamame</h4><p id="d13">Soja verde al vapor con escamas de sal.</p></div><div class="dish-price">4,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n14">Gyoza de Vegetal (5 uds)</h4><p id="d14">Empanadillas rellenas de mezcla de verduras.</p></div><div class="dish-price">5,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n15">Wakame Salad</h4><p id="d15">Ensalada de algas marinas con sésamo.</p></div><div class="dish-price">4,55€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n16">Arroz Blanco</h4><p id="d16">Cuenco de arroz japonés al vapor.</p></div><div class="dish-price">2,50€</div></div>
         </div>
     </section>
 
     <div style="text-align: center; background: #0f0f0f; padding-bottom: 80px;">
-        <a href="https://wa.me/34631669393" class="cta-btn" id="waBtn">RESERVAR POR WHATSAPP</a>
+        <a href="https://wa.me/34631669393" class="cta-btn" id="waB">RESERVAR POR WHATSAPP</a>
     </div>
 
-    <footer>
-        📍 Carrer Bailèn 221, Barcelona <br><br>
-        © MISS MISI 2026
-    </footer>
+    <footer>📍 Carrer Bailèn 221, Barcelona | © MISS MISI 2026</footer>
 
     <script>
         let currentLang = 'es';
-
-        const translations = {
+        const dictionary = {
             en: {
-                langBtn: "ES",
-                heroTag: "JAPANESE MODERN KITCHEN",
-                selectionTitle: "SELECTION",
-                cat1Title: "STARTERS",
-                cat1Desc: "Discover our selection of handcrafted starters.",
-                cat1Btn: "Explore Category →",
-                cat2Title: "URAMAKI",
-                cat2Desc: "Creative rolls with the freshest ingredients.",
-                cat2Btn: "Explore Category →",
-                cat3Title: "WOK & RAMEN",
-                cat3Desc: "The flavor of fire and the soul of Japan.",
-                cat3Btn: "Explore Category →",
-                startersTitle: "STARTERS",
-                d1Desc: "Steamed green soybeans with volcanic salt.",
-                d2Name: "Chicken Gyoza",
-                d2Desc: "Japanese chicken dumplings (5 pcs).",
-                d3Name: "Ebi Tempura",
-                d3Desc: "Crispy tempura prawns.",
-                d4Name: "Wakame Salad",
-                d4Desc: "Seaweed with sesame seeds.",
-                uramakiTitle: "URAMAKI SELECTION",
-                d5Desc: "Crab, avocado and cucumber.",
-                d6Desc: "Tuna and spicy mayo.",
-                d7Desc: "Eel, avocado and unagi sauce.",
-                waBtn: "BOOK VIA WHATSAPP"
+                langBtn: "ES", heroSub: "JAPANESE MODERN KITCHEN", selTitle: "SELECTION",
+                cat1T: "STARTERS", cat1D: "Hot and cold starters to begin.",
+                cat2T: "URAMAKI", cat2D: "Our special and creative sushi rolls.",
+                cat3T: "WOK & RAMEN", cat3D: "Hot dishes full of tradition.",
+                list1T: "STARTERS",
+                n1: "Teriyaki Salmon", d1: "Grilled salmon with teriyaki sauce.",
+                n2: "Ebi Tempura (5 pcs)", d2: "Deep fried prawns in Japanese tempura.",
+                n3: "Vegetable Tempura", d3: "Assorted deep fried vegetables.",
+                n4: "Ebi No Furai (5 pcs)", d4: "Panko breaded crispy prawns.",
+                n5: "Mixed Gyoza (6 pcs)", d5: "Assortment of our best dumplings.",
+                n6: "Prawn Gyoza (5 pcs)", d6: "Dumplings filled with shrimp.",
+                n7: "Pork Gyoza (5 pcs)", d7: "Classic pork meat dumplings.",
+                n8: "Chicken Katsu", d8: "Crispy Japanese style chicken breast.",
+                n9: "Tori No Karaage (5 pcs)", d9: "Marinated Japanese fried chicken.",
+                n10: "Takoyaki (4 pcs)", d10: "Octopus balls with savory toppings.",
+                n11: "Vegetable Rolls", d11: "Crispy rolls filled with vegetables.",
+                n12: "Chicken Gyoza (5 pcs)", d12: "Dumplings filled with chicken and veggies.",
+                n13: "Edamame", d13: "Steamed soybeans with sea salt flakes.",
+                n14: "Vegetable Gyoza (5 pcs)", d14: "Dumplings filled with mixed vegetables.",
+                n15: "Wakame Salad", d15: "Seaweed salad with sesame seeds.",
+                n16: "Steamed Rice", d16: "Bowl of steamed Japanese rice.",
+                waB: "BOOK VIA WHATSAPP"
             },
             es: {
-                langBtn: "EN",
-                heroTag: "COCINA JAPONESA MODERNA",
-                selectionTitle: "SELECCIÓN",
-                cat1Title: "ENTRANTES",
-                cat1Desc: "Descubre nuestra selección de entrantes artesanales.",
-                cat1Btn: "Explorar Categoría →",
-                cat2Title: "URAMAKI",
-                cat2Desc: "Rollos creativos con los ingredientes más frescos.",
-                cat2Btn: "Explorar Categoría →",
-                cat3Title: "WOK & RAMEN",
-                cat3Desc: "El sabor del fuego y el alma de la cocina japonesa.",
-                cat3Btn: "Explorar Categoría →",
-                startersTitle: "ENTRANTES",
-                d1Desc: "Soja verde al vapor con sal volcánica.",
-                d2Name: "Gyoza de Pollo",
-                d2Desc: "Empanadillas japonesas de pollo (5 uds).",
-                d3Name: "Ebi Tempura",
-                d3Desc: "Langostinos en tempura crujiente.",
-                d4Name: "Wakame Salad",
-                d4Desc: "Algas marinas con sésamo.",
-                uramakiTitle: "SELECCIÓN URAMAKI",
-                d5Desc: "Cangrejo, aguacate y pepino.",
-                d6Desc: "Atún y mayonesa picante.",
-                d7Desc: "Anguila, aguacate y salsa unagi.",
-                waBtn: "RESERVAR POR WHATSAPP"
+                langBtn: "EN", heroSub: "COCINA JAPONESA MODERNA", selTitle: "SELECCIÓN",
+                cat1T: "ENTRANTES", cat1D: "Entrantes calientes y fríos para empezar.",
+                cat2T: "URAMAKI", cat2D: "Nuestros rollos más especiales y creativos.",
+                cat3T: "WOK & RAMEN", cat3D: "Platos calientes llenos de tradición.",
+                list1T: "ENTRANTES",
+                n1: "Salmón Teriyaki", d1: "Salmón a la plancha con salsa teriyaki.",
+                n2: "Ebi Tempura (5 uds)", d2: "Langostinos fritos en tempura japonesa.",
+                n3: "Tempura de Verdura", d3: "Variedad de verduras fritas en tempura.",
+                n4: "Ebi No Furai (5 uds)", d4: "Langostinos rebozados en panko crujiente.",
+                n5: "Gyoza Mixta (6 uds)", d5: "Variedad de nuestras mejores empanadillas.",
+                n6: "Gyoza de Langostino (5 uds)", d6: "Empanadillas rellenas de langostino.",
+                n7: "Gyoza de Cerdo (5 uds)", d7: "Clásicas empanadillas de carne de cerdo.",
+                n8: "Pollo Katsu", d8: "Pechuga de pollo crujiente al estilo japonés.",
+                n9: "Tori No Karaage (5 uds)", d9: "Pollo marinado y frito al estilo japonés.",
+                n10: "Takoyaki (4 uds)", d10: "Bolitas de masa rellenas de pulpo.",
+                n11: "Rollitos de Vegetales", d11: "Rollitos crujientes rellenos de verdura.",
+                n12: "Gyoza de Pollo (5 uds)", d12: "Empanadillas rellenas de pollo y verduras.",
+                n13: "Edamame", d13: "Soja verde al vapor con escamas de sal.",
+                n14: "Gyoza de Vegetal (5 uds)", d14: "Empanadillas rellenas de mezcla de verduras.",
+                n15: "Wakame Salad", d15: "Ensalada de algas marinas con sésamo.",
+                n16: "Arroz Blanco", d16: "Cuenco de arroz japonés al vapor.",
+                waB: "RESERVAR POR WHATSAPP"
             }
         };
 
         function toggleLang() {
             currentLang = (currentLang === 'es') ? 'en' : 'es';
-            const data = translations[currentLang];
-
-            // 循环翻译字典，替换页面中对应的 ID 文字
-            for (let id in data) {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.innerText = data[id];
-                }
+            const dict = dictionary[currentLang];
+            for (let id in dict) {
+                const el = document.getElementById(id);
+                if (el) el.innerText = dict[id];
             }
         }
     </script>
-
 </body>
 </html>
