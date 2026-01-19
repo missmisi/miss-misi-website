@@ -8,201 +8,215 @@
 <meta name="description" content="MISS MISI is a modern Japanese restaurant in Barcelona. Fresh sushi, ramen and wok dishes. Located at Carrer Bailèn 221.">
 
 <style>
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:#fafafa;
-  color:#111;
-}
+  /* 基础样式 */
+  html { scroll-behavior: smooth; } /* 让页面跳转时丝滑滚动 */
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background:#fafafa;
+    color:#111;
+  }
 
-header{
-  text-align:center;
-  padding:70px 20px 50px;
-  background:#fff;
-}
+  header{
+    text-align:center;
+    padding:70px 20px 50px;
+    background:#fff;
+  }
 
-h1{
-  font-size:48px;
-  letter-spacing:3px;
-}
+  h1{
+    font-size:48px;
+    letter-spacing:3px;
+    margin: 0;
+  }
 
-.subtitle{
-  color:#666;
-  margin-top:12px;
-  font-size:16px;
-}
+  .subtitle{
+    color:#666;
+    margin-top:12px;
+    font-size:16px;
+  }
 
-.lang-btn{
-  position:fixed;
-  top:20px;
-  right:20px;
-  border:1px solid #ddd;
-  background:#fff;
-  padding:6px 14px;
-  border-radius:20px;
-  cursor:pointer;
-  z-index:1000;
-}
+  /* 语言切换按钮 */
+  .lang-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    border:1px solid #ddd;
+    background:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    z-index:1000;
+    font-weight: bold;
+  }
 
-.header-buttons{
-  margin-top:30px;
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
+  .header-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
 
-.btn{
-  display:inline-block;
-  padding:14px 34px;
-  border-radius:30px;
-  font-size:16px;
-  text-decoration:none;
-}
+  .btn{
+    display:inline-block;
+    padding:14px 34px;
+    border-radius:30px;
+    font-size:16px;
+    text-decoration:none;
+    transition: 0.3s;
+  }
 
-.btn-menu{ background:#111; color:#fff; }
-.btn-reserve{ background:#25D366; color:#fff; }
+  .btn-menu{ background:#111; color:#fff; }
+  .btn-reserve{ background:#25D366; color:#fff; }
+  .btn:hover { opacity: 0.8; transform: translateY(-2px); }
 
-section{
-  max-width:900px;
-  margin:auto;
-  padding:50px 20px;
-}
+  section{
+    max-width:900px;
+    margin:auto;
+    padding:50px 20px;
+  }
 
-.card{
-  background:#fff;
-  border-radius:18px;
-  padding:34px;
-  margin-bottom:30px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-}
+  .card{
+    background:#fff;
+    border-radius:18px;
+    padding:34px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  }
 
-.menu-category{ margin-top:40px; }
-.menu-category h3{
-  font-size:24px;
-  border-bottom:2px solid #111;
-  display:inline-block;
-  padding-bottom:6px;
-}
+  .menu-category{ margin-top:40px; }
+  .menu-category h3{
+    font-size:24px;
+    border-bottom:2px solid #111;
+    display:inline-block;
+    padding-bottom:6px;
+  }
 
-.menu-item{
-  display:flex;
-  justify-content:space-between;
-  margin-top:18px;
-  gap:20px;
-}
+  .menu-item{
+    display:flex;
+    justify-content:space-between;
+    margin-top:18px;
+    gap:20px;
+  }
 
-.menu-name{ font-weight:600; }
-.menu-desc{ font-size:14px; color:#666; margin-top:4px; }
-.menu-price{ font-weight:600; }
+  .menu-name{ font-weight:600; }
+  .menu-desc{ font-size:14px; color:#666; margin-top:4px; }
+  .menu-price{ font-weight:600; }
 
-footer{
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-  color:#777;
-}
+  footer{
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    color:#777;
+  }
 </style>
 </head>
 
 <body>
 
-<button class="lang-btn" onclick="toggleLang()">EN / ES</button>
+<button class="lang-btn" onclick="toggleLang()" id="langSwitchBtn">English / Español</button>
 
 <header>
   <h1>MISS MISI</h1>
-  <div class="subtitle" id="subtitle"></div>
+  <div class="subtitle" id="subtitle">Cocina japonesa moderna en Barcelona</div>
 
   <div class="header-buttons">
-    <a href="#menu" class="btn btn-menu" id="btnMenu">Ver menu</a>
+    <a href="#menu-section" class="btn btn-menu" id="btnMenu">Ver menú</a>
     <a href="https://wa.me/34631669393?text=Hola%20MISS%20MISI%2C%0AReserva%20mesa%3A"
        target="_blank"
        class="btn btn-reserve"
-       id="btnReserve"></a>
+       id="btnReserve">Reservar mesa</a>
   </div>
 </header>
 
 <section>
 
-<div class="card">
-  <h2 id="philosophyTitle"></h2>
-  <p id="philosophyText"></p>
-</div>
+  <div class="card">
+    <h2 id="philosophyTitle">Nuestra filosofía</h2>
+    <p id="philosophyText">MISS MISI es un restaurante japonés moderno con más de 2 años de experiencia en Barcelona.</p>
+  </div>
 
-<div class="card" id="menu">
-  <h2 id="menuTitle"></h2>
+  <div class="card" id="menu-section">
+    <h2 id="menuTitle">Menú</h2>
 
-  <div class="menu-category">
-    <h3 id="startersTitle"></h3>
+    <div class="menu-category">
+      <h3 id="startersTitle">Entrantes</h3>
 
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Edamame</div>
-        <div class="menu-desc" id="edamameDesc"></div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Edamame</div>
+          <div class="menu-desc" id="edamameDesc">Soja verde al vapor con sal</div>
+        </div>
+        <div class="menu-price">€4.50</div>
       </div>
-      <div class="menu-price">€4.50</div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Uramaki</h3>
+
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">California Roll</div>
+          <div class="menu-desc" id="californiaDesc">Cangrejo, aguacate y pepino</div>
+        </div>
+        <div class="menu-price">€8.90</div>
+      </div>
     </div>
   </div>
 
-  <div class="menu-category">
-    <h3>Uramaki</h3>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">California Roll</div>
-        <div class="menu-desc" id="californiaDesc"></div>
-      </div>
-      <div class="menu-price">€8.90</div>
-    </div>
+  <div class="card">
+    <h2 id="contactTitle">Contacto</h2>
+    <p>📍 Carrer Bailèn 221 · Barcelona<br>📞 631 669 393 · 931 798 664</p>
   </div>
-</div>
-
-<div class="card">
-  <h2 id="contactTitle"></h2>
-  <p>📍 Carrer Bailèn 221 · Barcelona<br>📞 631 669 393 · 931 798 664</p>
-</div>
 
 </section>
 
 <footer>© MISS MISI · Barcelona</footer>
 
 <script>
-let lang="es";
+// 初始化语言为西班牙语
+let currentLang = "es";
 
 const text = {
-  es:{
-    subtitle:"Cocina japonesa moderna en Barcelona",
-    btnMenu:"Ver menú",
-    btnReserve:"Reservar mesa",
-    philosophyTitle:"Nuestra filosofía",
-    philosophyText:"MISS MISI es un restaurante japonés moderno con más de 2 años de experiencia en Barcelona.",
-    menuTitle:"Menú",
-    startersTitle:"Entrantes",
-    edamameDesc:"Soja verde al vapor con sal",
-    californiaDesc:"Cangrejo, aguacate y pepino",
-    contactTitle:"Contacto"
+  es: {
+    subtitle: "Cocina japonesa moderna en Barcelona",
+    btnMenu: "Ver menú",
+    btnReserve: "Reservar mesa",
+    philosophyTitle: "Nuestra filosofía",
+    philosophyText: "MISS MISI es un restaurante japonés moderno con más de 2 años de experiencia en Barcelona.",
+    menuTitle: "Menú",
+    startersTitle: "Entrantes",
+    edamameDesc: "Soja verde al vapor con sal",
+    californiaDesc: "Cangrejo, aguacate y pepino",
+    contactTitle: "Contacto"
   },
-  en:{
-    subtitle:"Modern Japanese cuisine in Barcelona",
-    btnMenu:"View menu",
-    btnReserve:"Reserve a table",
-    philosophyTitle:"Our philosophy",
-    philosophyText:"MISS MISI is a modern Japanese restaurant with over 2 years of experience in Barcelona.",
-    menuTitle:"Menu",
-    startersTitle:"Starters",
-    edamameDesc:"Steamed green soybeans with sea salt",
-    californiaDesc:"Crab, avocado and cucumber",
-    contactTitle:"Contact"
+  en: {
+    subtitle: "Modern Japanese cuisine in Barcelona",
+    btnMenu: "View menu",
+    btnReserve: "Reserve a table",
+    philosophyTitle: "Our philosophy",
+    philosophyText: "MISS MISI is a modern Japanese restaurant with over 2 years of experience in Barcelona.",
+    menuTitle: "Menu",
+    startersTitle: "Starters",
+    edamameDesc: "Steamed green soybeans with sea salt",
+    californiaDesc: "Crab, avocado and cucumber",
+    contactTitle: "Contact"
   }
 };
 
-function toggleLang(){
-  lang = lang==="es"?"en":"es";
-  for(const id in text[lang]){
-    document.getElementById(id).innerText = text[lang][id];
+function toggleLang() {
+  // 1. 切换变量
+  currentLang = (currentLang === "es") ? "en" : "es";
+  
+  // 2. 根据当前语言更新页面文字
+  const content = text[currentLang];
+  for (const id in content) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.innerText = content[id];
+    }
   }
 }
-toggleLang();
 </script>
 
 </body>
