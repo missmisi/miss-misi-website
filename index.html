@@ -1,251 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>MISS MISI · Japanese Restaurant Barcelona</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="MISS MISI · Modern Japanese Restaurant in Barcelona. Sushi, nigiri, uramaki, ramen and more." />
+<title>MISS MISI | Japanese Restaurant in Barcelona</title>
+<meta name="description" content="MISS MISI is a modern Japanese restaurant in Barcelona. Fresh sushi, ramen and wok dishes. Located at Carrer Bailèn 221.">
+<meta name="keywords" content="Japanese restaurant Barcelona, sushi Barcelona, MISS MISI">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #fafafa;
-      color: #111;
-    }
+<!-- Local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "MISS MISI",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer Bailèn 221",
+    "addressLocality": "Barcelona",
+    "postalCode": "08037",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34 631 669 393",
+  "servesCuisine": ["Japanese", "Sushi"],
+  "priceRange": "€€"
+}
+</script>
 
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: white;
-      position: relative;
-    }
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:#fafafa;
+  color:#111;
+}
 
-    .lang-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      border: 1px solid #ddd;
-      background: white;
-      padding: 6px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+header{
+  text-align:center;
+  padding:70px 20px 40px;
+  background:#fff;
+}
 
-    h1 {
-      font-size: 46px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
+h1{
+  font-size:48px;
+  letter-spacing:3px;
+}
 
-    section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 50px 20px;
-    }
+.subtitle{
+  color:#666;
+  margin-top:12px;
+  font-size:16px;
+}
 
-    .card {
-      background: white;
-      border-radius: 18px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
+.lang-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  border:1px solid #ddd;
+  background:#fff;
+  padding:6px 14px;
+  border-radius:20px;
+  cursor:pointer;
+  z-index:1000;
+}
 
-    .menu-category {
-      margin-bottom: 40px;
-    }
+section{
+  max-width:900px;
+  margin:auto;
+  padding:50px 20px;
+}
 
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-bottom: 1px dashed #e5e5e5;
-      padding: 12px 0;
-    }
+.card{
+  background:#fff;
+  border-radius:18px;
+  padding:34px;
+  margin-bottom:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
 
-    .menu-item:last-child {
-      border-bottom: none;
-    }
+/* Reservation button */
+.reserve-btn{
+  display:inline-block;
+  margin-top:26px;
+  padding:14px 34px;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:16px;
+}
 
-    .menu-name {
-      font-weight: 600;
-    }
+/* Menu */
+.menu-category{
+  margin-top:40px;
+}
+.menu-category h3{
+  font-size:24px;
+  border-bottom:2px solid #111;
+  display:inline-block;
+  padding-bottom:6px;
+}
 
-    .menu-desc {
-      font-size: 14px;
-      color: #666;
-      margin-top: 4px;
-    }
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  margin-top:18px;
+  gap:20px;
+}
+.menu-name{ font-weight:600; }
+.menu-desc{ font-size:14px; color:#666; margin-top:4px; }
+.menu-price{ font-weight:600; }
 
-    .price {
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#777;
+}
+</style>
 </head>
 
 <body>
 
+<button class="lang-btn" onclick="toggleLang()">EN / ES</button>
+
 <header>
-  <button class="lang-btn" onclick="toggleLang()">EN / ES</button>
   <h1>MISS MISI</h1>
-  <p id="tagline">Cocina japonesa moderna en Barcelona</p>
+  <div class="subtitle"
+    data-es="Cocina japonesa moderna en Barcelona"
+    data-en="Modern Japanese cuisine in Barcelona"></div>
+
+  <!-- 唯一预约按钮 -->
+  <a href="https://wa.me/34631669393"
+     target="_blank"
+     class="reserve-btn"
+     data-es="Reservar mesa"
+     data-en="Reserve a table">
+  </a>
 </header>
 
-<section class="card">
-  <h2 id="menuTitle">Menú</h2>
+<section>
 
-  <!-- ENTRANTES -->
+<div class="card">
+  <h2 data-es="Nuestra filosofía" data-en="Our philosophy"></h2>
+  <p data-es="MISS MISI es un restaurante japonés moderno con más de 2 años de experiencia en Barcelona. Trabajamos con ingredientes frescos y cuidamos cada detalle."
+     data-en="MISS MISI is a modern Japanese restaurant with over 2 years of experience in Barcelona. We focus on fresh ingredients and attention to detail."></p>
+</div>
+
+<div class="card">
+  <h2 data-es="Menú" data-en="Menu"></h2>
+
   <div class="menu-category">
-    <h3 id="c1">Entrantes</h3>
+    <h3 data-es="Entrantes" data-en="Starters"></h3>
 
     <div class="menu-item">
       <div>
         <div class="menu-name">Edamame</div>
-        <div class="menu-desc">Judías de soja al vapor</div>
+        <div class="menu-desc"
+          data-es="Soja verde al vapor con sal"
+          data-en="Steamed green soybeans with sea salt"></div>
       </div>
-      <div class="price">€4.50</div>
-    </div>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Gyozas (6 uds)</div>
-        <div class="menu-desc">Empanadillas japonesas</div>
-      </div>
-      <div class="price">€6.90</div>
-    </div>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Tartar de Atún</div>
-        <div class="menu-desc">Atún fresco, aguacate y salsa especial</div>
-      </div>
-      <div class="price">€12.90</div>
+      <div class="menu-price">€4.50</div>
     </div>
   </div>
 
-  <!-- NIGIRI -->
   <div class="menu-category">
-    <h3>Nigiri (2 uds)</h3>
-
-    <div class="menu-item">
-      <div class="menu-name">Salmón</div>
-      <div class="price">€5.50</div>
-    </div>
-
-    <div class="menu-item">
-      <div class="menu-name">Atún</div>
-      <div class="price">€6.00</div>
-    </div>
-
-    <div class="menu-item">
-      <div class="menu-name">Dorada</div>
-      <div class="price">€5.80</div>
-    </div>
-  </div>
-
-  <!-- URAMAKI -->
-  <div class="menu-category">
-    <h3>Uramaki (8 piezas)</h3>
+    <h3>Uramaki</h3>
 
     <div class="menu-item">
       <div>
         <div class="menu-name">California Roll</div>
-        <div class="menu-desc">Cangrejo, aguacate y pepino</div>
+        <div class="menu-desc"
+          data-es="Cangrejo, aguacate y pepino"
+          data-en="Crab, avocado and cucumber"></div>
       </div>
-      <div class="price">€9.50</div>
-    </div>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Spicy Atún</div>
-        <div class="menu-desc">Atún picante y aguacate</div>
-      </div>
-      <div class="price">€10.90</div>
-    </div>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Tempura Langostino</div>
-        <div class="menu-desc">Langostino en tempura y salsa especial</div>
-      </div>
-      <div class="price">€11.50</div>
+      <div class="menu-price">€8.90</div>
     </div>
   </div>
+</div>
 
-  <!-- RAMEN -->
-  <div class="menu-category">
-    <h3>Ramen</h3>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Ramen de Pollo</div>
-        <div class="menu-desc">Caldo japonés, pollo, huevo y fideos</div>
-      </div>
-      <div class="price">€12.50</div>
-    </div>
-
-    <div class="menu-item">
-      <div>
-        <div class="menu-name">Ramen de Cerdo</div>
-        <div class="menu-desc">Caldo intenso, chashu y huevo</div>
-      </div>
-      <div class="price">€13.50</div>
-    </div>
-  </div>
-
-  <!-- POSTRES -->
-  <div class="menu-category">
-    <h3 id="desserts">Postres</h3>
-
-    <div class="menu-item">
-      <div class="menu-name">Mochi</div>
-      <div class="price">€4.90</div>
-    </div>
-
-    <div class="menu-item">
-      <div class="menu-name">Trufa de Chocolate</div>
-      <div class="price">€3.90</div>
-    </div>
-  </div>
+<div class="card">
+  <h2 data-es="Contacto" data-en="Contact"></h2>
+  <p>
+    📍 Carrer Bailèn 221, 08037 Barcelona<br>
+    📞 631 669 393 · 931 798 664
+  </p>
+</div>
 
 </section>
 
 <footer>
-  © MISS MISI · Carrer Bailèn 221 · Barcelona
+  © MISS MISI · Barcelona
 </footer>
 
 <script>
-  let lang = "es";
-
-  function toggleLang() {
-    lang = lang === "es" ? "en" : "es";
-
-    document.getElementById("tagline").innerText =
-      lang === "es"
-        ? "Cocina japonesa moderna en Barcelona"
-        : "Modern Japanese cuisine in Barcelona";
-
-    document.getElementById("menuTitle").innerText =
-      lang === "es" ? "Menú" : "Menu";
-
-    document.getElementById("c1").innerText =
-      lang === "es" ? "Entrantes" : "Starters";
-
-    document.getElementById("desserts").innerText =
-      lang === "es" ? "Postres" : "Desserts";
-  }
+let lang="es";
+function toggleLang(){
+  lang = lang==="es"?"en":"es";
+  document.querySelectorAll("[data-es]").forEach(el=>{
+    el.innerText = el.dataset[lang];
+  });
+}
+toggleLang();
 </script>
 
 </body>
