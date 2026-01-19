@@ -6,149 +6,123 @@
     <title>MISS MISI | Japanese Soul in Barcelona</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #d4af37;
-            --black: #0a0a0a;
-            --white: #ffffff;
-        }
-
+        :root { --gold: #d4af37; --black: #0a0a0a; --white: #ffffff; --grey: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
 
-        /* 顶部导航 */
-        nav {
-            position: fixed; top: 0; width: 100%; padding: 20px 40px;
-            display: flex; justify-content: space-between; align-items: center;
-            background: rgba(10, 10, 10, 0.9); z-index: 1000; border-bottom: 1px solid #222;
-        }
+        /* 导航 */
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.9); z-index: 1000; border-bottom: 1px solid #222; }
         .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
-        .lang-btn { 
-            background: none; border: 1px solid var(--gold); color: var(--gold);
-            padding: 5px 15px; border-radius: 20px; cursor: pointer; transition: 0.3s;
+
+        /* Hero */
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 6rem); text-shadow: 2px 2px 15px rgba(0,0,0,0.7); letter-spacing: 5px; }
+
+        /* 分类选择区 (也就是你截图的地方) */
+        .menu-preview { padding: 100px 10%; background: var(--black); text-align: center; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        
+        .category-card { 
+            background: var(--grey); padding: 50px 30px; border: 1px solid #333; transition: 0.4s; 
+            text-decoration: none; color: white; display: block; cursor: pointer;
         }
-        .lang-btn:hover { background: var(--gold); color: var(--black); }
+        .category-card:hover { border-color: var(--gold); transform: translateY(-10px); background: #222; }
+        .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 24px; margin-bottom: 15px; }
+        .category-card p { font-size: 14px; opacity: 0.8; }
 
-        /* 全屏海报区 */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('exterior.jpg'); /* 自动读取你仓库的 exterior.jpg */
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-        }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 6rem); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: var(--gold); letter-spacing: 4px; text-transform: uppercase; }
+        /* 详细菜品列表区 */
+        .detail-section { padding: 80px 10%; background: #0f0f0f; border-top: 1px solid #222; }
+        .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 32px; border-bottom: 1px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
+        
+        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .dish-item { display: flex; justify-content: space-between; border-bottom: 1px solid #333; padding-bottom: 15px; }
+        .dish-info h4 { font-size: 18px; margin-bottom: 5px; }
+        .dish-info p { font-size: 13px; color: #aaa; }
+        .dish-price { color: var(--gold); font-weight: bold; font-size: 18px; }
 
-        /* 介绍部分 (图文错位) */
-        .about { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .about-img { width: 100%; border-radius: 5px; filter: grayscale(30%); }
-        .about h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 20px; font-size: 32px; }
-
-        /* 菜单展示 */
-        .menu-preview { padding: 100px 10%; background: #111; text-align: center; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .menu-card { 
-            background: #1a1a1a; padding: 40px; border: 1px solid #333; transition: 0.3s; 
-            display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .menu-card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .price { color: var(--gold); font-size: 20px; font-weight: bold; margin-top: 20px; }
-
-        /* 按钮样式 */
-        .cta-btn {
-            display: inline-block; padding: 15px 40px; background: var(--gold); color: var(--black);
-            text-decoration: none; font-weight: bold; margin-top: 30px; border-radius: 2px;
-            transition: 0.3s;
-        }
-        .cta-btn:hover { background: var(--white); transform: scale(1.05); }
-
-        /* 页脚 */
-        footer { padding: 60px 20px; text-align: center; border-top: 1px solid #222; color: #666; font-size: 14px; }
-
-        @media (max-width: 768px) {
-            .about { grid-template-columns: 1fr; text-align: center; }
-            nav { padding: 20px; }
-        }
+        footer { padding: 60px 20px; text-align: center; color: #666; }
+        .cta-btn { display: inline-block; padding: 15px 40px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 2px; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">MISS MISI</div>
-        <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
-    </nav>
+    <nav><div class="logo">MISS MISI</div></nav>
 
     <section class="hero">
-        <h1 id="heroH1">MISS MISI</h1>
-        <p id="heroP">Japanese Modern Kitchen</p>
-        <a href="#menu" class="cta-btn" id="btnExplore">VER MENÚ</a>
+        <h1>MISS MISI</h1>
+        <p style="color:var(--gold); letter-spacing: 5px;">JAPANESE MODERN KITCHEN</p>
     </section>
-
-    <section class="about">
-        <div>
-            <h2 id="aboutH2">La Filosofía</h2>
-            <p id="aboutP">Desde el corazón de Barcelona, MISS MISI ofrece una reinterpretación de la cocina japonesa tradicional. Pescado fresco, técnica artesanal y un ambiente moderno.</p>
-        </div>
-        <img src="interior-1.jpg" alt="Interior" class="about-img"> </section>
 
     <section class="menu-preview" id="menu">
-        <h2 id="menuH2" style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">El Menú</h2>
+        <h2 style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">SELECTION</h2>
         <div class="menu-grid">
-            <div class="menu-card">
-                <h3 id="item1Title">EDAMAME</h3>
-                <p id="item1Desc">Soja verde al vapor con sal volcánica.</p>
-                <div class="price">4.50€</div>
+            <a href="#starters-detail" class="category-card">
+                <h3>STARTERS</h3>
+                <p>Descubre nuestra selección de entrantes artesanales.</p>
+                <div style="margin-top:20px; color:var(--gold);">Explore Category →</div>
+            </a>
+            <a href="#uramaki-detail" class="category-card">
+                <h3>URAMAKI</h3>
+                <p>Rollos creativos con los ingredientes más frescos.</p>
+                <div style="margin-top:20px; color:var(--gold);">Explore Category →</div>
+            </a>
+            <a href="#wok-detail" class="category-card">
+                <h3>WOK & RAMEN</h3>
+                <p>El sabor del fuego y el alma de la cocina japonesa.</p>
+                <div style="margin-top:20px; color:var(--gold);">Explore Category →</div>
+            </a>
+        </div>
+    </section>
+
+    <section id="starters-detail" class="detail-section">
+        <h2>ENTRANTES / STARTERS</h2>
+        <div class="dish-list">
+            <div class="dish-item">
+                <div class="dish-info"><h4>Edamame</h4><p>Soja verde al vapor con sal volcánica.</p></div>
+                <div class="dish-price">4.50€</div>
             </div>
-            <div class="menu-card">
-                <h3 id="item2Title">CALIFORNIA ROLL</h3>
-                <p id="item2Desc">Cangrejo, aguacate, pepino y sésamo.</p>
-                <div class="price">8.90€</div>
+            <div class="dish-item">
+                <div class="dish-info"><h4>Gyoza de Pollo</h4><p>Empanadillas japonesas de pollo (5 uds).</p></div>
+                <div class="dish-price">7.50€</div>
             </div>
-            <div class="menu-card">
-                <h3 id="item3Title">SPICY TUNA</h3>
-                <p id="item3Desc">Atún marinado con mayonesa japonesa picante.</p>
-                <div class="price">12.50€</div>
+            <div class="dish-item">
+                <div class="dish-info"><h4>Ebi Tempura</h4><p>Langostinos en tempura crujiente.</p></div>
+                <div class="dish-price">9.50€</div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-info"><h4>Wakame Salad</h4><p>Algas marinas con sésamo.</p></div>
+                <div class="dish-price">5.50€</div>
+            </div>
+            </div>
+    </section>
+
+    <section id="uramaki-detail" class="detail-section">
+        <h2>URAMAKI SELECTION</h2>
+        <div class="dish-list">
+            <div class="dish-item">
+                <div class="dish-info"><h4>California Roll</h4><p>Cangrejo, aguacate y pepino.</p></div>
+                <div class="dish-price">8.90€</div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-info"><h4>Spicy Tuna</h4><p>Atún y mayonesa picante.</p></div>
+                <div class="dish-price">12.50€</div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-info"><h4>Dragon Roll</h4><p>Anguila, aguacate y salsa unagi.</p></div>
+                <div class="dish-price">14.50€</div>
             </div>
         </div>
-        <a href="https://wa.me/34631669393" class="cta-btn" style="background: #25D366; color: white; border: none;" id="btnWA">RESERVAR POR WHATSAPP</a>
     </section>
+
+    <div style="text-align: center; background: #0f0f0f; padding-bottom: 80px;">
+        <a href="https://wa.me/34631669393" class="cta-btn">RESERVAR POR WHATSAPP</a>
+    </div>
 
     <footer>
         📍 Carrer Bailèn 221, Barcelona <br><br>
         © MISS MISI 2026
     </footer>
 
-    <script>
-        let currentLang = 'es';
-        const langData = {
-            en: {
-                heroH1: "MISS MISI", heroP: "Japanese Modern Kitchen",
-                btnExplore: "VIEW MENU", aboutH2: "Our Philosophy",
-                aboutP: "From the heart of Barcelona, MISS MISI offers a reinterpretation of traditional Japanese cuisine. Fresh fish, artisanal technique, and a modern vibe.",
-                menuH2: "Selection", item1Title: "EDAMAME", item1Desc: "Steamed green soybeans with volcanic salt.",
-                item2Title: "CALIFORNIA ROLL", item2Desc: "Crab, avocado, cucumber and sesame.",
-                item3Title: "SPICY TUNA", item3Desc: "Marinated tuna with spicy Japanese mayo.",
-                btnWA: "BOOK VIA WHATSAPP", langBtn: "ES"
-            },
-            es: {
-                heroH1: "MISS MISI", heroP: "Cocina Japonesa Moderna",
-                btnExplore: "VER MENÚ", aboutH2: "La Filosofía",
-                aboutP: "Desde el corazón de Barcelona, MISS MISI ofrece una reinterpretación de la cocina japonesa tradicional. Pescado fresco, técnica artesanal y un ambiente moderno.",
-                menuH2: "El Menú", item1Title: "EDAMAME", item1Desc: "Soja verde al vapor con sal volcánica.",
-                item2Title: "CALIFORNIA ROLL", item2Desc: "Cangrejo, aguacate, pepino y sésamo.",
-                item3Title: "SPICY TUNA", item3Desc: "Atún marinado con mayonesa japonesa picante.",
-                btnWA: "RESERVAR POR WHATSAPP", langBtn: "EN"
-            }
-        };
-
-        function toggleLang() {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            document.getElementById('langBtn').innerText = langData[currentLang].langBtn;
-            for (let id in langData[currentLang]) {
-                const el = document.getElementById(id);
-                if (el) el.innerText = langData[currentLang][id];
-            }
-        }
-    </script>
 </body>
 </html>
