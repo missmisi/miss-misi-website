@@ -12,9 +12,36 @@
         body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
 
         /* 导航 */
-        nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.9); z-index: 1000; border-bottom: 1px solid #222; }
-        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
+        /* 检查你的 CSS 中是否有这两项，如果没有请添加或替换 */
+    nav { 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        padding: 20px 40px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        background: rgba(10, 10, 10, 0.95); /* 深色半透明背景 */
+        z-index: 9999; /* 确保它在所有层级的最前面 */
+        border-bottom: 1px solid #222; 
+    }
 
+    .lang-btn { 
+        background: none; 
+        border: 1px solid var(--gold); 
+        color: var(--gold);
+        padding: 6px 18px; 
+        border-radius: 20px; 
+        cursor: pointer; 
+        font-weight: bold;
+        transition: 0.3s;
+        z-index: 10000; /* 再次确保按钮本身不会被遮挡 */
+    }
+
+    .lang-btn:hover { 
+        background: var(--gold); 
+        color: var(--black); 
+    }
         /* Hero */
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 6rem); text-shadow: 2px 2px 15px rgba(0,0,0,0.7); letter-spacing: 5px; }
