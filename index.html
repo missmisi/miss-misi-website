@@ -11,42 +11,25 @@
         html { scroll-behavior: smooth; }
         body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
 
-        /* 导航 */
-        /* 检查你的 CSS 中是否有这两项，如果没有请添加或替换 */
-    nav { 
-        position: fixed; 
-        top: 0; 
-        width: 100%; 
-        padding: 20px 40px; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        background: rgba(10, 10, 10, 0.95); /* 深色半透明背景 */
-        z-index: 9999; /* 确保它在所有层级的最前面 */
-        border-bottom: 1px solid #222; 
-    }
+        nav { 
+            position: fixed; top: 0; width: 100%; padding: 20px 40px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; 
+        }
 
-    .lang-btn { 
-        background: none; 
-        border: 1px solid var(--gold); 
-        color: var(--gold);
-        padding: 6px 18px; 
-        border-radius: 20px; 
-        cursor: pointer; 
-        font-weight: bold;
-        transition: 0.3s;
-        z-index: 10000; /* 再次确保按钮本身不会被遮挡 */
-    }
+        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
 
-    .lang-btn:hover { 
-        background: var(--gold); 
-        color: var(--black); 
-    }
-        /* Hero */
+        .lang-btn { 
+            background: none; border: 1px solid var(--gold); color: var(--gold);
+            padding: 6px 18px; border-radius: 20px; cursor: pointer; 
+            font-weight: bold; transition: 0.3s; z-index: 10000;
+        }
+
+        .lang-btn:hover { background: var(--gold); color: var(--black); }
+
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 6rem); text-shadow: 2px 2px 15px rgba(0,0,0,0.7); letter-spacing: 5px; }
 
-        /* 分类选择区 (也就是你截图的地方) */
         .menu-preview { padding: 100px 10%; background: var(--black); text-align: center; }
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
         
@@ -58,7 +41,6 @@
         .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 24px; margin-bottom: 15px; }
         .category-card p { font-size: 14px; opacity: 0.8; }
 
-        /* 详细菜品列表区 */
         .detail-section { padding: 80px 10%; background: #0f0f0f; border-top: 1px solid #222; }
         .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 32px; border-bottom: 1px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
         
@@ -81,78 +63,152 @@
 
     <section class="hero">
         <h1>MISS MISI</h1>
-        <p style="color:var(--gold); letter-spacing: 5px;">JAPANESE MODERN KITCHEN</p>
+        <p id="heroTag" style="color:var(--gold); letter-spacing: 5px;">JAPANESE MODERN KITCHEN</p>
     </section>
 
     <section class="menu-preview" id="menu">
-        <h2 style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">SELECTION</h2>
+        <h2 id="selectionTitle" style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">SELECTION</h2>
         <div class="menu-grid">
             <a href="#starters-detail" class="category-card">
-                <h3>STARTERS</h3>
-                <p>Descubre nuestra selección de entrantes artesanales.</p>
-                <div style="margin-top:20px; color:var(--gold);">Explore Category →</div>
+                <h3 id="cat1Title">STARTERS</h3>
+                <p id="cat1Desc">Descubre nuestra selección de entrantes artesanales.</p>
+                <div style="margin-top:20px; color:var(--gold);" id="cat1Btn">Explore Category →</div>
             </a>
             <a href="#uramaki-detail" class="category-card">
-                <h3>URAMAKI</h3>
-                <p>Rollos creativos con los ingredientes más frescos.</p>
-                <div style="margin-top:20px; color:var(--gold);">Explore Category →</div>
+                <h3 id="cat2Title">URAMAKI</h3>
+                <p id="cat2Desc">Rollos creativos con los ingredientes más frescos.</p>
+                <div style="margin-top:20px; color:var(--gold);" id="cat2Btn">Explore Category →</div>
             </a>
             <a href="#wok-detail" class="category-card">
-                <h3>WOK & RAMEN</h3>
-                <p>El sabor del fuego y el alma de la cocina japonesa.</p>
-                <div style="margin-top:20px; color:var(--gold);">Explore Category →</div>
+                <h3 id="cat3Title">WOK & RAMEN</h3>
+                <p id="cat3Desc">El sabor del fuego y el alma de la cocina japonesa.</p>
+                <div style="margin-top:20px; color:var(--gold);" id="cat3Btn">Explore Category →</div>
             </a>
         </div>
     </section>
 
     <section id="starters-detail" class="detail-section">
-        <h2>ENTRANTES / STARTERS</h2>
+        <h2 id="startersTitle">ENTRANTES / STARTERS</h2>
         <div class="dish-list">
             <div class="dish-item">
-                <div class="dish-info"><h4>Edamame</h4><p>Soja verde al vapor con sal volcánica.</p></div>
+                <div class="dish-info"><h4>Edamame</h4><p id="d1Desc">Soja verde al vapor con sal volcánica.</p></div>
                 <div class="dish-price">4.50€</div>
             </div>
             <div class="dish-item">
-                <div class="dish-info"><h4>Gyoza de Pollo</h4><p>Empanadillas japonesas de pollo (5 uds).</p></div>
+                <div class="dish-info"><h4 id="d2Name">Gyoza de Pollo</h4><p id="d2Desc">Empanadillas japonesas de pollo (5 uds).</p></div>
                 <div class="dish-price">7.50€</div>
             </div>
             <div class="dish-item">
-                <div class="dish-info"><h4>Ebi Tempura</h4><p>Langostinos en tempura crujiente.</p></div>
+                <div class="dish-info"><h4 id="d3Name">Ebi Tempura</h4><p id="d3Desc">Langostinos en tempura crujiente.</p></div>
                 <div class="dish-price">9.50€</div>
             </div>
             <div class="dish-item">
-                <div class="dish-info"><h4>Wakame Salad</h4><p>Algas marinas con sésamo.</p></div>
+                <div class="dish-info"><h4 id="d4Name">Wakame Salad</h4><p id="d4Desc">Algas marinas con sésamo.</p></div>
                 <div class="dish-price">5.50€</div>
             </div>
-            </div>
+        </div>
     </section>
 
     <section id="uramaki-detail" class="detail-section">
-        <h2>URAMAKI SELECTION</h2>
+        <h2 id="uramakiTitle">URAMAKI SELECTION</h2>
         <div class="dish-list">
             <div class="dish-item">
-                <div class="dish-info"><h4>California Roll</h4><p>Cangrejo, aguacate y pepino.</p></div>
+                <div class="dish-info"><h4>California Roll</h4><p id="d5Desc">Cangrejo, aguacate y pepino.</p></div>
                 <div class="dish-price">8.90€</div>
             </div>
             <div class="dish-item">
-                <div class="dish-info"><h4>Spicy Tuna</h4><p>Atún y mayonesa picante.</p></div>
+                <div class="dish-info"><h4>Spicy Tuna</h4><p id="d6Desc">Atún y mayonesa picante.</p></div>
                 <div class="dish-price">12.50€</div>
             </div>
             <div class="dish-item">
-                <div class="dish-info"><h4>Dragon Roll</h4><p>Anguila, aguacate y salsa unagi.</p></div>
+                <div class="dish-info"><h4>Dragon Roll</h4><p id="d7Desc">Anguila, aguacate y salsa unagi.</p></div>
                 <div class="dish-price">14.50€</div>
             </div>
         </div>
     </section>
 
     <div style="text-align: center; background: #0f0f0f; padding-bottom: 80px;">
-        <a href="https://wa.me/34631669393" class="cta-btn">RESERVAR POR WHATSAPP</a>
+        <a href="https://wa.me/34631669393" class="cta-btn" id="waBtn">RESERVAR POR WHATSAPP</a>
     </div>
 
     <footer>
         📍 Carrer Bailèn 221, Barcelona <br><br>
         © MISS MISI 2026
     </footer>
+
+    <script>
+        let currentLang = 'es';
+
+        const translations = {
+            en: {
+                langBtn: "ES",
+                heroTag: "JAPANESE MODERN KITCHEN",
+                selectionTitle: "SELECTION",
+                cat1Title: "STARTERS",
+                cat1Desc: "Discover our selection of handcrafted starters.",
+                cat1Btn: "Explore Category →",
+                cat2Title: "URAMAKI",
+                cat2Desc: "Creative rolls with the freshest ingredients.",
+                cat2Btn: "Explore Category →",
+                cat3Title: "WOK & RAMEN",
+                cat3Desc: "The flavor of fire and the soul of Japan.",
+                cat3Btn: "Explore Category →",
+                startersTitle: "STARTERS",
+                d1Desc: "Steamed green soybeans with volcanic salt.",
+                d2Name: "Chicken Gyoza",
+                d2Desc: "Japanese chicken dumplings (5 pcs).",
+                d3Name: "Ebi Tempura",
+                d3Desc: "Crispy tempura prawns.",
+                d4Name: "Wakame Salad",
+                d4Desc: "Seaweed with sesame seeds.",
+                uramakiTitle: "URAMAKI SELECTION",
+                d5Desc: "Crab, avocado and cucumber.",
+                d6Desc: "Tuna and spicy mayo.",
+                d7Desc: "Eel, avocado and unagi sauce.",
+                waBtn: "BOOK VIA WHATSAPP"
+            },
+            es: {
+                langBtn: "EN",
+                heroTag: "COCINA JAPONESA MODERNA",
+                selectionTitle: "SELECCIÓN",
+                cat1Title: "ENTRANTES",
+                cat1Desc: "Descubre nuestra selección de entrantes artesanales.",
+                cat1Btn: "Explorar Categoría →",
+                cat2Title: "URAMAKI",
+                cat2Desc: "Rollos creativos con los ingredientes más frescos.",
+                cat2Btn: "Explorar Categoría →",
+                cat3Title: "WOK & RAMEN",
+                cat3Desc: "El sabor del fuego y el alma de la cocina japonesa.",
+                cat3Btn: "Explorar Categoría →",
+                startersTitle: "ENTRANTES",
+                d1Desc: "Soja verde al vapor con sal volcánica.",
+                d2Name: "Gyoza de Pollo",
+                d2Desc: "Empanadillas japonesas de pollo (5 uds).",
+                d3Name: "Ebi Tempura",
+                d3Desc: "Langostinos en tempura crujiente.",
+                d4Name: "Wakame Salad",
+                d4Desc: "Algas marinas con sésamo.",
+                uramakiTitle: "SELECCIÓN URAMAKI",
+                d5Desc: "Cangrejo, aguacate y pepino.",
+                d6Desc: "Atún y mayonesa picante.",
+                d7Desc: "Anguila, aguacate y salsa unagi.",
+                waBtn: "RESERVAR POR WHATSAPP"
+            }
+        };
+
+        function toggleLang() {
+            currentLang = (currentLang === 'es') ? 'en' : 'es';
+            const data = translations[currentLang];
+
+            // 循环翻译字典，替换页面中对应的 ID 文字
+            for (let id in data) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerText = data[id];
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
