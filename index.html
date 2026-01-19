@@ -6,26 +6,6 @@
 
 <title>MISS MISI | Japanese Restaurant in Barcelona</title>
 <meta name="description" content="MISS MISI is a modern Japanese restaurant in Barcelona. Fresh sushi, ramen and wok dishes. Located at Carrer Bailèn 221.">
-<meta name="keywords" content="Japanese restaurant Barcelona, sushi Barcelona, MISS MISI">
-
-<!-- Local SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "MISS MISI",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carrer Bailèn 221",
-    "addressLocality": "Barcelona",
-    "postalCode": "08037",
-    "addressCountry": "ES"
-  },
-  "telephone": "+34 631 669 393",
-  "servesCuisine": ["Japanese", "Sushi"],
-  "priceRange": "€€"
-}
-</script>
 
 <style>
 body{
@@ -80,15 +60,8 @@ h1{
   text-decoration:none;
 }
 
-.btn-menu{
-  background:#111;
-  color:#fff;
-}
-
-.btn-reserve{
-  background:#25D366;
-  color:#fff;
-}
+.btn-menu{ background:#111; color:#fff; }
+.btn-reserve{ background:#25D366; color:#fff; }
 
 section{
   max-width:900px;
@@ -104,10 +77,7 @@ section{
   box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* Menu */
-.menu-category{
-  margin-top:40px;
-}
+.menu-category{ margin-top:40px; }
 .menu-category h3{
   font-size:24px;
   border-bottom:2px solid #111;
@@ -121,6 +91,7 @@ section{
   margin-top:18px;
   gap:20px;
 }
+
 .menu-name{ font-weight:600; }
 .menu-desc{ font-size:14px; color:#666; margin-top:4px; }
 .menu-price{ font-weight:600; }
@@ -140,46 +111,34 @@ footer{
 
 <header>
   <h1>MISS MISI</h1>
-  <div class="subtitle"
-    data-es="Cocina japonesa moderna en Barcelona"
-    data-en="Modern Japanese cuisine in Barcelona"></div>
+  <div class="subtitle" id="subtitle"></div>
 
-  <!-- 首页两个按钮 -->
   <div class="header-buttons">
-    <a href="#menu"
-       class="btn btn-menu"
-       data-es="Ver menú"
-       data-en="View menu"></a>
-
-    <a href="https://wa.me/34631669393?text=Hola%20MISS%20MISI%2C%0A%0AMe%20gustar%C3%ADa%20hacer%20una%20reserva.%0A%0ANombre%3A%20%0AFecha%3A%20%0AHora%3A%20%0APersonas%3A%20%0A%0A---%0A%0AHello%20MISS%20MISI%2C%0A%0AI%20would%20like%20to%20make%20a%20reservation.%0A%0AName%3A%20%0ADate%3A%20%0ATime%3A%20%0AGuests%3A%20"
-
+    <a href="#menu" class="btn btn-menu" id="btnMenu"></a>
+    <a href="https://wa.me/34631669393?text=Hola%20MISS%20MISI%2C%0AReserva%20mesa%3A"
        target="_blank"
        class="btn btn-reserve"
-       data-es="Reservar mesa"
-       data-en="Reserve a table"></a>
+       id="btnReserve"></a>
   </div>
 </header>
 
 <section>
 
 <div class="card">
-  <h2 data-es="Nuestra filosofía" data-en="Our philosophy"></h2>
-  <p data-es="MISS MISI es un restaurante japonés moderno con más de 2 años de experiencia en Barcelona. Trabajamos con ingredientes frescos y cuidamos cada detalle."
-     data-en="MISS MISI is a modern Japanese restaurant with over 2 years of experience in Barcelona. We focus on fresh ingredients and attention to detail."></p>
+  <h2 id="philosophyTitle"></h2>
+  <p id="philosophyText"></p>
 </div>
 
 <div class="card" id="menu">
-  <h2 data-es="Menú" data-en="Menu"></h2>
+  <h2 id="menuTitle"></h2>
 
   <div class="menu-category">
-    <h3 data-es="Entrantes" data-en="Starters"></h3>
+    <h3 id="startersTitle"></h3>
 
     <div class="menu-item">
       <div>
         <div class="menu-name">Edamame</div>
-        <div class="menu-desc"
-          data-es="Soja verde al vapor con sal"
-          data-en="Steamed green soybeans with sea salt"></div>
+        <div class="menu-desc" id="edamameDesc"></div>
       </div>
       <div class="menu-price">€4.50</div>
     </div>
@@ -191,9 +150,7 @@ footer{
     <div class="menu-item">
       <div>
         <div class="menu-name">California Roll</div>
-        <div class="menu-desc"
-          data-es="Cangrejo, aguacate y pepino"
-          data-en="Crab, avocado and cucumber"></div>
+        <div class="menu-desc" id="californiaDesc"></div>
       </div>
       <div class="menu-price">€8.90</div>
     </div>
@@ -201,26 +158,49 @@ footer{
 </div>
 
 <div class="card">
-  <h2 data-es="Contacto" data-en="Contact"></h2>
-  <p>
-    📍 Carrer Bailèn 221, 08037 Barcelona<br>
-    📞 631 669 393 · 931 798 664
-  </p>
+  <h2 id="contactTitle"></h2>
+  <p>📍 Carrer Bailèn 221 · Barcelona<br>📞 631 669 393 · 931 798 664</p>
 </div>
 
 </section>
 
-<footer>
-  © MISS MISI · Barcelona
-</footer>
+<footer>© MISS MISI · Barcelona</footer>
 
 <script>
 let lang="es";
+
+const text = {
+  es:{
+    subtitle:"Cocina japonesa moderna en Barcelona",
+    btnMenu:"Ver menú",
+    btnReserve:"Reservar mesa",
+    philosophyTitle:"Nuestra filosofía",
+    philosophyText:"MISS MISI es un restaurante japonés moderno con más de 2 años de experiencia en Barcelona.",
+    menuTitle:"Menú",
+    startersTitle:"Entrantes",
+    edamameDesc:"Soja verde al vapor con sal",
+    californiaDesc:"Cangrejo, aguacate y pepino",
+    contactTitle:"Contacto"
+  },
+  en:{
+    subtitle:"Modern Japanese cuisine in Barcelona",
+    btnMenu:"View menu",
+    btnReserve:"Reserve a table",
+    philosophyTitle:"Our philosophy",
+    philosophyText:"MISS MISI is a modern Japanese restaurant with over 2 years of experience in Barcelona.",
+    menuTitle:"Menu",
+    startersTitle:"Starters",
+    edamameDesc:"Steamed green soybeans with sea salt",
+    californiaDesc:"Crab, avocado and cucumber",
+    contactTitle:"Contact"
+  }
+};
+
 function toggleLang(){
   lang = lang==="es"?"en":"es";
-  document.querySelectorAll("[data-es]").forEach(el=>{
-    el.innerText = el.dataset[lang];
-  });
+  for(const id in text[lang]){
+    document.getElementById(id).innerText = text[lang][id];
+  }
 }
 toggleLang();
 </script>
