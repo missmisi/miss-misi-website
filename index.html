@@ -11,34 +11,30 @@
         html { scroll-behavior: smooth; }
         body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
 
-        /* 导航栏 */
         nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; }
         .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
         .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
         .lang-btn:hover { background: var(--gold); color: var(--black); }
 
-        /* Hero Section */
-        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 6rem); letter-spacing: 5px; }
+        .hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: 5px; }
 
-        /* 分类选择网格 */
-        .menu-preview { padding: 100px 10%; background: var(--black); text-align: center; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 50px; }
-        .category-card { background: var(--grey); padding: 30px 15px; border: 1px solid #333; transition: 0.4s; text-decoration: none; color: white; display: block; border-radius: 4px; }
-        .category-card:hover { border-color: var(--gold); transform: translateY(-5px); background: #222; }
-        .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 18px; }
+        .menu-preview { padding: 60px 5%; background: var(--black); text-align: center; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .category-card { background: var(--grey); padding: 20px 10px; border: 1px solid #333; transition: 0.3s; text-decoration: none; color: white; border-radius: 4px; }
+        .category-card:hover { border-color: var(--gold); background: #222; }
+        .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 14px; }
 
-        /* 菜品详情列表通用样式 */
-        .detail-section { padding: 80px 10%; background: #0f0f0f; border-top: 1px solid #222; }
-        .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 32px; border-bottom: 1px solid var(--gold); display: block; width: 100%; padding-bottom: 10px; }
-        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .detail-section { padding: 60px 5%; background: #0f0f0f; border-top: 1px solid #222; }
+        .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 28px; border-bottom: 1px solid var(--gold); padding-bottom: 10px; }
+        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .dish-item { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #222; padding: 15px 0; }
-        .dish-info h4 { font-size: 17px; color: var(--white); margin-bottom: 4px; }
-        .dish-info p { font-size: 13px; color: #888; }
-        .dish-price { color: var(--gold); font-weight: 500; font-size: 17px; margin-left: 15px; }
+        .dish-info h4 { font-size: 16px; color: var(--white); margin-bottom: 4px; }
+        .dish-info p { font-size: 12px; color: #888; }
+        .dish-price { color: var(--gold); font-weight: 500; font-size: 16px; margin-left: 10px; white-space: nowrap; }
 
-        footer { padding: 60px 20px; text-align: center; color: #666; font-size: 14px; background: var(--black); }
-        .cta-btn { display: inline-block; padding: 15px 40px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin-top: 50px; }
+        footer { padding: 40px 20px; text-align: center; color: #666; font-size: 12px; background: var(--black); }
+        .cta-btn { display: inline-block; padding: 12px 30px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin: 40px 0; }
     </style>
 </head>
 <body>
@@ -50,59 +46,77 @@
 
     <section class="hero">
         <h1>MISS MISI</h1>
-        <p id="heroSub" style="color:var(--gold); letter-spacing: 5px;">JAPANESE MODERN KITCHEN</p>
+        <p id="heroSub" style="color:var(--gold); letter-spacing: 3px;">JAPANESE MODERN KITCHEN</p>
     </section>
 
     <section class="menu-preview">
-        <h2 id="selTitle" style="font-family: 'Cinzel', serif; font-size: 40px; color: var(--gold);">MENU</h2>
+        <h2 id="selTitle">MENÚ</h2>
         <div class="menu-grid">
             <a href="#entrantes" class="category-card"><h3 id="tEnt">ENTRANTES</h3></a>
+            <a href="#ensalada" class="category-card"><h3 id="tEns">ENSALADA</h3></a>
             <a href="#maki" class="category-card"><h3 id="tMaki">MAKI</h3></a>
             <a href="#nigiri" class="category-card"><h3 id="tNigiri">NIGIRI</h3></a>
             <a href="#uramaki" class="category-card"><h3 id="tUra">URAMAKI</h3></a>
-            <a href="#wok" class="category-card"><h3 id="tWok">WOK & RAMEN</h3></a>
+            <a href="#combos" class="category-card"><h3 id="tCom">COMBOS</h3></a>
         </div>
     </section>
 
     <section id="entrantes" class="detail-section">
-        <h2 id="hEnt">ENTRANTES / STARTERS</h2>
+        <h2 id="hEnt">ENTRANTES</h2>
         <div class="dish-list">
             <div class="dish-item"><div class="dish-info"><h4 id="n20">20. Salmón Teriyaki</h4><p id="d20">Salmón a la plancha con salsa teriyaki.</p></div><div class="dish-price">11,90€</div></div>
             <div class="dish-item"><div class="dish-info"><h4 id="n12">12. Ebi Tempura</h4><p id="d12">Langostinos fritos en tempura japonesa (5 uds).</p></div><div class="dish-price">10,90€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n1">1. Tori No Karaage</h4><p id="d1">Pollo marinado y frito al estilo japonés.</p></div><div class="dish-price">4,55€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n10">10. Takoyaki</h4><p id="d10">Bolitas de masa rellenas de pulpo (4 uds).</p></div><div class="dish-price">6,55€</div></div>
+        </div>
+    </section>
+
+    <section id="ensalada" class="detail-section">
+        <h2 id="hEns">ENSALADA & VAPOR</h2>
+        <div class="dish-list">
+            <div class="dish-item"><div class="dish-info"><h4 id="nE1">Ensalada Vegetal</h4><p id="dE1">Lechuga, zanahoria, tomate cherry, mango, aguacate.</p></div><div class="dish-price">4,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n31">31. Saumai</h4><p id="d31">Dim sum tradicional de cerdo (4 uds).</p></div><div class="dish-price">5,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n32">32. Hagkao</h4><p id="d32">Dumplings de camarón cristal (4 uds).</p></div><div class="dish-price">5,20€</div></div>
         </div>
     </section>
 
     <section id="maki" class="detail-section">
-        <h2 id="hMaki">MAKI</h2>
+        <h2 id="hMaki">MAKI (8 uds)</h2>
         <div class="dish-list">
-            <div class="dish-item"><div class="dish-info"><h4 id="n30">30. Maki Salmón</h4><p id="d30">Rollo de arroz con salmón fresco.</p></div><div class="dish-price">5,50€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n31">31. Maki Atún</h4><p id="d31">Rollo de arroz con atún de primera calidad.</p></div><div class="dish-price">6,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n41">41. Maki Salmón</h4><p id="d41">Rollo clásico de salmón fresco.</p></div><div class="dish-price">5,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n42">42. Maki Atún</h4><p id="d42">Rollo clásico de atún premium.</p></div><div class="dish-price">6,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n43">43. Maki Aguacate</h4><p id="d43">Rollo de arroz con aguacate maduro.</p></div><div class="dish-price">4,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n50">50. Shake Tempura Maki</h4><p id="d50">Envueltos salmón y queso crema rebozado.</p></div><div class="dish-price">9,10€</div></div>
         </div>
     </section>
 
     <section id="nigiri" class="detail-section">
-        <h2 id="hNigiri">NIGIRI</h2>
+        <h2 id="hNigiri">NIGIRI (2 uds)</h2>
         <div class="dish-list">
-            <div class="dish-item"><div class="dish-info"><h4 id="n50">50. Nigiri Salmón</h4><p id="d50">Fina lámina de salmón sobre base de arroz.</p></div><div class="dish-price">4,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n61">61. Nigiri Salmón</h4><p id="d61">Fina lámina de salmón sobre base de arroz.</p></div><div class="dish-price">4,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n62">62. Nigiri Atún</h4><p id="d62">Fina lámina de atún sobre base de arroz.</p></div><div class="dish-price">4,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n65">65. Nigiri Salmón Flameado</h4><p id="d65">Salmón braseado con salsa especial.</p></div><div class="dish-price">4,50€</div></div>
         </div>
     </section>
 
     <section id="uramaki" class="detail-section">
-        <h2 id="hUra">URAMAKI</h2>
+        <h2 id="hUra">URAMAKI (8 uds)</h2>
         <div class="dish-list">
-            <div class="dish-item"><div class="dish-info"><h4 id="n81">81. California Roll</h4><p id="d81">Cangrejo, aguacate y pepino.</p></div><div class="dish-price">12,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n81">81. Uramaki Salmón</h4><p id="d81">Salmón y aguacate.</p></div><div class="dish-price">10,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n91">91. Crunchy</h4><p id="d91">Cangrejo, aguacate, teriyaki y cebolla crujiente.</p></div><div class="dish-price">11,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n96">96. Tiger Roll</h4><p id="d96">Langostino tempura, queso crema y salmón.</p></div><div class="dish-price">13,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n101">101. Dragon Roll</h4><p id="d101">Anguila, langostino tempura y aguacate.</p></div><div class="dish-price">14,90€</div></div>
         </div>
     </section>
 
-    <section id="wok" class="detail-section">
-        <h2 id="hWok">WOK & RAMEN</h2>
+    <section id="combos" class="detail-section">
+        <h2 id="hCom">COMBINACIONES</h2>
         <div class="dish-list">
-            <div class="dish-item"><div class="dish-info"><h4 id="n101">101. Yakisoba Vegetal</h4><p id="d101">Fideos salteados con verduras frescas.</p></div><div class="dish-price">9,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n150">150. Combo Salmón (12 uds)</h4><p id="d150">4 Maki, 4 Uramaki, 4 Nigiri de salmón.</p></div><div class="dish-price">17,90€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n151">151. Sushi Mix (16 uds)</h4><p id="d151">Variedad de maki, nigiri y uramaki.</p></div><div class="dish-price">22,50€</div></div>
         </div>
     </section>
 
-    <div style="text-align: center; background: #0f0f0f; padding-bottom: 80px;">
+    <div style="text-align: center; background: #0f0f0f; padding-bottom: 60px;">
         <a href="https://wa.me/34631669393" class="cta-btn" id="waB">RESERVAR POR WHATSAPP</a>
     </div>
 
@@ -113,30 +127,52 @@
         const dictionary = {
             en: {
                 langBtn: "ES", heroSub: "JAPANESE MODERN KITCHEN", selTitle: "MENU",
-                tEnt: "STARTERS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tWok: "WOK & RAMEN",
-                hEnt: "STARTERS", hMaki: "MAKI", hNigiri: "NIGIRI", hUra: "URAMAKI", hWok: "WOK & RAMEN",
+                tEnt: "STARTERS", tEns: "SALADS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tCom: "COMBOS",
+                hEnt: "STARTERS", hEns: "SALAD & STEAMED", hMaki: "MAKI (8 pcs)", hNigiri: "NIGIRI (2 pcs)", hUra: "URAMAKI (8 pcs)", hCom: "COMBINATIONS",
                 n20: "20. Teriyaki Salmon", d20: "Grilled salmon with teriyaki sauce.",
-                n12: "12. Ebi Tempura", d12: "Deep fried prawns in Japanese tempura (5 pcs).",
-                n1: "1. Tori No Karaage", d1: "Marinated Japanese fried chicken.",
-                n30: "30. Salmon Maki", d30: "Rice roll with fresh salmon.",
-                n31: "31. Tuna Maki", d31: "Rice roll with premium tuna.",
-                n50: "50. Salmon Nigiri", d50: "Thin slice of salmon on rice base.",
-                n81: "81. California Roll", d81: "Crab, avocado and cucumber.",
-                n101: "101. Vegetable Yakisoba", d101: "Stir-fried noodles with fresh vegetables.",
+                n12: "12. Ebi Tempura", d12: "Japanese fried prawns (5 pcs).",
+                n10: "10. Takoyaki", d10: "Octopus balls with savory sauce (4 pcs).",
+                nE1: "Vegetable Salad", dE1: "Lettuce, carrot, cherry tomato, mango, avocado.",
+                n31: "31. Saumai", d31: "Traditional pork dim sum (4 pcs).",
+                n32: "32. Hagkao", d32: "Crystal shrimp dumplings (4 pcs).",
+                n41: "41. Salmon Maki", d41: "Classic fresh salmon roll.",
+                n42: "42. Tuna Maki", d42: "Premium fresh tuna roll.",
+                n43: "43. Avocado Maki", d43: "Ripe avocado and rice roll.",
+                n50: "50. Shake Tempura Maki", d50: "Salmon and cream cheese tempura roll.",
+                n61: "61. Salmon Nigiri", d61: "Thin salmon slice over rice.",
+                n62: "62. Tuna Nigiri", d62: "Thin tuna slice over rice.",
+                n65: "65. Flamed Salmon Nigiri", d65: "Seared salmon with special sauce.",
+                n81: "81. Salmon Uramaki", d81: "Salmon and avocado roll.",
+                n91: "91. Crunchy Roll", d91: "Crab, avocado, teriyaki and crispy onion.",
+                n96: "96. Tiger Roll", d96: "Tempura shrimp, cream cheese and salmon.",
+                n101: "101. Dragon Roll", d101: "Eel, tempura shrimp and avocado.",
+                n150: "150. Salmon Combo (12 pcs)", d150: "4 Maki, 4 Uramaki, 4 Nigiri (all salmon).",
+                n151: "151. Sushi Mix (16 pcs)", d151: "Assortment of maki, nigiri and uramaki.",
                 waB: "BOOK VIA WHATSAPP"
             },
             es: {
                 langBtn: "EN", heroSub: "COCINA JAPONESA MODERNA", selTitle: "MENÚ",
-                tEnt: "ENTRANTES", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tWok: "WOK & RAMEN",
-                hEnt: "ENTRANTES", hMaki: "MAKI", hNigiri: "NIGIRI", hUra: "URAMAKI", hWok: "WOK & RAMEN",
+                tEnt: "ENTRANTES", tEns: "ENSALADAS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tCom: "COMBOS",
+                hEnt: "ENTRANTES", hEns: "ENSALADA & VAPOR", hMaki: "MAKI (8 uds)", hNigiri: "NIGIRI (2 uds)", hUra: "URAMAKI (8 uds)", hCom: "COMBINACIONES",
                 n20: "20. Salmón Teriyaki", d20: "Salmón a la plancha con salsa teriyaki.",
                 n12: "12. Ebi Tempura", d12: "Langostinos fritos en tempura japonesa (5 uds).",
-                n1: "1. Tori No Karaage", d1: "Pollo marinado y frito al estilo japonés.",
-                n30: "30. Maki Salmón", d30: "Rollo de arroz con salmón fresco.",
-                n31: "31. Maki Atún", d31: "Rollo de arroz con atún de primera calidad.",
-                n50: "50. Nigiri Salmón", d50: "Fina lámina de salmón sobre base de arroz.",
-                n81: "81. California Roll", d81: "Cangrejo, aguacate y pepino.",
-                n101: "101. Yakisoba Vegetal", d101: "Fideos salteados con verduras frescas.",
+                n10: "10. Takoyaki", d10: "Bolitas de masa rellenas de pulpo (4 uds).",
+                nE1: "Ensalada Vegetal", dE1: "Lechuga, zanahoria, tomate cherry, mango, aguacate.",
+                n31: "31. Saumai", d31: "Dim sum tradicional de cerdo (4 uds).",
+                n32: "32. Hagkao", d32: "Dumplings de camarón cristal (4 uds).",
+                n41: "41. Maki Salmón", d41: "Rollo clásico de salmón fresco.",
+                n42: "42. Maki Atún", d42: "Rollo clásico de atún premium.",
+                n43: "43. Maki Aguacate", d43: "Rollo de arroz con aguacate maduro.",
+                n50: "50. Shake Tempura Maki", d50: "Envueltos salmón y queso crema rebozado.",
+                n61: "61. Nigiri Salmón", d61: "Fina lámina de salmón sobre base de arroz.",
+                n62: "62. Nigiri Atún", d62: "Fina lámina de atún sobre base de arroz.",
+                n65: "65. Nigiri Salmón Flameado", d65: "Salmón braseado con salsa especial.",
+                n81: "81. Uramaki Salmón", d81: "Salmón y aguacate.",
+                n91: "91. Crunchy", d91: "Cangrejo, aguacate, teriyaki y cebolla crujiente.",
+                n96: "96. Tiger Roll", d96: "Langostino tempura, queso crema y salmón.",
+                n101: "101. Dragon Roll", d101: "Anguila, langostino tempura y aguacate.",
+                n150: "150. Combo Salmón (12 uds)", d150: "4 Maki, 4 Uramaki, 4 Nigiri de salmón.",
+                n151: "151. Sushi Mix (16 uds)", d151: "Variedad de maki, nigiri y uramaki.",
                 waB: "RESERVAR POR WHATSAPP"
             }
         };
