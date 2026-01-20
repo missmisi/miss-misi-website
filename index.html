@@ -1,178 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MISS MISI | Japanese Kitchen Barcelona</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: #d4af37; --black: #0a0a0a; --white: #ffffff; --grey: #1a1a1a; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
-        nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; }
-        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
-        .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        .lang-btn:hover { background: var(--gold); color: var(--black); }
-        .hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: 5px; }
-        .menu-preview { padding: 60px 5%; background: var(--black); text-align: center; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
-        .category-card { background: var(--grey); padding: 20px 10px; border: 1px solid #333; transition: 0.3s; text-decoration: none; color: white; border-radius: 4px; }
-        .category-card:hover { border-color: var(--gold); background: #222; }
-        .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 14px; }
-        .detail-section { padding: 60px 5%; background: #0f0f0f; border-top: 1px solid #222; }
-        .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 28px; border-bottom: 1px solid var(--gold); padding-bottom: 10px; }
-        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .dish-item { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #222; padding: 15px 0; }
-        .dish-info h4 { font-size: 16px; color: var(--white); margin-bottom: 4px; }
-        .dish-info p { font-size: 12px; color: #888; }
-        .dish-price { color: var(--gold); font-weight: 500; font-size: 16px; margin-left: 10px; white-space: nowrap; }
-        footer { padding: 40px 20px; text-align: center; color: #666; font-size: 12px; background: var(--black); }
-        .cta-btn { display: inline-block; padding: 12px 30px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin: 40px 0; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISS MISI | Japanese Kitchen Barcelona</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --black: #0a0a0a; --white: #ffffff; --grey: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; }
+        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
+        .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .lang-btn:hover { background: var(--gold); color: var(--black); }
+        .hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: 5px; }
+        .menu-preview { padding: 60px 5%; background: var(--black); text-align: center; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .category-card { background: var(--grey); padding: 20px 10px; border: 1px solid #333; transition: 0.3s; text-decoration: none; color: white; border-radius: 4px; }
+        .category-card:hover { border-color: var(--gold); background: #222; }
+        .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 14px; }
+        .detail-section { padding: 60px 5%; background: #0f0f0f; border-top: 1px solid #222; }
+        .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 28px; border-bottom: 1px solid var(--gold); padding-bottom: 10px; }
+        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .dish-item { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #222; padding: 15px 0; }
+        .dish-info h4 { font-size: 16px; color: var(--white); margin-bottom: 4px; }
+        .dish-info p { font-size: 12px; color: #888; }
+        .dish-price { color: var(--gold); font-weight: 500; font-size: 16px; margin-left: 10px; white-space: nowrap; }
+        footer { padding: 40px 20px; text-align: center; color: #666; font-size: 12px; background: var(--black); }
+        .cta-btn { display: inline-block; padding: 12px 30px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin: 40px 0; }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">MISS MISI</div>
-        <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
-    </nav>
+    <nav>
+        <div class="logo">MISS MISI</div>
+        <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+    </nav>
 
-    <section class="hero">
-        <h1>MISS MISI</h1>
-        <p id="heroSub" style="color:var(--gold); letter-spacing: 3px;">JAPANESE MODERN KITCHEN</p>
-    </section>
+    <section class="hero">
+        <h1>MISS MISI</h1>
+        <p id="heroSub" style="color:var(--gold); letter-spacing: 3px;">JAPANESE MODERN KITCHEN</p>
+    </section>
 
-    <section class="menu-preview">
-        <h2 id="selTitle">MENÚ</h2>
-        <div class="menu-grid">
-            <a href="#entrantes" class="category-card"><h3 id="tEnt">ENTRANTES</h3></a>
-            <a href="#ensalada" class="category-card"><h3 id="tEns">ENSALADA</h3></a>
-            <a href="#maki" class="category-card"><h3 id="tMaki">MAKI</h3></a>
-            <a href="#nigiri" class="category-card"><h3 id="tNigiri">NIGIRI</h3></a>
-            <a href="#uramaki" class="category-card"><h3 id="tUra">URAMAKI</h3></a>
-            <a href="#combos" class="category-card"><h3 id="tCom">COMBOS</h3></a>
-        </div>
-    </section>
+    <section class="menu-preview">
+        <h2 id="selTitle">MENÚ</h2>
+        <div class="menu-grid">
+            <a href="#entrantes" class="category-card"><h3 id="tEnt">ENTRANTES</h3></a>
+            <a href="#ensalada" class="category-card"><h3 id="tEns">ENSALADA</h3></a>
+            <a href="#maki" class="category-card"><h3 id="tMaki">MAKI</h3></a>
+            <a href="#nigiri" class="category-card"><h3 id="tNigiri">NIGIRI</h3></a>
+            <a href="#uramaki" class="category-card"><h3 id="tUra">URAMAKI</h3></a>
+            <a href="#combos" class="category-card"><h3 id="tCom">COMBOS</h3></a>
+        </div>
+    </section>
 
-    <section id="entrantes" class="detail-section">
-        <h2 id="hEnt">ENTRANTES</h2>
-        <div class="dish-list">
-            <div class="dish-item"><div class="dish-info"><h4 id="n1">1. Wakame</h4><p id="d1">Ensalada de algas marinas con sésamo.</p></div><div class="dish-price">4,55€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n2">2. Edamame</h4><p id="d2">Judías verdes de soja al vapor con sal.</p></div><div class="dish-price">3,60€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n3">3. Wakame no Misoshiru</h4><p id="d3">Sopa de Miso con algas wakame y tofu.</p></div><div class="dish-price">3,35€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n5">5. Gyoza Mixta (6 uds)</h4><p id="d5">3 empanadillas vegetales y 3 de pollo.</p></div><div class="dish-price">7,80€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n6">6. Gyoza de Pollo (5 uds)</h4><p id="d6">Empanadillas rellenas de pollo y verduras.</p></div><div class="dish-price">6,50€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n7">7. Gyoza de Cerdo (5 uds)</h4><p id="d7">Empanadillas rellenas de cerdo y verduras.</p></div><div class="dish-price">6,95€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n8">8. Gyoza de Langostino (5 uds)</h4><p id="d8">Empanadillas rellenas de langostino y verduras.</p></div><div class="dish-price">7,50€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n9">9. Gyoza de Vegetal (5 uds)</h4><p id="d9">Empanadillas rellenas de verduras mixtas.</p></div><div class="dish-price">5,95€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n11">11. Tori no Karaage (5 uds)</h4><p id="d11">Pollo frito marinado al estilo japonés.</p></div><div class="dish-price">6,85€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n12">12. Ebi Tempura (5 uds)</h4><p id="d12">Tempura de langostinos con salsa ponzu.</p></div><div class="dish-price">9,80€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n13">13. Tempura de Verdura</h4><p id="d13">Verduras mixtas fritas en tempura crujiente.</p></div><div class="dish-price">8,50€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n15">15. Mini Rollitos (6 uds)</h4><p id="d15">Rollitos crujientes de vegetales.</p></div><div class="dish-price">4,45€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n16">16. Takoyaki</h4><p id="d16">Bolas de harina rellenas de pulpo con salsas.</p></div><div class="dish-price">6,65€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n17">17. Pollo Katsu</h4><p id="d17">Pollo rebozado con spicy mayo, teriyaki y sésamo.</p></div><div class="dish-price">6,95€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n18">18. Ebi no Furai (5 uds)</h4><p id="d18">Langostinos fritos con salsa sweet chili.</p></div><div class="dish-price">8,20€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n19">19. Gohan</h4><p id="d19">Arroz blanco cocido con vinagre de sushi.</p></div><div class="dish-price">2,80€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n20">20. Salmón Teriyaki</h4><p id="d20">Salmón a la plancha con salsa teriyaki.</p></div><div class="dish-price">11,90€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n21">21. Tempura Verdura y Ebi</h4><p id="d21">Mezcla de verduras y langostinos en tempura.</p></div><div class="dish-price">10,50€</div></div>
-        </div>
-    </section>
+    <section id="entrantes" class="detail-section">
+        <h2 id="hEnt">ENTRANTES</h2>
+        <div class="dish-list">
+            <div class="dish-item"><div class="dish-info"><h4 id="n1">1. Wakame</h4><p id="d1">Ensalada de algas marinas con sésamo.</p></div><div class="dish-price">4,55€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n2">2. Edamame</h4><p id="d2">Judías verdes de soja al vapor con sal.</p></div><div class="dish-price">3,60€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n3">3. Wakame no Misoshiru</h4><p id="d3">Sopa de Miso con algas wakame y tofu.</p></div><div class="dish-price">3,35€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n5">5. Gyoza Mixta (6 uds)</h4><p id="d5">3 empanadillas vegetales y 3 de pollo.</p></div><div class="dish-price">7,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n6">6. Gyoza de Pollo (5 uds)</h4><p id="d6">Empanadillas rellenas de pollo y verduras.</p></div><div class="dish-price">6,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n7">7. Gyoza de Cerdo (5 uds)</h4><p id="d7">Empanadillas rellenas de cerdo y verduras.</p></div><div class="dish-price">6,95€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n8">8. Gyoza de Langostino (5 uds)</h4><p id="d8">Empanadillas rellenas de langostino y verduras.</p></div><div class="dish-price">7,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n9">9. Gyoza de Vegetal (5 uds)</h4><p id="d9">Empanadillas rellenas de verduras mixtas.</p></div><div class="dish-price">5,95€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n11">11. Tori no Karaage (5 uds)</h4><p id="d11">Pollo frito marinado al estilo japonés.</p></div><div class="dish-price">6,85€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n12">12. Ebi Tempura (5 uds)</h4><p id="d12">Tempura de langostinos con salsa ponzu.</p></div><div class="dish-price">9,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n13">13. Tempura de Verdura</h4><p id="d13">Verduras mixtas fritas en tempura crujiente.</p></div><div class="dish-price">8,50€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n15">15. Mini Rollitos (6 uds)</h4><p id="d15">Rollitos crujientes de vegetales.</p></div><div class="dish-price">4,45€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n16">16. Takoyaki</h4><p id="d16">Bolas de harina rellenas de pulpo con salsas.</p></div><div class="dish-price">6,65€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n17">17. Pollo Katsu</h4><p id="d17">Pollo rebozado con spicy mayo, teriyaki y sésamo.</p></div><div class="dish-price">6,95€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n18">18. Ebi no Furai (5 uds)</h4><p id="d18">Langostinos fritos con salsa sweet chili.</p></div><div class="dish-price">8,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n19">19. Gohan</h4><p id="d19">Arroz blanco cocido con vinagre de sushi.</p></div><div class="dish-price">2,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n20">20. Salmón Teriyaki</h4><p id="d20">Salmón a la plancha con salsa teriyaki.</p></div><div class="dish-price">11,90€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n21">21. Tempura Verdura y Ebi</h4><p id="d21">Mezcla de verduras y langostinos en tempura.</p></div><div class="dish-price">10,50€</div></div>
+        </div>
+    </section>
 
-    <section id="ensalada" class="detail-section">
-        <h2 id="hEns">ENSALADA & VAPOR</h2>
-        <div class="dish-list">
-            <div class="dish-item"><div class="dish-info"><h4 id="nE1">Ensalada Vegetal</h4><p id="dE1">Lechuga, zanahoria, tomate cherry, mango, aguacate.</p></div><div class="dish-price">4,80€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n31">31. Saumai</h4><p id="d31">Dim sum tradicional de cerdo (4 uds).</p></div><div class="dish-price">5,20€</div></div>
-            <div class="dish-item"><div class="dish-info"><h4 id="n32">32. Hagkao</h4><p id="d32">Dumplings de camarón cristal (4 uds).</p></div><div class="dish-price">5,20€</div></div>
-        </div>
-    </section>
+    <section id="ensalada" class="detail-section">
+        <h2 id="hEns">ENSALADA & VAPOR</h2>
+        <div class="dish-list">
+            <div class="dish-item"><div class="dish-info"><h4 id="nE1">Ensalada Vegetal</h4><p id="dE1">Lechuga, zanahoria, tomate cherry, mango, aguacate.</p></div><div class="dish-price">4,80€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n31">31. Saumai</h4><p id="d31">Dim sum tradicional de cerdo (4 uds).</p></div><div class="dish-price">5,20€</div></div>
+            <div class="dish-item"><div class="dish-info"><h4 id="n32">32. Hagkao</h4><p id="d32">Dumplings de camarón cristal (4 uds).</p></div><div class="dish-price">5,20€</div></div>
+        </div>
+    </section>
 
-    <section id="maki" class="detail-section">
-        <h2 id="hMaki">MAKI (8 uds)</h2>
-        <div class="dish-list">
-    <div class="dish-item"><div class="dish-info"><h4 id="n41">41. Salmon Maki (8 uds)</h4><p id="d41">Rollo clásico de salmón fresco.</p></div><div class="dish-price">5,80€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n42">42. Atún Maki (8 uds)</h4><p id="d42">Rollo clásico de atún premium.</p></div><div class="dish-price">7,20€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n43">43. Avocado Maki (8 uds)</h4><p id="d43">Rollo de arroz con aguacate maduro.</p></div><div class="dish-price">5,00€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n44">44. Ebi Maki (8 uds)</h4><p id="d44">Rollo de langostinos cocidos.</p></div><div class="dish-price">5,95€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n45">45. Kappa Maki (8 uds)</h4><p id="d45">Rollo de pepino refrescante y sésamo.</p></div><div class="dish-price">5,00€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n46">46. Aguacate y Queso (8 uds)</h4><p id="d46">Maki de aguacate con queso crema.</p></div><div class="dish-price">5,10€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n47">47. Salmón y Queso (8 uds)</h4><p id="d47">Maki de salmón con queso crema.</p></div><div class="dish-price">6,10€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n48">48. Salmón y Aguacate (8 uds)</h4><p id="d48">Maki de salmón y aguacate.</p></div><div class="dish-price">6,20€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n49">49. Atún y Aguacate (8 uds)</h4><p id="d49">Maki de atún y aguacate.</p></div><div class="dish-price">7,50€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n50">50. Shake Tempura Maki (8 uds)</h4><p id="d50">Envueltos salmón y queso crema rebozado, topping de tártar de salmón y salsa unagi.</p></div><div class="dish-price">9,10€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n51">51. Maguro Tempura Maki (6 uds)</h4><p id="d51">Atún picante con espárragos trigueros, en tempura frita con salsa ponzu.</p></div><div class="dish-price">9,60€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n52">52. Philadelphia Maki (6 uds)</h4><p id="d52">Rollo relleno de salmón rebozado, queso crema, cebollino y aguacate.</p></div><div class="dish-price">8,70€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n53">53. Shake Tempura Especial (8 uds)</h4><p id="d53">Rollo rebozado de salmón y queso, topping de cebolla crujiente y teriyaki.</p></div><div class="dish-price">7,80€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n54">54. Atún Tempura Maki (8 uds)</h4><p id="d54">Rollo rebozado de atún y queso, topping de cebolla crujiente y teriyaki.</p></div><div class="dish-price">8,30€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n55">55. Mango Maki (8 uds)</h4><p id="d55">Maki de mango fresco de alta calidad y arroz sazonado.</p></div><div class="dish-price">5,50€</div></div>
+    <section id="maki" class="detail-section">
+        <h2 id="hMaki">MAKI (8 uds)</h2>
+        <div class="dish-list">
+    <div class="dish-item"><div class="dish-info"><h4 id="n41">41. Salmon Maki (8 uds)</h4><p id="d41">Rollo clásico de salmón fresco.</p></div><div class="dish-price">5,80€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n42">42. Atún Maki (8 uds)</h4><p id="d42">Rollo clásico de atún premium.</p></div><div class="dish-price">7,20€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n43">43. Avocado Maki (8 uds)</h4><p id="d43">Rollo de arroz con aguacate maduro.</p></div><div class="dish-price">5,00€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n44">44. Ebi Maki (8 uds)</h4><p id="d44">Rollo de langostinos cocidos.</p></div><div class="dish-price">5,95€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n45">45. Kappa Maki (8 uds)</h4><p id="d45">Rollo de pepino refrescante y sésamo.</p></div><div class="dish-price">5,00€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n46">46. Aguacate y Queso (8 uds)</h4><p id="d46">Maki de aguacate con queso crema.</p></div><div class="dish-price">5,10€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n47">47. Salmón y Queso (8 uds)</h4><p id="d47">Maki de salmón con queso crema.</p></div><div class="dish-price">6,10€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n48">48. Salmón y Aguacate (8 uds)</h4><p id="d48">Maki de salmón y aguacate.</p></div><div class="dish-price">6,20€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n49">49. Atún y Aguacate (8 uds)</h4><p id="d49">Maki de atún y aguacate.</p></div><div class="dish-price">7,50€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n50">50. Shake Tempura Maki (8 uds)</h4><p id="d50">Envueltos salmón y queso crema rebozado, topping de tártar de salmón y salsa unagi.</p></div><div class="dish-price">9,10€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n51">51. Maguro Tempura Maki (6 uds)</h4><p id="d51">Atún picante con espárragos trigueros, en tempura frita con salsa ponzu.</p></div><div class="dish-price">9,60€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n52">52. Philadelphia Maki (6 uds)</h4><p id="d52">Rollo relleno de salmón rebozado, queso crema, cebollino y aguacate.</p></div><div class="dish-price">8,70€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n53">53. Shake Tempura Especial (8 uds)</h4><p id="d53">Rollo rebozado de salmón y queso, topping de cebolla crujiente y teriyaki.</p></div><div class="dish-price">7,80€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n54">54. Atún Tempura Maki (8 uds)</h4><p id="d54">Rollo rebozado de atún y queso, topping de cebolla crujiente y teriyaki.</p></div><div class="dish-price">8,30€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n55">55. Mango Maki (8 uds)</h4><p id="d55">Maki de mango fresco de alta calidad y arroz sazonado.</p></div><div class="dish-price">5,50€</div></div>
 </div>
-    </section>
-    <section id="nigiri" class="detail-section">
-        <h2 id="hNigiri">NIGIRI (2 uds)</h2>
-        <div class="dish-list">
-           <div class="dish-list">
-    <div class="dish-item"><div class="dish-info"><h4 id="n61">61. Nigiri de Salmón (2 uds)</h4><p id="d61">Fina lámina de salmón fresco sobre arroz sazonado.</p></div><div class="dish-price">4,20€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n62">62. Nigiri de Atún (2 uds)</h4><p id="d62">Lámina de atún premium sobre arroz sazonado.</p></div><div class="dish-price">5,60€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n63">63. Nigiri Blanco (2 uds)</h4><p id="d63">Lámina de dorada fresca sobre arroz sazonado.</p></div><div class="dish-price">4,20€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n64">64. Nigiri Ebi (2 uds)</h4><p id="d64">Lámina de langostino cocido sobre arroz sazonado.</p></div><div class="dish-price">4,50€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n65">65. Nigiri de Aguacate (2 uds)</h4><p id="d65">Lámina de aguacate maduro sobre arroz sazonado.</p></div><div class="dish-price">4,30€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n66">66. Nigiri de Anguila (2 uds)</h4><p id="d66">Anguila braseada con salsa unagi sobre arroz sazonado.</p></div><div class="dish-price">6,20€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n67">67. Nigiri Salmón y Queso (2 uds)</h4><p id="d67">Salmón con un toque de queso Philadelphia.</p></div><div class="dish-price">4,60€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n68">68. Nigiri Salmón y Aguacate (2 uds)</h4><p id="d68">Salmón fresco con topping de aguacate.</p></div><div class="dish-price">4,60€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n69">69. Nigiri Salmón Flameado (2 uds)</h4><p id="d69">Salmón braseado con soplete y salsa especial.</p></div><div class="dish-price">5,10€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n70">70. Nigiri Atún Flameado (2 uds)</h4><p id="d70">Atún braseado con soplete y salsa especial.</p></div><div class="dish-price">6,10€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n71">71. Nigiri Salmón XXL (10 uds)</h4><p id="d71">Gran bandeja de nigiris de salmón fresco, ideal para compartir.</p></div><div class="dish-price">19,90€</div></div>
+    </section>
+    <section id="nigiri" class="detail-section">
+        <h2 id="hNigiri">NIGIRI (2 uds)</h2>
+        <div class="dish-list">
+           <div class="dish-list">
+    <div class="dish-item"><div class="dish-info"><h4 id="n61">61. Nigiri de Salmón (2 uds)</h4><p id="d61">Fina lámina de salmón fresco sobre arroz sazonado.</p></div><div class="dish-price">4,20€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n62">62. Nigiri de Atún (2 uds)</h4><p id="d62">Lámina de atún premium sobre arroz sazonado.</p></div><div class="dish-price">5,60€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n63">63. Nigiri Blanco (2 uds)</h4><p id="d63">Lámina de dorada fresca sobre arroz sazonado.</p></div><div class="dish-price">4,20€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n64">64. Nigiri Ebi (2 uds)</h4><p id="d64">Lámina de langostino cocido sobre arroz sazonado.</p></div><div class="dish-price">4,50€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n65">65. Nigiri de Aguacate (2 uds)</h4><p id="d65">Lámina de aguacate maduro sobre arroz sazonado.</p></div><div class="dish-price">4,30€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n66">66. Nigiri de Anguila (2 uds)</h4><p id="d66">Anguila braseada con salsa unagi sobre arroz sazonado.</p></div><div class="dish-price">6,20€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n67">67. Nigiri Salmón y Queso (2 uds)</h4><p id="d67">Salmón con un toque de queso Philadelphia.</p></div><div class="dish-price">4,60€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n68">68. Nigiri Salmón y Aguacate (2 uds)</h4><p id="d68">Salmón fresco con topping de aguacate.</p></div><div class="dish-price">4,60€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n69">69. Nigiri Salmón Flameado (2 uds)</h4><p id="d69">Salmón braseado con soplete y salsa especial.</p></div><div class="dish-price">5,10€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n70">70. Nigiri Atún Flameado (2 uds)</h4><p id="d70">Atún braseado con soplete y salsa especial.</p></div><div class="dish-price">6,10€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n71">71. Nigiri Salmón XXL (10 uds)</h4><p id="d71">Gran bandeja de nigiris de salmón fresco, ideal para compartir.</p></div><div class="dish-price">19,90€</div></div>
 </div>
-    </section>
-    <section id="uramaki" class="detail-section">
-        <h2 id="hUra">URAMAKI (8 uds)</h2>
-        <div class="dish-list">
-    <div class="dish-item"><div class="dish-info"><h4 id="n81">81. Uramaki Salmón y Aguacate (8 uds)</h4><p id="d81">Salmón, aguacate y semillas de sésamo por fuera.</p></div><div class="dish-price">7,50€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n82">82. Uramaki Salmón y Queso (8 uds)</h4><p id="d82">Salmón, aguacate, queso Philadelphia y sésamo.</p></div><div class="dish-price">7,80€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n83">83. California Uramaki (8 uds)</h4><p id="d83">Cangrejo, aguacate, pepino y sésamo por fuera.</p></div><div class="dish-price">6,80€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n84">84. Uramaki Atún y Aguacate (8 uds)</h4><p id="d84">Atún premium, aguacate y semillas de sésamo.</p></div><div class="dish-price">8,50€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n85">85. Uramaki Tempura de Pollo (8 uds)</h4><p id="d85">Pollo rebozado, aguacate y salsa japonesa.</p></div><div class="dish-price">7,50€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n86">86. Uramaki Tempura de Langostino (8 uds)</h4><p id="d86">Langostino rebozado, aguacate y salsa japonesa.</p></div><div class="dish-price">8,50€</div></div>
-    <div class="dish-item"><div class="dish-info"><h4 id="n87">87. Uramaki Ebi (8 uds)</h4><p id="d87">Sushi ebi (langostino cocido) y aguacate.</p></div><div class="dish-price">8,50€</div></div>
+    </section>
+    <section id="uramaki" class="detail-section">
+        <h2 id="hUra">URAMAKI (8 uds)</h2>
+        <div class="dish-list">
+    <div class="dish-item"><div class="dish-info"><h4 id="n81">81. Uramaki Salmón y Aguacate (8 uds)</h4><p id="d81">Salmón, aguacate y semillas de sésamo por fuera.</p></div><div class="dish-price">7,50€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n82">82. Uramaki Salmón y Queso (8 uds)</h4><p id="d82">Salmón, aguacate, queso Philadelphia y sésamo.</p></div><div class="dish-price">7,80€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n83">83. California Uramaki (8 uds)</h4><p id="d83">Cangrejo, aguacate, pepino y sésamo por fuera.</p></div><div class="dish-price">6,80€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n84">84. Uramaki Atún y Aguacate (8 uds)</h4><p id="d84">Atún premium, aguacate y semillas de sésamo.</p></div><div class="dish-price">8,50€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n85">85. Uramaki Tempura de Pollo (8 uds)</h4><p id="d85">Pollo rebozado, aguacate y salsa japonesa.</p></div><div class="dish-price">7,50€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n86">86. Uramaki Tempura de Langostino (8 uds)</h4><p id="d86">Langostino rebozado, aguacate y salsa japonesa.</p></div><div class="dish-price">8,50€</div></div>
+    <div class="dish-item"><div class="dish-info"><h4 id="n87">87. Uramaki Ebi (8 uds)</h4><p id="d87">Sushi ebi (langostino cocido) y aguacate.</p></div><div class="dish-price">8,50€</div></div>
 </div>
-    </section>
-    <section id="combos" class="detail-section"><h2 id="hCom">COMBINACIONES</h2><div class="dish-list"><div class="dish-item"><div class="dish-info"><h4 id="n150">150. Combo Salmón (12 uds)</h4><p id="d150">4 Maki, 4 Uramaki, 4 Nigiri de salmón.</p></div><div class="dish-price">17,90€</div></div></div></section>
+    </section>
+    <section id="combos" class="detail-section"><h2 id="hCom">COMBINACIONES</h2><div class="dish-list"><div class="dish-item"><div class="dish-info"><h4 id="n150">150. Combo Salmón (12 uds)</h4><p id="d150">4 Maki, 4 Uramaki, 4 Nigiri de salmón.</p></div><div class="dish-price">17,90€</div></div></div></section>
 
-    <div style="text-align: center; background: #0f0f0f; padding-bottom: 60px;">
-        <a href="https://wa.me/34631669393" class="cta-btn" id="waB">RESERVAR POR WHATSAPP</a>
-    </div>
-    <footer>📍 Carrer Bailèn 221, Barcelona | © MISS MISI 2026</footer>
+    <div style="text-align: center; background: #0f0f0f; padding-bottom: 60px;">
+        <a href="https://wa.me/34631669393" class="cta-btn" id="waB">RESERVAR POR WHATSAPP</a>
+    </div>
+    <footer>📍 Carrer Bailèn 221, Barcelona | © MISS MISI 2026</footer>
 
-    <script>
-        let currentLang = 'es';
-        const dictionary = {
-            en: {
-                langBtn: "ES", heroSub: "JAPANESE MODERN KITCHEN", selTitle: "MENU",
-                tEnt: "STARTERS", tEns: "SALADS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tCom: "COMBOS",
-                hEnt: "STARTERS", hEns: "SALAD & STEAMED", hMaki: "MAKI (8 pcs)", hNigiri: "NIGIRI (2 pcs)", hUra: "URAMAKI (8 pcs)", hCom: "COMBINATIONS",
-                n1: "1. Wakame", d1: "Seaweed salad with sesame seeds.",
-                n2: "2. Edamame", d2: "Steamed soybeans with sea salt.",
-                n3: "3. Wakame no Misoshiru", d3: "Miso soup with seaweed and tofu.",
-                n5: "5. Mixed Gyoza (6 pcs)", d5: "3 vegetable and 3 chicken dumplings.",
-                n6: "6. Chicken Gyoza (5 pcs)", d6: "Dumplings filled with chicken and vegetables.",
-                n7: "7. Pork Gyoza (5 pcs)", d7: "Dumplings filled with pork and vegetables.",
-                n8: "8. Prawn Gyoza (5 pcs)", d8: "Dumplings filled with prawns and vegetables.",
-                n9: "9. Vegetable Gyoza (5 pcs)", d9: "Dumplings filled with mixed vegetables.",
-                n11: "11. Tori no Karaage (5 pcs)", d11: "Japanese style marinated fried chicken.",
-                n12: "12. Ebi Tempura (5 pcs)", d12: "Prawn tempura served with ponzu sauce.",
-                n13: "13. Vegetable Tempura", d13: "Assorted deep-fried vegetables in tempura.",
-                n15: "15. Mini Spring Rolls (6 pcs)", d15: "Crispy vegetable spring rolls.",
-                n16: "16. Takoyaki", d16: "Octopus wheat balls with sauces and bonito flakes.",
-                n17: "17. Chicken Katsu", d17: "Breaded chicken with spicy mayo and teriyaki.",
-                n18: "18. Ebi no Furai (5 pcs)", d18: "Fried prawns with sweet chili sauce.",
-                n19: "19. Gohan", d19: "Steamed rice seasoned with sushi vinegar.",
-                n20: "20. Teriyaki Salmon", d20: "Grilled salmon with teriyaki sauce.",
-                n21: "21. Vegetable & Ebi Tempura", d21: "Mixed vegetables and prawns tempura.",
-                nE1: "Vegetable Salad", dE1: "Lettuce, carrot, cherry tomato, mango, avocado.",
-                n31: "31. Saumai", d31: "Traditional pork dim sum (4 pcs).",
-                n32: "32. Hagkao", d32: "Crystal shrimp dumplings (4 pcs).",
-                n41: "41. Salmon Maki (8 pcs)", d41: "Classic fresh salmon roll.",
+    <script>
+        let currentLang = 'es';
+        const dictionary = {
+            en: {
+                langBtn: "ES", heroSub: "JAPANESE MODERN KITCHEN", selTitle: "MENU",
+                tEnt: "STARTERS", tEns: "SALADS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tCom: "COMBOS",
+                hEnt: "STARTERS", hEns: "SALAD & STEAMED", hMaki: "MAKI (8 pcs)", hNigiri: "NIGIRI (2 pcs)", hUra: "URAMAKI (8 pcs)", hCom: "COMBINATIONS",
+                n1: "1. Wakame", d1: "Seaweed salad with sesame seeds.",
+                n2: "2. Edamame", d2: "Steamed soybeans with sea salt.",
+                n3: "3. Wakame no Misoshiru", d3: "Miso soup with seaweed and tofu.",
+                n5: "5. Mixed Gyoza (6 pcs)", d5: "3 vegetable and 3 chicken dumplings.",
+                n6: "6. Chicken Gyoza (5 pcs)", d6: "Dumplings filled with chicken and vegetables.",
+                n7: "7. Pork Gyoza (5 pcs)", d7: "Dumplings filled with pork and vegetables.",
+                n8: "8. Prawn Gyoza (5 pcs)", d8: "Dumplings filled with prawns and vegetables.",
+                n9: "9. Vegetable Gyoza (5 pcs)", d9: "Dumplings filled with mixed vegetables.",
+                n11: "11. Tori no Karaage (5 pcs)", d11: "Japanese style marinated fried chicken.",
+                n12: "12. Ebi Tempura (5 pcs)", d12: "Prawn tempura served with ponzu sauce.",
+                n13: "13. Vegetable Tempura", d13: "Assorted deep-fried vegetables in tempura.",
+                n15: "15. Mini Spring Rolls (6 pcs)", d15: "Crispy vegetable spring rolls.",
+                n16: "16. Takoyaki", d16: "Octopus wheat balls with sauces and bonito flakes.",
+                n17: "17. Chicken Katsu", d17: "Breaded chicken with spicy mayo and teriyaki.",
+                n18: "18. Ebi no Furai (5 pcs)", d18: "Fried prawns with sweet chili sauce.",
+                n19: "19. Gohan", d19: "Steamed rice seasoned with sushi vinegar.",
+                n20: "20. Teriyaki Salmon", d20: "Grilled salmon with teriyaki sauce.",
+                n21: "21. Vegetable & Ebi Tempura", d21: "Mixed vegetables and prawns tempura.",
+                nE1: "Vegetable Salad", dE1: "Lettuce, carrot, cherry tomato, mango, avocado.",
+                n31: "31. Saumai", d31: "Traditional pork dim sum (4 pcs).",
+                n32: "32. Hagkao", d32: "Crystal shrimp dumplings (4 pcs).",
+                n41: "41. Salmon Maki (8 pcs)", d41: "Classic fresh salmon roll.",
 n42: "42. Tuna Maki (8 pcs)", d42: "Premium fresh tuna roll.",
 n43: "43. Avocado Maki (8 pcs)", d43: "Ripe avocado and sushi rice roll.",
 n44: "44. Ebi Maki (8 pcs)", d44: "Cooked prawn roll.",
@@ -187,7 +187,7 @@ n52: "52. Philadelphia Maki (6 pcs)", d52: "Fried salmon, cream cheese, chives, 
 n53: "53. Special Shake Tempura (8 pcs)", d53: "Deep-fried salmon and cheese roll with crispy onion and teriyaki.",
 n54: "54. Tuna Tempura Maki (8 pcs)", d54: "Deep-fried tuna and cheese roll with crispy onion and teriyaki.",
 n55: "55. Mango Maki (8 pcs)", d55: "High-quality fresh mango maki with seasoned rice.",
-                n61: "61. Salmon Nigiri (2 pcs)", d61: "Fresh salmon slice over seasoned sushi rice.",
+                n61: "61. Salmon Nigiri (2 pcs)", d61: "Fresh salmon slice over seasoned sushi rice.",
 n62: "62. Tuna Nigiri (2 pcs)", d62: "Premium tuna slice over seasoned sushi rice.",
 n63: "63. White Fish Nigiri (2 pcs)", d63: "Fresh Sea Bream (Dorada) slice over rice.",
 n64: "64. Ebi Nigiri (2 pcs)", d64: "Cooked prawn over seasoned sushi rice.",
@@ -198,42 +198,42 @@ n68: "68. Salmon & Avocado Nigiri (2 pcs)", d68: "Fresh salmon with avocado topp
 n69: "69. Seared Salmon Nigiri (2 pcs)", d69: "Flame-seared salmon with special sauce.",
 n70: "70. Seared Tuna Nigiri (2 pcs)", d70: "Flame-seared tuna with special sauce.",
 n71: "71. Salmon Nigiri XXL (10 pcs)", d71: "Large platter of fresh salmon nigiri, perfect for sharing.",
-                n81: "81. Salmon & Avocado Uramaki (8 pcs)", d81: "Salmon, avocado, and sesame seeds outside.",
+                n81: "81. Salmon & Avocado Uramaki (8 pcs)", d81: "Salmon, avocado, and sesame seeds outside.",
 n82: "82. Salmon & Cheese Uramaki (8 pcs)", d82: "Salmon, avocado, Philadelphia cheese, and sesame.",
 n83: "83. California Uramaki (8 pcs)", d83: "Crab, avocado, cucumber, and sesame seeds outside.",
 n84: "84. Tuna & Avocado Uramaki (8 pcs)", d84: "Premium tuna, avocado, and sesame seeds.",
 n85: "85. Chicken Tempura Uramaki (8 pcs)", d85: "Fried chicken, avocado, and Japanese sauce.",
 n86: "86. Prawn Tempura Uramaki (8 pcs)", d86: "Fried prawn, avocado, and Japanese sauce.",
 n87: "87. Ebi Uramaki (8 pcs)", d87: "Sushi ebi (cooked prawn) and avocado.",
-                n150: "150. Salmon Combo (12 pcs)", d150: "4 Maki, 4 Uramaki, 4 Nigiri.",
-                waB: "BOOK VIA WHATSAPP"
-            },
-            es: {
-                langBtn: "EN", heroSub: "COCINA JAPONESA MODERNA", selTitle: "MENÚ",
-                tEnt: "ENTRANTES", tEns: "ENSALADAS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tCom: "COMBOS",
-                hEnt: "ENTRANTES", hEns: "ENSALADA & VAPOR", hMaki: "MAKI (8 uds)", hNigiri: "NIGIRI (2 uds)", hUra: "URAMAKI (8 uds)", hCom: "COMBINACIONES",
-                n1: "1. Wakame", d1: "Ensalada de algas marinas con sésamo.",
-                n2: "2. Edamame", d2: "Judías verdes de soja al vapor con sal.",
-                n3: "3. Wakame no Misoshiru", d3: "Sopa de Miso con algas wakame y tofu.",
-                n5: "5. Gyoza Mixta (6 uds)", d5: "3 empanadillas vegetales y 3 de pollo.",
-                n6: "6. Gyoza de Pollo (5 uds)", d6: "Empanadillas rellenas de pollo y verduras.",
-                n7: "7. Gyoza de Cerdo (5 uds)", d7: "Empanadillas rellenas de cerdo y verduras.",
-                n8: "8. Gyoza de Langostino (5 uds)", d8: "Empanadillas rellenas de langostino y verduras.",
-                n9: "9. Gyoza de Vegetal (5 uds)", d9: "Empanadillas rellenas de verduras mixtas.",
-                n11: "11. Tori no Karaage (5 uds)", d11: "Pollo frito marinado al estilo japonés.",
-                n12: "12. Ebi Tempura (5 uds)", d12: "Tempura de langostinos con salsa ponzu.",
-                n13: "13. Tempura de Verdura", d13: "Verduras mixtas fritas en tempura crujiente.",
-                n15: "15. Mini Rollitos (6 uds)", d15: "Rollitos crujientes de vegetales.",
-                n16: "16. Takoyaki", d16: "Bolas de harina rellenas de pulpo con salsas.",
-                n17: "17. Pollo Katsu", d17: "Pollo rebozado con spicy mayo, teriyaki y sésamo.",
-                n18: "18. Ebi no Furai (5 uds)", d18: "Langostinos fritos con salsa sweet chili.",
-                n19: "19. Gohan", d19: "Arroz blanco cocido con vinagre de sushi.",
-                n20: "20. Salmón Teriyaki", d20: "Salmón a la plancha con salsa teriyaki.",
-                n21: "21. Tempura Verdura y Ebi", d21: "Mezcla de verduras y langostinos en tempura.",
-                nE1: "Ensalada Vegetal", dE1: "Lechuga, zanahoria, tomate cherry, mango, aguacate.",
-                n31: "31. Saumai", d31: "Dim sum tradicional de cerdo (4 uds).",
-                n32: "32. Hagkao", d32: "Dumplings de camarón cristal (4 uds).",
-                
+                n150: "150. Salmon Combo (12 pcs)", d150: "4 Maki, 4 Uramaki, 4 Nigiri.",
+                waB: "BOOK VIA WHATSAPP"
+            },
+            es: {
+                langBtn: "EN", heroSub: "COCINA JAPONESA MODERNA", selTitle: "MENÚ",
+                tEnt: "ENTRANTES", tEns: "ENSALADAS", tMaki: "MAKI", tNigiri: "NIGIRI", tUra: "URAMAKI", tCom: "COMBOS",
+                hEnt: "ENTRANTES", hEns: "ENSALADA & VAPOR", hMaki: "MAKI (8 uds)", hNigiri: "NIGIRI (2 uds)", hUra: "URAMAKI (8 uds)", hCom: "COMBINACIONES",
+                n1: "1. Wakame", d1: "Ensalada de algas marinas con sésamo.",
+                n2: "2. Edamame", d2: "Judías verdes de soja al vapor con sal.",
+                n3: "3. Wakame no Misoshiru", d3: "Sopa de Miso con algas wakame y tofu.",
+                n5: "5. Gyoza Mixta (6 uds)", d5: "3 empanadillas vegetales y 3 de pollo.",
+                n6: "6. Gyoza de Pollo (5 uds)", d6: "Empanadillas rellenas de pollo y verduras.",
+                n7: "7. Gyoza de Cerdo (5 uds)", d7: "Empanadillas rellenas de cerdo y verduras.",
+                n8: "8. Gyoza de Langostino (5 uds)", d8: "Empanadillas rellenas de langostino y verduras.",
+                n9: "9. Gyoza de Vegetal (5 uds)", d9: "Empanadillas rellenas de verduras mixtas.",
+                n11: "11. Tori no Karaage (5 uds)", d11: "Pollo frito marinado al estilo japonés.",
+                n12: "12. Ebi Tempura (5 uds)", d12: "Tempura de langostinos con salsa ponzu.",
+                n13: "13. Tempura de Verdura", d13: "Verduras mixtas fritas en tempura crujiente.",
+                n15: "15. Mini Rollitos (6 uds)", d15: "Rollitos crujientes de vegetales.",
+                n16: "16. Takoyaki", d16: "Bolas de harina rellenas de pulpo con salsas.",
+                n17: "17. Pollo Katsu", d17: "Pollo rebozado con spicy mayo, teriyaki y sésamo.",
+                n18: "18. Ebi no Furai (5 uds)", d18: "Langostinos fritos con salsa sweet chili.",
+                n19: "19. Gohan", d19: "Arroz blanco cocido con vinagre de sushi.",
+                n20: "20. Salmón Teriyaki", d20: "Salmón a la plancha con salsa teriyaki.",
+                n21: "21. Tempura Verdura y Ebi", d21: "Mezcla de verduras y langostinos en tempura.",
+                nE1: "Ensalada Vegetal", dE1: "Lechuga, zanahoria, tomate cherry, mango, aguacate.",
+                n31: "31. Saumai", d31: "Dim sum tradicional de cerdo (4 uds).",
+                n32: "32. Hagkao", d32: "Dumplings de camarón cristal (4 uds).",
+                
 n41: "41. Salmon Maki (8 uds)", d41: "Rollo clásico de salmón fresco.",
 n42: "42. Atún Maki (8 uds)", d42: "Rollo clásico de atún premium.",
 n43: "43. Avocado Maki (8 uds)", d43: "Rollo de arroz con aguacate maduro.",
@@ -249,7 +249,7 @@ n52: "52. Philadelphia Maki (6 uds)", d52: "Rollo relleno de salmón rebozado, q
 n53: "53. Shake Tempura Especial (8 uds)", d53: "Rollo rebozado de salmón y queso, topping de cebolla crujiente y teriyaki.",
 n54: "54. Atún Tempura Maki (8 uds)", d54: "Rollo rebozado de atún y queso, topping de cebolla crujiente y teriyaki.",
 n55: "55. Mango Maki (8 uds)", d55: "Maki de mango fresco de alta calidad y arroz sazonado.",
-                n61: "61. Nigiri de Salmón (2 uds)", d61: "Fina lámina de salmón fresco sobre arroz sazonado.",
+                n61: "61. Nigiri de Salmón (2 uds)", d61: "Fina lámina de salmón fresco sobre arroz sazonado.",
 n62: "62. Nigiri de Atún (2 uds)", d62: "Lámina de atún premium sobre arroz sazonado.",
 n63: "63. Nigiri Blanco (2 uds)", d63: "Lámina de dorada fresca sobre arroz sazonado.",
 n64: "64. Nigiri Ebi (2 uds)", d64: "Lámina de langostino cocido sobre arroz sazonado.",
@@ -260,26 +260,26 @@ n68: "68. Nigiri Salmón y Aguacate (2 uds)", d68: "Salmón fresco con topping d
 n69: "69. Nigiri Salmón Flameado (2 uds)", d69: "Salmón braseado con soplete y salsa especial.",
 n70: "70. Nigiri Atún Flameado (2 uds)", d70: "Atún braseado con soplete y salsa especial.",
 n71: "71. Nigiri Salmón XXL (10 uds)", d71: "Gran bandeja de nigiris de salmón fresco, ideal para compartir.",
-                n81: "81. Uramaki Salmón y Aguacate (8 uds)", d81: "Salmón, aguacate y semillas de sésamo por fuera.",
+                n81: "81. Uramaki Salmón y Aguacate (8 uds)", d81: "Salmón, aguacate y semillas de sésamo por fuera.",
 n82: "82. Uramaki Salmón y Queso (8 uds)", d82: "Salmón, aguacate, queso Philadelphia y sésamo.",
 n83: "83. California Uramaki (8 uds)", d83: "Cangrejo, aguacate, pepino y sésamo por fuera.",
 n84: "84. Uramaki Atún y Aguacate (8 uds)", d84: "Atún premium, aguacate y semillas de sésamo.",
 n85: "85. Uramaki Tempura de Pollo (8 uds)", d85: "Pollo rebozado, aguacate y salsa japonesa.",
 n86: "86. Uramaki Tempura de Langostino (8 uds)", d86: "Langostino rebozado, aguacate y salsa japonesa.",
 n87: "87. Uramaki Ebi (8 uds)", d87: "Sushi ebi (langostino cocido) y aguacate.",
-                n150: "150. Combo Salmón (12 uds)", d150: "4 Maki, 4 Uramaki, 4 Nigiri de salmón.",
-                waB: "RESERVAR POR WHATSAPP"
-            }
-        };
+                n150: "150. Combo Salmón (12 uds)", d150: "4 Maki, 4 Uramaki, 4 Nigiri de salmón.",
+                waB: "RESERVAR POR WHATSAPP"
+            }
+        };
 
-        function toggleLang() {
-            currentLang = (currentLang === 'es') ? 'en' : 'es';
-            const dict = dictionary[currentLang];
-            for (let id in dict) {
-                const el = document.getElementById(id);
-                if (el) el.innerText = dict[id];
-            }
-        }
-    </script>
+        function toggleLang() {
+            currentLang = (currentLang === 'es') ? 'en' : 'es';
+            const dict = dictionary[currentLang];
+            for (let id in dict) {
+                const el = document.getElementById(id);
+                if (el) el.innerText = dict[id];
+            }
+        }
+    </script>
 </body>
 </html>
