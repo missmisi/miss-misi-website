@@ -29,6 +29,23 @@
         .dish-info p { font-size: 12px; color: #888; }
         .dish-price { color: var(--gold); font-weight: 500; font-size: 16px; margin-left: 10px; white-space: nowrap; }
         footer { padding: 40px 20px; text-align: center; color: #666; font-size: 12px; background: var(--black); }
+        #backToTop {
+        display: none;        /* 初始状态隐藏 */
+        position: fixed;      /* 固定在屏幕上，不随页面滚动走 */
+        bottom: 30px;         /* 距离底部 30 像素 */
+        right: 30px;          /* 距离右边 30 像素 */
+        z-index: 10000;       /* 确保它在所有内容的最上层 */
+        width: 50px;
+        height: 50px;
+        background-color: #d4af37; /* 金色 */
+        color: #0a0a0a;       /* 黑色箭头 */
+        border: none;
+        border-radius: 50%;   /* 圆形按钮 */
+        cursor: pointer;      /* 鼠标移上去变小手 */
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* 阴影增加立体感 */
+        }
         .cta-btn { display: inline-block; padding: 12px 30px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin: 40px 0; }
     </style>
 </head>
@@ -169,6 +186,7 @@
     </div>
 
     <footer>📍 Carrer Bailèn 221, Barcelona | © MISS MISI 2026</footer>
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
 
     <script>
         let currentLang = 'es';
@@ -311,6 +329,26 @@
                 const el = document.getElementById(id);
                 if (el) el.innerText = dict[id];
             }
+            // 获取按钮元素
+        const topBtn = document.getElementById("backToTop");
+
+        // 告诉浏览器：当窗口滚动时执行这个动作
+        window.onscroll = function() {
+        // 如果滚动超过 500 像素，显示按钮，否则隐藏
+        if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {
+            topBtn.style.display = "block";
+            } else {
+            topBtn.style.display = "none";
+            }
+            };
+
+        // 点击按钮时触发的函数
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // 实现丝滑的平滑滚动
+    });
+    }
         }
     </script>
 </body>
