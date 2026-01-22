@@ -329,7 +329,10 @@
                 const el = document.getElementById(id);
                 if (el) el.innerText = dict[id];
             }
-            // 获取按钮元素
+
+        }
+        
+                    // 获取按钮元素
         const topBtn = document.getElementById("backToTop");
 
         // 告诉浏览器：当窗口滚动时执行这个动作
@@ -337,19 +340,18 @@
         // 如果滚动超过 500 像素，显示按钮，否则隐藏
         if (document.documentElement.scrollTop > 500 || document.body.scrollTop > 500) {
             topBtn.style.display = "block";
-            } else {
+        } else {
             topBtn.style.display = "none";
-            }
-            };
+        }
+        };
 
         // 点击按钮时触发的函数
         function scrollToTop() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth' // 实现丝滑的平滑滚动
-    });
+        });
     }
-        }
     </script>
 </body>
 </html>
