@@ -88,6 +88,7 @@
         <h2 id="selTitle">MENÚ</h2>
         <div class="menu-grid">
             <a href="#entrantes" class="category-card"><h3 id="tEnt">ENTRANTES</h3></a>
+            <a href="#poke-tartar" class="category-card"><h3 id="tPkTt">POKE & TARTAR</h3></a>
             <a href="#al-vapor" class="category-card"><h3 id="tVap">AL VAPOR</h3></a>
             <a href="#ensalada" class="category-card"><h3 id="tEns">ENSALADA</h3></a>
             <a href="#maki" class="category-card"><h3 id="tMaki">MAKI</h3></a>
@@ -125,7 +126,51 @@
             <div class="dish-item"><div class="dish-info"><h4 id="n20">20. Salmón Teriyaki</h4><p id="d20">Salmón a la plancha con salsa teriyaki.</p></div><div class="dish-price">11,90€</div></div>
             <div class="dish-item"><div class="dish-info"><h4 id="n21">21. Tempura Verdura y Ebi</h4><p id="d21">Mezcla de verduras y langostinos en tempura.</p></div><div class="dish-price">10,50€</div></div>
         </div>
+        
     </section>
+    
+    <section id="poke-tartar" class="detail-section">
+    <h2 style="display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 24px; letter-spacing: 4px; margin-bottom: 30px;">
+        <img src="https://www.svgrepo.com/show/489811/fish-bowl.svg" style="width: 35px; height: 35px; filter: invert(72%) sepia(54%) saturate(446%) hue-rotate(3deg) brightness(96%) contrast(92%);">
+        <span id="hPkTt">POKE & TARTAR</span>
+    </h2>
+
+    <h3 class="sub-category-title" style="color: var(--gold); text-align: center; margin: 20px 0; font-family: 'Cinzel', serif;">POKES</h3>
+    
+    <div class="dish-item">
+        <div class="dish-info">
+            <h3 id="n121">121. Poke de Salmón</h3>
+            <p id="d121">Salmón, aguacate, zanahoria, wakame, edamame, mango, cebolla crispy, sésamo, salsa ponzu y teriyaki.</p>
+        </div>
+        <span class="price">10,95€</span>
+    </div>
+
+    <div class="dish-item">
+        <div class="dish-info">
+            <h3 id="n122">122. Poke de Atún</h3>
+            <p id="d122">Atún, aguacate, zanahoria, wakame, edamame, mango, cebolla crispy, sésamo, salsa ponzu y teriyaki.</p>
+        </div>
+        <span class="price">12,95€</span>
+    </div>
+
+    <h3 class="sub-category-title" style="color: var(--gold); text-align: center; margin: 40px 0 20px; font-family: 'Cinzel', serif;">TARTAR</h3>
+
+    <div class="dish-item">
+        <div class="dish-info">
+            <h3 id="nTtS">Tartar de Salmón</h3>
+            <p id="dTtS">Salmón, aguacate, sésamo y tobiko con salsa de sésamo.</p>
+        </div>
+        <span class="price">10,50€</span>
+    </div>
+
+    <div class="dish-item">
+        <div class="dish-info">
+            <h3 id="nTtA">Tartar de Atún</h3>
+            <p id="dTtA">Atún, aguacate, sésamo y tobiko con salsa de sésamo.</p>
+        </div>
+        <span class="price">12,50€</span>
+    </div>
+</section>
 
     <section id="ensalada" class="detail-section">
         <h2 style="display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 24px; letter-spacing: 4px; margin-bottom: 30px;">
@@ -279,6 +324,17 @@
                 n21: "21. Vegetable & Ebi Tempura", d21: "Mixed vegetables and prawns tempura.",
                 nE1: "Vegetable Salad", dE1: "Lettuce, carrot, cherry tomato, mango, avocado.",
                 // 在 en: { ... } 里面添加
+tPkTt: "POKE & TARTAR",
+hPkTt: "POKE & TARTAR",
+n121: "121. Salmon Poke Bowl",
+d121: "Salmon, avocado, carrot, wakame, edamame, mango, crispy onion, sesame, ponzu and teriyaki sauce.",
+n122: "122. Tuna Poke Bowl",
+d122: "Tuna, avocado, carrot, wakame, edamame, mango, crispy onion, sesame, ponzu and teriyaki sauce.",
+nTtS: "Salmon Tartare",
+dTtS: "Salmon, avocado, sesame and tobiko with sesame sauce.",
+nTtA: "Tuna Tartare",
+dTtA: "Tuna, avocado, sesame and tobiko with sesame sauce.",
+                // 在 en: { ... } 里面添加
                 hAlVapor: "STEAMED",
                 n31: "31. Shaumai",
                 d31: "Traditional pork dim sum (4 pcs).",
@@ -349,6 +405,17 @@
                 n20: "20. Salmón Teriyaki", d20: "Salmón a la plancha con salsa teriyaki.",
                 n21: "21. Tempura Verdura y Ebi", d21: "Mezcla de verduras y langostinos en tempura.",
                 nE1: "Ensalada Vegetal", dE1: "Lechuga, zanahoria, tomate cherry, mango, aguacate.",
+                // 在 es: { ... } 里面添加
+tPkTt: "POKE & TARTAR",
+hPkTt: "POKE & TARTAR",
+n121: "121. Poke de Salmón",
+d121: "Salmón, aguacate, zanahoria, wakame, edamame, mango, cebolla crispy, sésamo, salsa ponzu y teriyaki.",
+n122: "122. Poke de Atún",
+d122: "Atún, aguacate, zanahoria, wakame, edamame, mango, cebolla crispy, sésamo, salsa ponzu y teriyaki.",
+nTtS: "Tartar de Salmón",
+dTtS: "Salmón, aguacate, sésamo y tobiko con salsa de sésamo.",
+nTtA: "Tartar de Atún",
+dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
                 // 在 es: { ... } 里面添加
                 hAlVapor: "AL VAPOR",
                 n31: "31. Saumai",
