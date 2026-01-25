@@ -75,6 +75,7 @@
     <a href="#sushis-clasicos" style="color: white; text-decoration: none; font-size: 12px;">SUSHIS CLÁSICOS</a>
     <a href="#maki-temaki" style="color: white; text-decoration: none; font-size: 12px;">MAKI & TEMAKI</a>
     <a href="#uramaki" style="color: white; text-decoration: none; font-size: 12px;">URAMAKI</a>
+    <a href="#hot-kitchen" style="color: white; text-decoration: none; font-size: 12px;">COCINA CALIENTE</a>
     <a href="#combos-section" style="color: white; text-decoration: none; font-size: 12px;">COMBOS & CHIRASHI</a>
 </div>
         <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
@@ -522,7 +523,7 @@
 </div>
         
     </section>
-    <section id="hot-kitchen" class="detail-section">
+   <section id="hot-kitchen" class="detail-section">
     <h2 style="display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 24px; letter-spacing: 4px; margin-bottom: 30px;">
         <span style="width: 40px; height: 1px; background: var(--gold);"></span>
         <span id="hHotKitchen">COCINA CALIENTE</span>
@@ -537,7 +538,8 @@
         </h3>
     </div>
     <div class="dish-list" id="hot-fritos">
-        </div>
+        <p style="text-align: center; color: #888; font-size: 12px; font-style: italic;">Consulte nuestras especialidades del día</p>
+    </div>
 
     <div style="text-align: center; margin: 40px 0 25px;">
         <h3 style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 16px;">
@@ -546,8 +548,63 @@
             <span style="font-size: 10px; margin-left: 8px;">◆</span>
         </h3>
     </div>
-    <div class="dish-list" id="hot-main">
+    
+    <div style="padding: 0 10px;">
+        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border: 1px solid rgba(212,175,55,0.2); margin-bottom: 20px;">
+            <h4 id="hYakisoba" style="color: var(--gold); margin-bottom: 5px;">YAKISOBA</h4>
+            <p style="font-size: 12px; color: #bbb; margin-bottom: 12px;">Tallarines japoneses con verduras variadas.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px;">
+                <span>201. Verduras: <b>6,95€</b></span>
+                <span>202. Pollo: <b>7,45€</b></span>
+                <span>203. Ternera: <b>8,50€</b></span>
+                <span>204. Solomillo: <b>8,50€</b></span>
+                <span>205. Gambas: <b>8,50€</b></span>
+                <span>206. Marisco: <b>9,05€</b></span>
+            </div>
         </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border: 1px solid rgba(212,175,55,0.2); margin-bottom: 20px;">
+            <h4 id="hYakimeshi" style="color: var(--gold); margin-bottom: 5px;">YAKIMESHI</h4>
+            <p style="font-size: 12px; color: #bbb; margin-bottom: 12px;">Arroz frito tradicional con verduras.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px;">
+                <span>301. Verduras: <b>6,95€</b></span>
+                <span>302. Pollo: <b>7,50€</b></span>
+                <span>303. Ternera: <b>8,50€</b></span>
+                <span>304. Solomillo: <b>8,50€</b></span>
+                <span>305. Gambas: <b>8,50€</b></span>
+                <span>306. Marisco: <b>9,05€</b></span>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border: 1px solid rgba(212,175,55,0.2); margin-bottom: 20px;">
+            <h4 id="hUdon" style="color: var(--gold); margin-bottom: 5px;">UDON</h4>
+            <p style="font-size: 12px; color: #bbb; margin-bottom: 12px;">Fideos gruesos con verduras y kimuchi picante.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px;">
+                <span>501. Verduras: <b>7,50€</b></span>
+                <span>502. Pollo: <b>8,00€</b></span>
+                <span>503. Ternera: <b>9,00€</b></span>
+                <span>504. Solomillo: <b>9,05€</b></span>
+                <span>505. Gambas: <b>9,05€</b></span>
+                <span>506. Marisco: <b>9,60€</b></span>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0 25px;">
+        <h3 style="color: var(--gold); font-family: 'Cinzel', serif; font-size: 16px;">
+            <span style="font-size: 10px; margin-right: 8px;">◆</span>
+            TEPPANYAKI
+            <span style="font-size: 10px; margin-left: 8px;">◆</span>
+        </h3>
+    </div>
+    <div class="dish-list">
+        <div class="dish-item"><div class="dish-info"><h4 id="n704">704. Pato Frito (1/4)</h4><p id="d704">Pato marinado en salsa teriyaki y frito crujiente.</p></div><span class="dish-price">8,95€</span></div>
+        <div class="dish-item"><div class="dish-info"><h4 id="n705">705. Teppanyaki Ternera</h4><p id="d705">Tiras de carne con pimientos y cebolla a la plancha.</p></div><span class="dish-price">8,95€</span></div>
+        <div class="dish-item"><div class="dish-info"><h4 id="n706">706. Teppan Ramen</h4><p id="d706">Ramen salteado con vegetales, huevo y camarones.</p></div><span class="dish-price">10,50€</span></div>
+        <div class="dish-item"><div class="dish-info"><h4 id="n707">707. Yaki Tori (2 uds)</h4><p id="d707">Brochetas de pollo con salsa teriyaki.</p></div><span class="dish-price">4,95€</span></div>
+        <div class="dish-item"><div class="dish-info"><h4 id="n708">708. Yaki Ebi (2 uds)</h4><p id="d708">Pinchos de gambas a la plancha con salsa especial.</p></div><span class="dish-price">5,95€</span></div>
+        <div class="dish-item"><div class="dish-info"><h4 id="n709">709. Yaki Salmón (2 uds)</h4><p id="d709">Brochetas de salmón fresco a la plancha.</p></div><span class="dish-price">6,50€</span></div>
+    </div>
 </section>
 
     <section id="combos-section" class="detail-section">
@@ -810,8 +867,25 @@ dTtA: "Tuna, avocado, sesame and tobiko with sesame sauce.",
             n107: "107. Crystal Salmon Uramaki", d107: "Rice paper, lettuce, salmon, and cream cheese.",
             n108: "108. Miss Uramaki", d108: "Prawn tempura, cream cheese, tobiko, seared salmon, and candied onion.",
             n109: "109. Maguro Tartar Uramaki", d109: "Tuna tartar, avocado, kampyo, topped with candied onion and chives.",
-               
-                hHotKitchen: "KITCHEN & HOT DISHES",
+                
+                                // 标题类
+                hHotKitchen: "HOT DISHES",
+                hYakisoba: "YAKI SOBA (Noodles)",
+                hYakimeshi: "YAKIMESHI (Fried Rice)",
+                hUdon: "UDON (Thick Noodles)",
+                
+                // 描述类
+                dYakisoba: "Stir-fried Japanese noodles with mixed vegetables.",
+                dYakimeshi: "Traditional Japanese fried rice with vegetables.",
+                dUdon: "Thick wheat noodles with vegetables and spicy kimchi.",
+
+                n704: "704. Crispy Duck (1/4)", d704: "Duck marinated in teriyaki sauce, fried to perfection. A romantic gourmet delight.",
+                n705: "705. Beef Teppanyaki", d705: "Sautéed beef strips with peppers and onions, cooked on an iron griddle.",
+                n706: "706. Teppan Ramen", d706: "Stir-fried ramen noodles with mixed vegetables, egg, and shrimp on a griddle.",
+                n707: "707. Yaki Tori (2 pcs)", d707: "Grilled chicken skewers with traditional teriyaki sauce.",
+                n708: "708. Yaki Ebi (2 pcs)", d808: "Grilled prawn skewers with our house-special sauce.",
+                n709: "709. Yaki Salmon (2 pcs)", d709: "Grilled salmon skewers with teriyaki sauce and sesame seeds.",
+                
                 n181: "181. Salmon Hand Roll", d181: "Avocado and cream cheese with teriyaki sauce and sesame.",
                 n182: "182. Tuna Hand Roll", d182: "Avocado and cream cheese with teriyaki sauce and sesame.",
                 n183: "183. Ebi Avocado Hand Roll", d183: "Cooked prawn, tobiko, avocado, and mint sauce.",
@@ -955,7 +1029,26 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
             n107: "107. Cristal Salmón Uramaki", d107: "Papel de arroz, lechuga, salmón y queso.",
             n108: "108. Miss Uramaki", d108: "Langostino tempura, queso crema, tobiko, salmón soasado y cebolla confitada.",
             n109: "109. Maguro Tartar Uramaki", d109: "Tartar de atún, aguacate, kampyo, cebolla confitada y cebollino.",
-                hHotKitchen: "COCINA CALIENTE",
+                
+                            // 标题类
+            hHotKitchen: "COCINA CALIENTE",
+            hYakisoba: "YAKISOBA",
+            hYakimeshi: "YAKIMESHI",
+            hUdon: "UDON",
+            
+            // 描述类
+            dYakisoba: "Tallarines japoneses con verduras variadas.",
+            dYakimeshi: "Arroz frito tradicional con verduras.",
+            dUdon: "Fideos gruesos con verduras y kimuchi picante.",
+
+            // 铁板烧类 (n704-n709, d704-d709 按之前给你的保持不变即可)
+            n704: "704. Pato Frito (1/4)", d704: "Pato marinado en salsa teriyaki, una delicia crujiente para los amantes de la buena cocina.",
+            n705: "705. Teppanyaki de Ternera", d705: "Carne de res salteada con pimientos y cebolla, tierna por dentro y con un aroma irresistible.",
+            n706: "706. Teppan Ramen", d706: "Fideos ramen salteados con vegetales, huevo y camarones al estilo Teppanyaki.",
+            n707: "707. Yaki Tori (2 uds)", d707: "Brochetas de pollo a la brasa con salsa teriyaki.",
+            n708: "708. Yaki Ebi (2 uds)", d808: "Pinchos de gambas a la plancha con salsa especial.",
+            n709: "709. Yaki Salmón (2 uds)", d709: "Brochetas de salmón a la plancha con salsa teriyaki.",
+                
                 n181: "181. Temaki de Salmón", d181: "Aguacate y queso con salsa teriyaki y sésamo.",
                 n182: "182. Temaki de Atún", d182: "Aguacate y queso con salsa teriyaki y sésamo.",
                 n183: "183. Temaki Ebi Avocado", d183: "Langostino cocido, tobiko, aguacate y salsa de menta.",
