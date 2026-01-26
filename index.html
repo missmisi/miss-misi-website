@@ -1040,7 +1040,12 @@ dTtA: "Tuna, avocado, sesame and tobiko with sesame sauce.",
                 
                 n135: "135. Salmon Chirashi Bowl", d135: "Sushi rice topped with raw salmon slices, avocado, and sesame seeds.",
                 n137: "137. Mixed Fish Chirashi", d137: "Sushi rice topped with salmon, tuna, white fish, prawn, and teriyaki sauce.",
-
+            pAllergy: "If you have any food allergies or intolerances, please inform our staff before placing your order.",
+            hOpening: "OPENING HOURS",
+            tMonTue: "Monday & Tuesday:",
+            tWedSun: "Wednesday - Sunday:",
+            hLocation: "LOCATION"
+                    
                 txtRes: "RESERVE",
                 
                 waB: "BOOK VIA WHATSAPP"
@@ -1217,8 +1222,12 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
                 
                 n135: "135. Shake Chirashi", d135: "Arroz para sushi cubierto con láminas de salmón crudo, aguacate y semillas de sésamo.",
                 n137: "137. Chirashi Mixto", d137: "Arroz para sushi cubierto con salmón, atún, dorada, ebi y salsa teriyaki.",
-
-                txtRes: "RESERVAR",
+            pAllergy: "Si tiene alguna alergia o intolerancia alimentaria, por favor informe a nuestro personal antes de realizar su pedido.",
+            hOpening: "HORARIO",
+            tMonTue: "Lunes y Martes:",
+            tWedSun: "Miércoles - Domingo:",
+            hLocation: "UBICACIÓN"
+                            txtRes: "RESERVAR",
                 
                 waB: "RESERVAR POR WHATSAPP"
             }
@@ -1306,5 +1315,38 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
     animation: pulse-green 2s infinite;
 }
 </style>
+        
+ <footer style="background: #000; color: #fff; padding: 40px 20px; text-align: center; border-top: 1px solid var(--gold);">
+    
+    <div style="margin-bottom: 30px; padding: 15px; border: 1px dashed rgba(212,175,55,0.5); border-radius: 8px;">
+        <p id="pAllergy" style="font-size: 13px; color: #ccc; font-style: italic; line-height: 1.6;">
+            Si tiene alguna alergia o intolerancia alimentaria, por favor informe a nuestro personal antes de realizar su pedido.
+        </p>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <h3 id="hOpening" style="color: var(--gold); font-size: 18px; margin-bottom: 15px; letter-spacing: 2px;">HORARIO</h3>
+        <div style="font-size: 14px; line-height: 1.8; color: #eee; display: inline-block; text-align: left;">
+            <p><strong id="tMonTue">Lunes y Martes:</strong><br>
+               <span style="color: var(--gold);">19:00 – 23:30</span></p>
+            <p style="margin-top: 10px;"><strong id="tWedSun">Miércoles - Domingo:</strong><br>
+               11:30 – 16:30<br>
+               19:00 – 23:30</p>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <h3 id="hLocation" style="color: var(--gold); font-size: 18px; margin-bottom: 15px; letter-spacing: 2px;">UBICACIÓN</h3>
+        <p style="font-size: 14px; margin-bottom: 15px; color: #eee;">Calle de la Alegría, 123, 08001 Barcelona</p>
+        
+        <a href="https://maps.app.goo.gl/vx97P9X8dkgCowp1A" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #000; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;">
+            <span>📍 CÓMO LLEGAR</span>
+        </a>
+    </div>
+
+    <div style="font-size: 11px; color: #666; margin-top: 20px;">
+        &copy; 2024 Restaurante Japonés. Todos los derechos reservados.
+    </div>
+</footer>
 </body>
 </html>
