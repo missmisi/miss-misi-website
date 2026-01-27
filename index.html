@@ -1035,13 +1035,7 @@ dTtA: "Tuna, avocado, sesame and tobiko with sesame sauce.",
                 n135: "135. Salmon Chirashi Bowl", d135: "Sushi rice topped with raw salmon slices, avocado, and sesame seeds.",
                 n137: "137. Mixed Fish Chirashi", d137: "Sushi rice topped with salmon, tuna, white fish, prawn, and teriyaki sauce.",
 
-                txtRes: "BOOK NOW",
-                // 新增页脚翻译
-          fAllergy: "If you have any food allergies or intolerances, please inform our staff before placing your order.",
-          fOpeningTitle: "OPENING HOURS",
-          fMonTue: "Monday & Tuesday:",
-          fWedSun: "Wednesday - Sunday:",
-          fLocationTitle: "LOCATION"
+                txtRes: "RESERVE",
                 
                 waB: "BOOK VIA WHATSAPP"
             },
@@ -1138,9 +1132,8 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
                 n166: "166. Gunkan Spicy Salmón", d166: "Tartar de salmón con salsa picante especial.",
                 n167: "167. Gunkan Wakame", d167: "Cestita de nori rellena de ensalada wakame.",
                 
-                // 即使翻译后的内容一模一样，ID 也要分开
-                tMakiTemaki: "MAKI & TEMAKI", // 负责方块的翻译
-                hMakiTemaki: "MAKI & TEMAKI", // 负责正文标题的翻译
+                
+                hMakiTemaki: "MAKI & TEMAKI",
                 n81: "81. Uramaki Salmón y Aguacate (8 uds)", d81: "Salmón, aguacate y semillas de sésamo por fuera.",
                 n82: "82. Uramaki Salmón y Queso (8 uds)", d82: "Salmón, aguacate, queso Philadelphia y sésamo.",
                 n83: "83. California Uramaki (8 uds)", d83: "Cangrejo, aguacate, pepino y sésamo por fuera.",
@@ -1195,7 +1188,7 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
                 n182: "182. Temaki de Atún", d182: "Aguacate y queso con salsa teriyaki y sésamo.",
                 n183: "183. Temaki Ebi Avocado", d183: "Langostino cocido, tobiko, aguacate y salsa de menta.",
                 n184: "184. Temaki Ebi Furai", d184: "Langostino frito con lechuga y queso.",
-                tCom: "COMBOS",
+                
                 hCombosChirasi: "COMBOS & CHIRASHI",
                 n801: "801. Combo 1", d801: "6 Nigiri de salmón, 8 uramaki de salmón.",
                 n802: "802. Combo 2", d802: "Variado de Nigiri (salmón, atún, gambas, blanco), uramaki y maki.",
@@ -1213,12 +1206,6 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
                 n137: "137. Chirashi Mixto", d137: "Arroz para sushi cubierto con salmón, atún, dorada, ebi y salsa teriyaki.",
 
                 txtRes: "RESERVAR",
-                // 新增页脚翻译
-          fAllergy: "Si tiene alguna alergia o intolerancia alimentaria, por favor informe a nuestro personal antes de realizar su pedido.",
-          fOpeningTitle: "HORARIO",
-          fMonTue: "Lunes y Martes:",
-          fWedSun: "Miércoles - Domingo:",
-          fLocationTitle: "UBICACIÓN"
                 
                 waB: "RESERVAR POR WHATSAPP"
             }
@@ -1256,34 +1243,7 @@ dTtA: "Atún, aguacate, sésamo y tobiko con salsa de sésamo.",
         });
     }
     </script>
-        
-    <footer style="background: #000; color: #fff; padding: 40px 20px; text-align: center; border-top: 1px solid #d4af37; margin-top: 50px; font-family: 'Noto Sans JP', sans-serif;">
-        <div style="margin-bottom: 30px; padding: 15px; border: 1px dashed rgba(212,175,55,0.5); border-radius: 8px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            <p id="fAllergy" style="font-size: 13px; color: #ccc; font-style: italic;">
-                Si tiene alguna alergia o intolerancia alimentaria, por favor informe a nuestro personal antes de realizar su pedido.
-            </p>
-        </div>
-
-        <div style="margin-bottom: 35px;">
-            <h3 id="fOpeningTitle" style="color: #d4af37; font-size: 18px; margin-bottom: 15px; letter-spacing: 2px;">HORARIO</h3>
-            <div style="font-size: 14px; line-height: 1.8; color: #eee; display: inline-block; text-align: left;">
-                <p><strong id="fMonTue">Lunes y Martes:</strong><br>
-                   <span style="color: #d4af37;">19:00 – 23:30</span></p>
-                <p style="margin-top: 10px;"><strong id="fWedSun">Miércoles - Domingo:</strong><br>
-                   11:30 – 16:30<br>
-                   19:00 – 23:30</p>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 30px;">
-            <h3 id="fLocationTitle" style="color: #d4af37; font-size: 18px; margin-bottom: 15px; letter-spacing: 2px;">UBICACIÓN</h3>
-            <p style="font-size: 14px; margin-bottom: 15px; color: #eee;">Carrer Bailen 221, 08037 Barcelona</p>
-            <a href="https://maps.app.goo.gl/mVyN9DqgqbSKbEuM8" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; background: #d4af37; color: #000; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px;">
-                <span>📍 CÓMO LLEGAR</span>
-            </a>
-        </div>
-    </footer>
-        
+    
     <a href="https://wa.me/34631669393?text=Hola,%20quisiera%20reservar%20una%20mesa:%0A-%20Nombre:%20%0A-%20Fecha:%20%0A-%20Hora:%20%0A-%20Personas:%20" 
    target="_blank" 
    class="whatsapp-float"
