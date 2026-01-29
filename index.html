@@ -17,7 +17,8 @@
             padding: 0 5%; display: flex; justify-content: space-between; align-items: center; 
             background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; 
         }
-        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo {display: flex;align-items: center;background: transparent; /* 确保容器不带底色 */
+        }
         #siteLogo {height: 55px;width: auto;display: block;
     /* 核心代码：这行会让图片里的黑色/深色背景自动过滤，变为透明 */
     mix-blend-mode: screen; 
