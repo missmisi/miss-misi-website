@@ -10,85 +10,70 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { background-color: var(--black); color: var(--white); font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; }
-        nav { position: fixed; top: 0; width: 100%; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; }
-        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
+        
+        /* 导航栏基础样式 */
+        nav { 
+            position: fixed; top: 0; width: 100%; padding: 10px 40px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            background: rgba(10, 10, 10, 0.95); z-index: 9999; border-bottom: 1px solid #222; 
+        }
+
+        /* Logo 核心设置 - 放在外面，确保全局生效 */
+        .logo { padding: 5px 0; text-decoration: none; }
+        #siteLogo {
+            height: 60px;    /* 电脑端高度 */
+            width: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        #siteLogo:hover { transform: scale(1.05); }
+
         .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
         .lang-btn:hover { background: var(--gold); color: var(--black); }
+        
         .hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: 5px; }
+        
         .menu-preview { padding: 60px 5%; background: var(--black); text-align: center; }
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        
         .category-card { background: var(--grey); padding: 20px 10px; border: 1px solid #333; transition: 0.3s; text-decoration: none; color: white; border-radius: 4px; }
         .category-card:hover { border-color: var(--gold); background: #222; }
         .category-card h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 14px; }
+        
         .detail-section { padding: 80px 5% 40px; background: #0f0f0f; border-top: 1px solid #222; }
         .detail-section h2 { font-family: 'Cinzel', serif; color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 28px; border-bottom: 1px solid var(--gold); padding-bottom: 10px; }
-        .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .dish-item { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #222; padding: 15px 0; }
-        .dish-info h4 { font-size: 16px; color: var(--white); margin-bottom: 4px; }
-        .dish-info p { font-size: 12px; color: #888; }
-        .dish-price { color: var(--gold); font-weight: 500; font-size: 16px; margin-left: 10px; white-space: nowrap; }
-        footer { padding: 40px 20px; text-align: center; color: #666; font-size: 12px; background: var(--black); }
+        
+        /* 分类大图样式 */
+        .category-banner {
+            width: 100%; height: 180px; object-fit: cover; border-radius: 12px;
+            margin-bottom: 25px; border: 1px solid #333; display: block;
+        }
+
+        /* 按钮与通用组件 */
         #backToTop {
-        display: none;        /* 初始状态隐藏 */
-        position: fixed;      /* 固定在屏幕上，不随页面滚动走 */
-        bottom: 80px;         /* 距离底部 30 像素 */
-        right: 30px;          /* 距离右边 30 像素 */
-        z-index: 10000;       /* 确保它在所有内容的最上层 */
-        width: 50px;
-        height: 50px;
-        background-color: #d4af37; /* 金色 */
-        color: #0a0a0a;       /* 黑色箭头 */
-        border: none;
-        border-radius: 50%;   /* 圆形按钮 */
-        cursor: pointer;      /* 鼠标移上去变小手 */
-        font-size: 24px;
-        font-weight: bold;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* 阴影增加立体感 */
+            display: none; position: fixed; bottom: 80px; right: 30px; z-index: 10000;
+            width: 50px; height: 50px; background-color: var(--gold); color: #0a0a0a;
+            border: none; border-radius: 50%; cursor: pointer; font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
         .cta-btn { display: inline-block; padding: 12px 30px; background: #25D366; color: white; text-decoration: none; font-weight: bold; border-radius: 4px; margin: 40px 0; }
-        /* 分类大图样式 */
-.category-banner {
-    width: 100%;
-    height: 180px;         /* 手机端高度，你可以根据需要调整 */
-    object-fit: cover;     /* 核心属性：确保图片不拉伸、不变形 */
-    border-radius: 12px;   /* 优雅的圆角 */
-    margin-bottom: 25px;   /* 与标题保持距离 */
-    border: 1px solid #333; /* 淡淡的边框，增加质感 */
-    display: block;        /* 确保它是块状显示 */
-}
 
-/* 电脑端让图片稍微高一点，更有视觉冲击力 */
-@media (min-width: 768px) {
-    .category-banner {
-        height: 300px;
-    }
+        /* --- 响应式布局：电脑端 --- */
+        @media (min-width: 768px) {
+            .category-banner { height: 300px; }
+        }
 
-        /* Logo 容器样式 */
-.logo {
-    padding: 5px 0;
-}
-
-#siteLogo {
-    height: 60px;    /* 电脑端高度，你可以根据喜好微调 */
-    width: auto;     /* 自动宽度，防止拉伸变形 */
-    display: block;
-    transition: transform 0.3s ease; /* 增加一点触摸反馈动画 */
-}
-
-#siteLogo:hover {
-    transform: scale(1.05); /* 鼠标移上去轻轻放大，显高级 */
-}
-
-/* 📱 手机端专用：让 Logo 适应小屏幕 */
-@media (max-width: 600px) {
-    #siteLogo {
-        height: 45px; /* 手机端导航栏变窄，Logo 也相应调小 */
-    }
-    nav {
-        padding: 10px 20px !important; /* 缩小导航栏左右边距 */
-    }
-}
+        /* --- 响应式布局：手机端 --- */
+        @media (max-width: 600px) {
+            #siteLogo {
+                height: 45px; /* 手机端 Logo 变小 */
+            }
+            nav {
+                padding: 10px 20px !important; /* 缩小导航栏间距 */
+            }
+            .hero { height: 50vh; }
+        }
     </style>
 </head>
 <body>
