@@ -19,10 +19,13 @@
         }
         .logo {display: flex;align-items: center;background: transparent; /* 确保容器不带底色 */
         }
+
         #siteLogo {height: 55px;width: auto;display: block;
-    /* 核心代码：这行会让图片里的黑色/深色背景自动过滤，变为透明 */
-    mix-blend-mode: screen; 
+    /* 核心组合拳：滤镜 + 混合模式 */
+    filter: brightness(1.1) contrast(1.1); /* 增强金色亮度，加深背景黑度 */
+    mix-blend-mode: lighten;               /* 变亮模式：只显示比背景亮的部分 */
     transition: transform 0.3s ease;}
+        
         #siteLogo:hover { transform: scale(1.05); }
 
         .lang-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 6px 18px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
