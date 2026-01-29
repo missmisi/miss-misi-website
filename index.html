@@ -63,6 +63,31 @@
     .category-banner {
         height: 300px;
     }
+
+        /* Logo 容器样式 */
+.logo {
+    padding: 5px 0;
+}
+
+#siteLogo {
+    height: 60px;    /* 电脑端高度，你可以根据喜好微调 */
+    width: auto;     /* 自动宽度，防止拉伸变形 */
+    display: block;
+    transition: transform 0.3s ease; /* 增加一点触摸反馈动画 */
+}
+
+#siteLogo:hover {
+    transform: scale(1.05); /* 鼠标移上去轻轻放大，显高级 */
+}
+
+/* 📱 手机端专用：让 Logo 适应小屏幕 */
+@media (max-width: 600px) {
+    #siteLogo {
+        height: 45px; /* 手机端导航栏变窄，Logo 也相应调小 */
+    }
+    nav {
+        padding: 10px 20px !important; /* 缩小导航栏左右边距 */
+    }
 }
     </style>
 </head>
