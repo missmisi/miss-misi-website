@@ -30,7 +30,19 @@
         .lang-btn:hover { background: var(--gold); color: var(--black); }
 
         /* --- 首页部分 --- */
-        .hero { height: 65vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('exterior.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 80px; }
+        .hero {height: 100vh; /* 1. 让首屏占满整个浏览器高度 */background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), /* 2. 这里的 0.4 是黑色半透明遮罩，保护文字 */
+        url('hero-bg.png'); /* 3. 确保你的图片文件名叫 hero-bg.jpg */
+    background-size: cover;       /* 背景铺满 */
+    background-position: center;  /* 居中对齐 */
+    background-attachment: fixed; /* 4. 关键：这会让背景在滚动时固定，非常高级 */
+    
+    /* 5. Flexbox 布局：现在的目标是让内容居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 8vw, 4rem); letter-spacing: 5px; color: var(--gold); animation: fadeInUp 3.0s ease-out; /* 执行 fadeInUp 动画，持续 1.5 秒，平滑结束 */}
         .hero p { font-size: 14px; letter-spacing: 3px; color: #ccc; margin-top: 10px; }
 
